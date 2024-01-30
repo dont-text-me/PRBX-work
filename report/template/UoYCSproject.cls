@@ -117,7 +117,7 @@
 
 \titlehead{ \hfill Department of Computer Science\\\vspace{32pt}
 \begin{center}
-\includegraphics[height = 1in]{"./UOY-Logo-Stacked-shield-Black"}\\
+\includegraphics[height = 1in]{../figures/introduction/UOY-Logo-Stacked-shield-Black}\\
 \vspace{32pt}
   \ifx\UoYCSP@degree\undefined%
     \ClassError{UoYCSproject}%

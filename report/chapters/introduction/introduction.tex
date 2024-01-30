@@ -64,7 +64,7 @@ Such beans are commonly referred to as ``quakers'' and, when roasted, can be ide
 an uneven, spotty exterior as seen on figure \ref{fig:quakerBeanExample}.
 The spotty pattern develops due to the lack of sugar, preventing the bean from fully caramelising during roasting.
 \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[width=0.5\textwidth]{quaker-coffee-bean}
+    \includegraphics[width=0.5\textwidth]{figures/introduction/quaker-coffee-bean}
     \caption*{Source: \cite{quakerBeanImg}}
     \caption{An example of a ``quaker'' coffee bean.}
     \label{fig:quakerBeanExample}
@@ -89,34 +89,55 @@ While the knowledge and expertise of many roasters allows them to perform this t
 it still requires a significant amount of time and manual labour, preventing the roasters from performing other tasks.
 Furthermore, this approach does not guarantee repeatable or even correct results,
 depending fully on the judgement of the person performing it.
-
+\pagebreak
 It should be noted that some commercial solutions are offered:
 industrial scale colour graders can provide a high degree of accuracy and efficiency.
 These machines use image recognition to place the beans in one of several pre-determined categories,
 using blasts of compressed air to remove defective beans as they fall through the air.
 \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[width=0.5\textwidth]{colour-sorter-scale}
+    \includegraphics[width=0.5\textwidth]{figures/introduction/colour-sorter-scale}
     \caption*{Source: \cite{colourSorterImg}}
     \caption{A typical colour grader in a coffee roasting facility}
     \label{fig:colourSorterExample}
+    \vspace{-3em}
 \end{wrapfigure}
 These machines, however, are often a poor fit to all but the largest coffee roasters due to several reasons:
 \begin{itemize}
     \item Prohibitive pricing
     \begin{itemize}
-        \item Test
+        \item With colour graders costing well into the tens of thousands of pounds,
+        purchasing one is a difficult to justify investment for most small roasters.
+        Given the cost of specialty-grade green coffee, the roasters' profit margins are usually
+        quite narrow, therefore the value of such an investment will become apparent only after an extremely long period of time.
+        Additionally, these machines come with significant operating costs which will be discussed further.
     \end{itemize}
     \item Large size
     \begin{itemize}
-        \item Test
+        \item Figure \ref{fig:colourSorterExample} shows a colour grader in use.
+        From the figure, the challenges brought along by these devices' dimensions are clear:
+        their large height, noise and energy consumption often make them incompatible with the spaces occupied by many
+        small scale roasters.
     \end{itemize}
     \item Unknown training dataset
     \begin{itemize}
-        \item Test
+        \item Most colour graders use some kind of image classification algorithm to sort the beans.
+        While this allows for high classification speeds and good accuracy, few manufacturers provide information on the
+        dataset that was used to develop the classifier.
+        While this is unlikely to pose an issue with the most frequently consumed coffee varieties,
+        rare coffee species or beans that have undergone an unusual processing method may not fit into the model used by such machines.
+        Therefore, these machines lack flexibility and may not be suitable for roasters who often switch their beans or
+        attempt to experiment with roasting or processing techniques.
     \end{itemize}
-    \item Scale of production
+    \item Required scale of production
     \begin{itemize}
-        \item Test
+        \item As discussed above, most colour graders are aimed at production done at a scale
+        significantly exceeding that of most small-to-medium coffee roasters.
+        Many colour graders are designed to be a part of an automated ``production line'', with the beans being moved through
+        chutes between the roaster, grader and any further machinery, e.g. a portioning and packaging machine.
+        Given that many roasters roast in batches that are an order of magnitude smaller than ones that can benefit from such machinery,
+        colour graders simply do not fit in their workflow.
+        Furthermore, even to achieve their basic functionality, colour graders need an additional air compressor,
+        further adding to the costs associated with incorporating one into one's producion.
     \end{itemize}
 \end{itemize}
 
