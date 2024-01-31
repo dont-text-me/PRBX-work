@@ -1,6 +1,9 @@
-\documentclass{./styles/UoYCSproject}
+\documentclass{./template/UoYCSproject}
+\usepackage{wrapfig}
+\usepackage{caption}
+
 \addbibresource{main.bib}
-\graphicspath{{./figures}}
+\graphicspath{{./figures/}}
 \author{Ivan Barinskiy}
 \title{An evaluation of various image classification methods for identifying roast defects in coffee beans.}
 \supervisor{Adrian Bors}
@@ -27,22 +30,19 @@
 THIS IS A DRAFT TODO TODO todo.
 \end{summary}
 
-\chapter{Introduction}
-\label{ch:introduction}
+\chapter{Introduction}\label{ch:introduction}
+\input{chapters/introduction}
 
-\chapter{Methods}
-\label{ch:methods2}
+\chapter{Literature review}\label{ch:litreview}
 
-\chapter{Results}
-\label{ch:results}
+\chapter{Methods}\label{ch:methods}
 
-\chapter{Conclusion}
-\label{ch:conclusion}
+\chapter{Results}\label{ch:results}
 
+\chapter{Conclusion}\label{ch:conclusion}
 
 \appendix
-\chapter{Appendix}
-\label{ch:appendix}
+\chapter{Appendix}\label{ch:appendix}
 
 \printbibliography
 
