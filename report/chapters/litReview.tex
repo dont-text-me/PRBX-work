@@ -1,0 +1,43 @@
+When reviewing the literature for this project, the available information fell into two categories:
+on one hand, it was important to consult papers describing past attempts at classifying coffee beans,
+especially those that proposed methods for doing it at scale.
+On the other hand, looking at the wider world of image classification revealed useful details and approaches to
+classifier architecture that informed the decisions made in this project.
+Overall, considering the history of image classification as a field and its applications in the coffee industry
+built the information background that enabled the development of the prototypes in this project.
+
+\section{Coffee bean classification}
+\label{sec:lit-review-coffee}
+The overall picture gathered from reviewing the literature under this topic suggests that identifying
+items as small as coffee beans is definitely possible, although not without some degree of effort invested in the process.
+Several of the reviewed papers claimed great results, though for many, the data gathering and cleaning process involved
+rare or expensive equipment.
+
+An example of such study has been conducted by Chen et al. \cite{hyperspectralChen}, who have achieved an accuracy of
+98.6\% when classifying green coffee beans.
+While the purpose of their paper is slightly different, focusing on optimising a different stage in the coffee supply chain,
+their approach to data collection and processing provided valuable insights serving as a great starting point.
+Similar to this project, the authors have identified several green coffee defects to classify: insect damage,
+black beans (ones that have prematurely fallen off the tree and could not develop) and bean fragments.
+The images were taken in batches, using a hyperspectral scanner,
+which captures light beyond the visible frequency range.
+The paper's main strengths were in its design of the image processing pipeline and classifier architecture.
+The capturing of images was automated using a conveyor belt feeding rows of beans of the same category under the scanner.
+While the extra equipment required for this approach introduces extra costs and may be better fit for a commercial application,
+the technique of splitting an image of a row of beans into groups of individual images,
+all resized to the same dimensions provided a great way to simplify and speed up the data gathering process for this project.
+The authors, using neural networks to classify the images, have provided several classifier architectures.
+While the highest-performing network in their study (a 3D-CNN) required leveraging the hyperspectral data provided by the scanner,
+the 2D-CNN architecture they described used only the spatial data of the images.
+Interestingly, the CNN-based classifiers boasted fast classification time, with the authors developing a real-time sorting device.
+While physical prototypes are beyond the scope of this project, knowing that near real-time classification speeds are
+possible with this architecture suggests that this approach could fit the task at hand well.
+Furthermore, Chen et al.\ employed a dimensionality reduction algorithm (PCA) for their model, which has improved the overall accuracy
+when reducing the hyperspectral data down to 3 components.
+This increase in performance could also be investigated and leveraged in this project.
+
+
+
+
+\section{Wider look at image classification algorithms}
+\label{sec:lit-review-general}
