@@ -19,6 +19,7 @@ While the purpose of their paper is slightly different, focusing on optimising a
 their approach to data collection and processing provided valuable insights serving as a great starting point.
 Similar to this project, the authors have identified several green coffee defects to classify: insect damage,
 black beans (ones that have prematurely fallen off the tree and could not develop) and bean fragments.
+
 The images were taken in batches, using a hyperspectral scanner,
 which captures light beyond the visible frequency range.
 The paper's main strengths were in its design of the image processing pipeline and classifier architecture.
@@ -26,6 +27,7 @@ The capturing of images was automated using a conveyor belt feeding rows of bean
 While the extra equipment required for this approach introduces extra costs and may be better fit for a commercial application,
 the technique of splitting an image of a row of beans into groups of individual images,
 all resized to the same dimensions provided a great way to simplify and speed up the data gathering process for this project.
+
 The authors, using neural networks to classify the images, have provided several classifier architectures.
 While the highest-performing network in their study (a 3D-CNN) required leveraging the hyperspectral data provided by the scanner,
 the 2D-CNN architecture they described used only the spatial data of the images.
@@ -35,6 +37,36 @@ possible with this architecture suggests that this approach could fit the task a
 Furthermore, Chen et al.\ employed a dimensionality reduction algorithm (PCA) for their model, which has improved the overall accuracy
 when reducing the hyperspectral data down to 3 components.
 This increase in performance could also be investigated and leveraged in this project.
+
+Despite the high performance and large dataset in Chen et al.'s paper, the real-world performance of any model could
+be improved by a more diverse dataset, showing either more defects, more coffee varieties, or both.
+This project aims to cover this gap by utilising beans processed by various methods, from several distinct origins and species.
+
+Oliveri et al.\  take a slightly different approach in their 2019 paper \cite{hyperspectralGreenOliveri}.
+Rather than utilising a deep learning network, they instead used a K-nearest-neighbour (KNN) classifier to assign the closest
+category to a given bean image.
+Similar to the previous paper, the authors have identified three classes of bean defects, however the defects were slightly different:
+instead of insect damage, the authors instead focused on beans that have lost too much moisture.
+THe data gathering process was similar to that of Chen et al., as was their use of PCA to extract the key components
+to be used for classification.
+
+The authors did not develop any physical apparatus to separate the defective beans in their paper, however
+they were able to process images of groups of beans, highlighting defective ones on the original image.
+This approach fits really well with the constraints and aims of this project, as being able to identify defects and
+determine their place on the original image would already lead to a significant saving of effort and time for the potential users.
+
+Another strength of Oliveri et al's paper is in their iterative and transparent approach to the development of the model.
+The authors were one of the few who mentioned cross validation as part of their project and explained the choice of the number
+of neighbours for their classifier.
+Furthermore, they admitted that due to the rarity of certain bean defects, they were not able to gather enough samples
+to add them to the classifier as well as having to remove a number of beans from the sample pool to make the ratio of beans
+in each class as even as possible.
+
+While the above shortcoming, coupled with a lack of reporting on the species or processing of the beans, identifies areas for
+improvement, the overall approach shows great potential in identifying defects.
+The application of the model and its design have influenced the research process for this project, which,
+with a more varied dataset, aims to explore the topic of KNN classification further.
+
 
 
 
