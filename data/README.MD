@@ -22,3 +22,7 @@
 | anaerobicNat      | Natural process, but with no air presence                                                                             |
 | honey             | Similar to natural processing, buth with less flesh of the coffee cherry present                                      |
 | CM                | Carbonic maceration - beans held in an air free, CO2 rich environment prior to further processing                     |
+
+## Bean classes and counts
+
+![bean class breakdowns](bean-class-breakdowns.png)
