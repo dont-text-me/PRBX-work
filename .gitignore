@@ -2,3 +2,4 @@ report/out
 data/processed
 data/archives
 data/processed-whitebg
+*.pt
