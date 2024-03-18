@@ -11,6 +11,7 @@
 | ResnNet 34 (improved background, smaller batches)             | 29 minutes        | 94.1%    | ![](confusion-matrices/resnet_34_whitebg_94_acc_8_batch.png) | 8          | 0.001         | 0.9      | 0.1               | 10                   |
 | ResnNet 34 (improved background, even smaller batches)        | 31 minutes        | 93.7%    | ![](confusion-matrices/resnet_34_whitebg_93_acc_4_batch.png) | 4          | 0.001         | 0.9      | 0.1               | 10                   |
 | Swin transformer (base, all but last layer frozen, 40 epochs) | 1 hour 50 minutes | 85.4%    | ![](confusion-matrices/swin_b_85_acc_4_batch.png)            | 4          | 0.001         | 0.9      | 0.1               | 10                   |
+| MobileNet v2 (no pre-training)                                | 41 minute         | 84%      | ![](confusion-matrices/mobileNet-no-pretraining0-5gamma.png) | 4          | 0.001         | 0.9      | 0.5               | 10                   |
 
 
 ## Note: weights files not tracked but available on request
