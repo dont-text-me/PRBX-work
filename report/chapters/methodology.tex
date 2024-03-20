@@ -42,57 +42,68 @@ in google images and GitHub.
 
 Overall, the dataset contained 2786 images, each annotated with the bean variety,
 the processing method used and the defect (or lack thereof) present in the bean.
-A further description of the dataset is provided below.
+It should be noted that despite the initial aims, the distribution of defects in
+the final dataset was imbalanced, with certain defects occuring much less
+frequently than others. To attempt to combat this, in cases where a bean
+exhibited several defects at once, it was labelled as the rarer defect. For
+example, if the bean was both a ''quaker`` (underdeveloped) and had insect damage,
+it was labelled as having insect damage only. While not a perfect solution, this
+ensured a satisfactory number of images per class. A further description of the dataset
+is provided below.
 
 \subsection{Dataset description and statistics}
-\label{subsec:dataset-description-and-statistics}
-
-\begin{figure}
+\label{subsec:dataset-description-and-statistics} Keeping in line with the project
+aims, this section will mainly focus on the defects identified in the beans
+contained in the dataset. Overall, the beans exhibited five various defects, whose
+counts and short descriptions are presented in table~\ref{tab:beanDefectCounts}.
+Figure~\ref{fig:beanDefects} provides a brief look at the various defects, with more
+examples shown in the appendix % TODO add appendix with more images
+\begin{figure}[h]
 	{\textwidth}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.2\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/quaker-bean
 		}
 		\subcaption{A quaker bean} \label{fig:quakerBeanSingle}
 	\end{subfigure}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.2\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/normal-bean
 		}
 		\subcaption{A normal bean} \label{fig:normalBeanSingle}
 	\end{subfigure}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.2\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/insect-damaged-bean
 		}
 		\subcaption{An insect damaged bean} \label{fig:insectBeanSingle}
 	\end{subfigure}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.2\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/bean-fragment
 		}
 		\subcaption{A bean fragment} \label{fig:fragBeanSingle}
 	\end{subfigure}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.25\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/burnt-bean
 		}
 		\subcaption{A burnt bean} \label{fig:burntBeanSingle}
 	\end{subfigure}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.25\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/mold-damaged-bean
 		}
 		\subcaption{A mould damaged bean} \label{fig:moldBeanSingle}
 	\end{subfigure}
 	\begin{subfigure}
-		{0.3\textwidth}
+		{0.25\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
 			./figures/methodology/under-bean
 		}
@@ -102,8 +113,24 @@ A further description of the dataset is provided below.
 	\label{fig:beanDefects}
 \end{figure}
 
-\subsection{Approach to data gathering and pre-processing}
-\label{subsec:approach-to-data-gathering-and-pre-processing}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.25\linewidth}|p{0.6\linewidth}|p{0.15\linewidth}|}
+		\toprule \textbf{Defect name} & \textbf{Visual features}                                                                                                                                             & \textbf{Count} \\
+		\midrule Normal bean          & Even colour, brown to dark-brown hue, no surface damage or blemishes and a round shape with no deformities                                                           & 1311           \\
+		Quaker                        & Light brown to brown hue (due to less caramelisation of sugar), scorch marks, brown spots on surface. Occasionally, a shrivelled, uneven look of the outside surface & 978            \\
+		Bean fragment                 & Significantly deformed or chipped exterior, smaller bean pieces                                                                                                      & 296            \\
+		Underroasted                  & Very light brown exterior, dark green or yellow in extremely underroasted beans                                                                                      & 104            \\
+		Burnt                         & Dark brown to black exterior, significant scorching or an oily, shiny surface                                                                                        & 50             \\
+		Insect/mould damage           & Small, round holes or larger ''craters`` on the surface                                                                                                              & 47             \\
+		\bottomrule
+	\end{tabular}
+	\caption{Bean defect counts}
+	\label{tab:beanDefectCounts}
+\end{table}
+
+\subsection{Data pre-processing}
+\label{subsec:data-pre-processing}
 
 \section{Combatting class imbalance}
 \label{sec:combatting-class-imbalance}
