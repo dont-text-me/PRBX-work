@@ -1,8 +1,7 @@
-# This document contains a record of all the models trained during the project. 
-
+# This document contains a record of all the models trained during the project.
 
 | Architecture                                                  | Training time     | Accuracy | Confusion matrix                                             | Batch size | learning rate | momentum | Gamma (scheduler) | Step size(scheduler) |
-|---------------------------------------------------------------|-------------------|----------|--------------------------------------------------------------|------------|---------------|----------|-------------------|----------------------|
+| ------------------------------------------------------------- | ----------------- | -------- | ------------------------------------------------------------ | ---------- | ------------- | -------- | ----------------- | -------------------- |
 | ResNet 18                                                     | 18 minutes        | 93.0%    | ![](confusion-matrices/resnet_18_93_acc.png)                 | 16         | 0.001         | 0.9      | 0.1               | 10                   |
 | ResNet 34                                                     | 34 minutes        | 93.6%    | ![](confusion-matrices/resnet_34_93_acc.png)                 | 16         | 0.001         | 0.9      | 0.1               | 8                    |
 | EfficientNet V2 (small)                                       | 42 minutes        | 90.5%    | ![](confusion-matrices/efficientnet_v2_s_91_acc.png)         | 16         | 0.001         | 0.9      | 0.1               | 8                    |
@@ -13,5 +12,4 @@
 | Swin transformer (base, all but last layer frozen, 40 epochs) | 1 hour 50 minutes | 85.4%    | ![](confusion-matrices/swin_b_85_acc_4_batch.png)            | 4          | 0.001         | 0.9      | 0.1               | 10                   |
 | MobileNet v2 (no pre-training)                                | 41 minute         | 84%      | ![](confusion-matrices/mobileNet-no-pretraining0-5gamma.png) | 4          | 0.001         | 0.9      | 0.5               | 10                   |
 
-
-## Note: weights files not tracked but available on request
+### Note: weights files not tracked but available on request

@@ -1,50 +1,48 @@
 \documentclass{./template/UoYCSproject}
 \usepackage{wrapfig}
 \usepackage{caption}
+\usepackage{subcaption}
 
 \addbibresource{main.bib}
 \graphicspath{{./figures/}}
 \author{Ivan Barinskiy}
-\title{An evaluation of various image classification methods for identifying roast defects in coffee beans.}
+\title{An evaluation of various image classification methods for identifying
+roast defects in coffee beans.}
 \supervisor{Adrian Bors}
 \BSc
 
 \dedication{To all students everywhere}
 
-%\acknowledgements{
-%  I would like to thank my goldfish for all the help it gave me
-%  writing this document.
-%
-%  As usual, my boss was an inspiring source of sagacious advice.
-%}
+\acknowledgements{ I would like to thank Ben at Harmony coffee roasters and Levi and Vanessa at Vibe With coffee roasters for their invaluable help with sourcing and identifying the materials for the dataset and their insightful comments which helped inform the discussion and evaluation of the results of my project. }
 
 \begin{document}
-\pagenumbering{roman}
-\maketitle
-\listoffigures
-\listoftables
-%\renewcommand*{\lstlistlistingname}{List of Listings}
-%\lstlistoflistings
+	\pagenumbering{roman}
+	\maketitle
+	\listoffigures \listoftables
+	%\renewcommand*{\lstlistlistingname}{List of Listings}
+	%\lstlistoflistings
 
-\begin{summary}
-THIS IS A DRAFT TODO TODO todo.
-\end{summary}
+	\begin{summary}
+		THIS IS A DRAFT TODO TODO todo.
+	\end{summary}
 
-\chapter{Introduction}\label{ch:introduction}
-\input{chapters/introduction}
+	\chapter{Introduction}
+	\label{ch:introduction}
+	\input{chapters/introduction}
 
-\chapter{Literature review}\label{ch:litreview}
-\input{chapters/litReview}
+	\chapter{Literature review}
+	\label{ch:litreview}
+	\input{chapters/litReview}
 
-%\chapter{Methods}\label{ch:methods}
-%
-%\chapter{Results}\label{ch:results}
-%
-%\chapter{Conclusion}\label{ch:conclusion}
-%
-%\appendix
-%\chapter{Appendix}\label{ch:appendix}
+	\chapter{Methods}
+	\label{ch:methods}
+	\input{chapters/methodology}
+	%\chapter{Results}\label{ch:results}
+	%
+	%\chapter{Conclusion}\label{ch:conclusion}
+	%
+	%\appendix
+	%\chapter{Appendix}\label{ch:appendix}
 
-\printbibliography
-
+	\printbibliography
 \end{document}
