@@ -37,6 +37,8 @@ samples.
 
 To digitize the dataset, beans of each group were arranged in $5 \times 5$ grids
 (where possible) and photographed using the main lens of the Pixel 7 pro smartphone.
+All images were taken on a bright white background, with care taken to not include any dust or debris in the image.
+Overhead lights along with a smaller tabletop light were used to make sure lighting levels stayed consistent between pictures.
 Images of each defect were stored locally on the smartphone with a backup made
 in google images and GitHub.
 
@@ -52,66 +54,68 @@ ensured a satisfactory number of images per class. A further description of the 
 is provided below.
 
 \subsection{Dataset description and statistics}
-\label{subsec:dataset-description-and-statistics} Keeping in line with the project
+\label{subsec:dataset-description-and-statistics}
+\begin{figure}[h]
+{\textwidth}
+	\begin{subfigure}
+	{0.2\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/quaker-bean
+		}
+		\subcaption{''Quaker``} \label{fig:quakerBeanSingle}
+	\end{subfigure}
+	\begin{subfigure}
+	{0.2\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/normal-bean
+		}
+		\subcaption{Normal} \label{fig:normalBeanSingle}
+	\end{subfigure}
+	\begin{subfigure}
+	{0.2\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/insect-damaged-bean
+		}
+		\subcaption{Insect \\ damage} \label{fig:insectBeanSingle}
+	\end{subfigure}
+	\begin{subfigure}
+	{0.2\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/bean-fragment
+		}
+		\subcaption{Bean \\ fragment} \label{fig:fragBeanSingle}
+	\end{subfigure}
+	\begin{subfigure}
+	{0.25\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/burnt-bean
+		}
+		\subcaption{Burnt} \label{fig:burntBeanSingle}
+	\end{subfigure}
+	\begin{subfigure}
+	{0.25\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/mold-damaged-bean
+		}
+		\subcaption{Mould damage} \label{fig:moldBeanSingle}
+	\end{subfigure}
+	\begin{subfigure}
+	{0.25\textwidth}
+		\includegraphics[height=0.8\linewidth, keepaspectratio]{
+			./figures/methodology/under-bean
+		}
+		\subcaption{Underroasted} \label{fig:underBeanSingle}
+	\end{subfigure}
+	\caption{Examples of bean defects}
+	\label{fig:beanDefects}
+\end{figure}
+
+Keeping in line with the project
 aims, this section will mainly focus on the defects identified in the beans
 contained in the dataset. Overall, the beans exhibited five various defects, whose
 counts and short descriptions are presented in table~\ref{tab:beanDefectCounts}.
 Figure~\ref{fig:beanDefects} provides a brief look at the various defects, with more
 examples shown in the appendix % TODO add appendix with more images
-\begin{figure}[h]
-	{\textwidth}
-	\begin{subfigure}
-		{0.2\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/quaker-bean
-		}
-		\subcaption{A quaker bean} \label{fig:quakerBeanSingle}
-	\end{subfigure}
-	\begin{subfigure}
-		{0.2\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/normal-bean
-		}
-		\subcaption{A normal bean} \label{fig:normalBeanSingle}
-	\end{subfigure}
-	\begin{subfigure}
-		{0.2\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/insect-damaged-bean
-		}
-		\subcaption{An insect damaged bean} \label{fig:insectBeanSingle}
-	\end{subfigure}
-	\begin{subfigure}
-		{0.2\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/bean-fragment
-		}
-		\subcaption{A bean fragment} \label{fig:fragBeanSingle}
-	\end{subfigure}
-	\begin{subfigure}
-		{0.25\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/burnt-bean
-		}
-		\subcaption{A burnt bean} \label{fig:burntBeanSingle}
-	\end{subfigure}
-	\begin{subfigure}
-		{0.25\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/mold-damaged-bean
-		}
-		\subcaption{A mould damaged bean} \label{fig:moldBeanSingle}
-	\end{subfigure}
-	\begin{subfigure}
-		{0.25\textwidth}
-		\includegraphics[height=0.8\linewidth, keepaspectratio]{
-			./figures/methodology/under-bean
-		}
-		\subcaption{An underroasted bean} \label{fig:underBeanSingle}
-	\end{subfigure}
-	\caption{Examples of bean defects}
-	\label{fig:beanDefects}
-\end{figure}
 
 \begin{table}[h]
 	\centering
@@ -134,22 +138,34 @@ The number of beans belonging to each processing method and variety method is sh
 on figures~\ref{fig:beanProcessingCounts} and~\ref{fig:beanVarietyCounts} respectively.
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=\linewidth, height=3cm]{
+		\includegraphics[width=\linewidth, height=2.5cm]{
 			./figures/methodology/processing-counts
 		}
 	\caption{Bean processing method counts}
 	\label{fig:beanProcessingCounts}
 
-	\includegraphics[width=\linewidth, height=3cm]{
+	\includegraphics[width=\linewidth, height=2.5cm]{
 			./figures/methodology/variety-counts
 		}
 	\caption{Bean variety counts}
 	\label{fig:beanVarietyCounts}
 \end{figure}
 
+It should be noted that the original intent was for the insect and mould damage to be distinct classes,
+however, these defects are quite rare, especially with the higher-grade green coffee the local roasters worked with.
+Because of this lack of available data, it was decided to merge the classes: not only do the visual features of the two
+defects resemble each other, but the effects they have on the final product are also similar.
+While future work could seek an improved dataset and a higher granularity of classes, the merging of the two classes here
+is unlikely to reduce the practical usefulness of the classifier in a roaster's daily tasks.
 \subsection{Data pre-processing}
 \label{subsec:data-pre-processing}
-TODO \cite{opencvLibrary}
+As described in the above section, the beans were arranged in grids when their pictures were taken.
+To train the classifier however, each bean had to be contained in its own image, requiring the use of a software solution
+to automatically separate each bean.
+The solution was implemented in Python and depended heavily on the OpenCV library~\cite{opencvLibrary}, which provides
+tools for working with and processing images.
+
+
 \section{Combatting class imbalance}
 \label{sec:combatting-class-imbalance}
 
