@@ -25,12 +25,12 @@ the resources needed to make each decision when running the model. Despite this 
 versions of the KNN architecture remain a popular choice for image
 classification to this day, and, with some modification, solve the large resource
 requirements by utilising advanced data structures, such as in the case of the
-KN-KNN algorithm \cite{kdtreeKNN}.
+KD-KNN algorithm \cite{kdtreeKNN}.
 
 Since the algorithm requires the calculation of ``distance'' between any given
 datapoints, several metrics of calculation exist, such as Euclidean, Manhatan and
 more. The choice of the distance metric as well as the value of K must be picked
-experimentally, with a technique such as cross validation. Overall, the KNN algorithm
+experimentally, with a technique such as grid searching. Overall, the KNN algorithm
 provides a quick and efficient way of prototyping an image classifier, however
 the simplicity comes at a cost of the need to manually pick the necessary
 hyperparameters to get the best out of the architecture.

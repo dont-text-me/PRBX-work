@@ -230,8 +230,29 @@ aims of the project.
 The following section outlines the approaches taken in implementing a suite of image classifiers for bean defects.
 The classifiers were implemented in Python, and, where applicable, were trained on an M3 Apple Silicon system with 36GB
 of memory.
-\subsection{Unsupervised learning}
+
+The literature review identified 3 general paths that one could take when developing a classifier, each with a different
+set of strengths, weaknesses, and aiming to address different priorities.
+The following subsection will discuss the approach taken to develop the three models to be evaluated further, in an
+increasing order of complexity.
+\subsection{Nearest-neighbor classifier}
 \label{subsec:knn-classifier}
+The primary reasoning behind implementing a KNN-based classifier is its speed of deployment, simplicity of implementation
+and good accuracy potential.
+As a concept, KNN can be easily understood even by non-technical stakeholders and requires little experimentation apart
+from picking the value of K, determining how many ''neighbors`` each input has to be compared against.
+
+One of the main challenges with KNN is its computational cost: the number of comparisons grows quickly with an increase
+in the amount of features, dimensions and data points.
+Therefore, with the dataset's images containing tens of thousands of pixels, each with three colour channels, a brute-force
+approach was dismissed.
+
+An approach seen, among others, in Olivieri et. al.'s paper~\cite{hyperspectralGreenOliveri}, is dimensionality reduction,
+which aims to extract the features of the data that contribute to its difference the most.
+While several dimensionality reduction techniques exist, the significant visual differences across the bean classes suggested
+that the use of colour histograms could efficiently reduce the size of the data while still preserving its differences.
+
+A colour histogram is a relatively simple plot of the distribution of colours in a given image.
 
 \subsection{Compact CNN classifier}
 \label{subsec:deep-learning}
