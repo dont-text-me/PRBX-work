@@ -253,7 +253,32 @@ While several dimensionality reduction techniques exist, the significant visual 
 that the use of colour histograms could efficiently reduce the size of the data while still preserving its differences.
 
 A colour histogram is a relatively simple plot of the distribution of colours in a given image.
+A strength of this approach is its resilience to the orientations of beans in the images - the colour distribution stays
+the same no matter how the bean is positioned (apart from the small discrepancies in shadows).
+Furthermore, by controlling the amount of distinct colours in the histogram, the dimensionality can be easily changed to
+make sure there is plenty of data to compare the images by.
 
+It should be noted that the method is not without its criticisms: while colour makes up a significant amount of the difference
+between the beans, properties like texture and shape are removed by the dimensionality reduction process.
+Also, the size of the image itself can skew the distribution simply due to the difference in the numbers of pixels.
+
+It should be noted that another approach to a KNN classifier was tested in a preliminary experiment:
+there, the images were converted into long vectors by extracting colour information from each channel (red, green or blue)
+and concatenating the three resulting grids into a one-dimensional representation.
+While this approach was able to correctly classify some images, especially those belonging to the ''normal`` and ''quaker``
+classes, the performance on the smaller classes combined with the long prediction times suggested that the colour histogram
+provided a better compromise between the richness of the data and the practicality of the classifier.
+
+The best hyperparameters were found in a grid search, with different choices of the value of k, the distance metric
+and nearest neighbour calculation algorithm trialed.
+In every experiment, the classifier was fitted with 80\% of the data, chosen at random and evaluated on the rest of the data,
+with metrics such as overall accuracy, per-class precision, recall and f1 score recorded and tracked.
+To maintain a consistent ratio of beans of different types, a stratified split function has been used.
+
+The classifiers and their evaluation were implemented using the Scikit-learn library \cite{sklearnLibrary}, with the calculation of colour
+distributions provided by the Scikit-image library \cite{skImageLibrary}.
+Loading the data was done by creating a \verb|DataLoader| class provided by the PyTorch \cite{pytorchLibrary}, which allowed
+for the data loading to be easily shared between this classifier and ones developed later.
 \subsection{Compact CNN classifier}
 \label{subsec:deep-learning}
 
