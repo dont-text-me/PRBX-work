@@ -67,7 +67,6 @@ is provided below.
 \subsection{Dataset description and statistics}
 \label{subsec:dataset-description-and-statistics}
 \begin{figure}[h]
-{\textwidth}
 	\begin{subfigure}
 	{0.2\textwidth}
 		\includegraphics[height=0.8\linewidth, keepaspectratio]{
@@ -206,10 +205,10 @@ A visualisation of the data processing pipeline is shown on figure~\ref{fig:imgP
 		{\includegraphics[height=4cm, keepaspectratio]{methodology/bean-batch-raw}};
 	\node[right=of raw](gray)
 		{\includegraphics[height=4cm, keepaspectratio]{methodology/bean-batch-gray}};
-	\node[left=of thresh, below=of raw] (contours)
-		{\includegraphics[height=4cm, keepaspectratio]{methodology/bean-batch-contours}};
 	\node[below=of gray] (thresh)
 		{\includegraphics[height=4cm, keepaspectratio]{methodology/bean-batch-thresh}};
+	\node[left=of thresh, below=of raw] (contours)
+		{\includegraphics[height=4cm, keepaspectratio]{methodology/bean-batch-contours}};
 
 	\draw[->,thick] (raw) -- (gray);
 	\draw[->,thick] (gray) -- (thresh);
@@ -277,7 +276,7 @@ To maintain a consistent ratio of beans of different types, a stratified split f
 
 The classifiers and their evaluation were implemented using the Scikit-learn library \cite{sklearnLibrary}, with the calculation of colour
 distributions provided by the Scikit-image library \cite{skImageLibrary}.
-Loading the data was done by creating a \verb|DataLoader| class provided by the PyTorch \cite{pytorchLibrary}, which allowed
+Loading the data was done by creating a \verb|DataLoader| class provided by the PyTorch library \cite{pytorchLibrary}, which allowed
 for the data loading to be easily shared between this classifier and ones developed later.
 \subsection{Compact CNN classifier}
 \label{subsec:deep-learning}
