@@ -290,13 +290,13 @@ images would be a benefit, with the classifier being able to extract texture and
 
 While countless network architectures exist, the goal with this classifier was ensuring the smallest possible classification time,
 and, therefore, smaller designs were considered.
-The MobileNet V2 architecture stood out for its relatively small number of parameters and a promised ability to run even on
+The MobileNet V2 architecture~\cite{mobileNet} stood out for its relatively small number of parameters and a promised ability to run even on
 a mobile device.
 Therefore, a high performance result from such a small architecture would result in a classifier that is able to be deployed
 on any system, removing the cost barrier between coffee roasters and automatic quality control methods.
 Furthermore, a smaller architecture would be faster to train on a custom dataset, providing greater flexibility.
 
-Other smaller architectures such as EfficientNet were considered and trialled in preliminary experiments,
+Other smaller architectures such as the smallest form of an EfficientNet~\cite{efficientNet} were considered and trialled in preliminary experiments,
 however, MobileNet consistently outperformed the others and was therefore selected as the final model of this type.
 \subsection{Application of transfer learning to large models}
 \label{subsec:transfer-learning}
