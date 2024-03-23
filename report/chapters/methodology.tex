@@ -296,10 +296,38 @@ Therefore, a high performance result from such a small architecture would result
 on any system, removing the cost barrier between coffee roasters and automatic quality control methods.
 Furthermore, a smaller architecture would be faster to train on a custom dataset, providing greater flexibility.
 
-Other smaller architectures such as the smallest form of an EfficientNet~\cite{efficientNet} were considered and trialled in preliminary experiments,
+Other smaller architectures such as ShuffleNet V2`~\cite{shuffleNet} were considered and trialled in preliminary experiments,
 however, MobileNet consistently outperformed the others and was therefore selected as the final model of this type.
 \subsection{Application of transfer learning to large models}
 \label{subsec:transfer-learning}
+The models trialled in this set of experiments were the largest in terms of the number of parameters and
+architectural complexity.
+The idea behind using these modules was that the large number of parameters could allow them to extract even more information
+from the input images and gain better performance, especially in comparing the defects to each other.
+
+A drawback of such large modules is their need for large dataset during training, a requirement which the gathered data would
+struggle to fulfil.
+To overcome this limitation, a techique called transfer learning was employed.
+In this technique, the model is first trained on a large, not necessarily domain-specific dataset and then
+''fine-tuned`` on a smaller selection of domain-specific data.
+This technique allows the models to learn to extract features from images and then sharpen that knowledge by training on a dataset
+specific to the given task.
+
+A commonly used general-purpose dataset is ImageNet~\cite{imageNet}, containing over a million images belonging to a thousand
+classes.
+Pre-trained modules were loaded from the \verb|torchvision.models| package provided by PyTorch~\cite{pytorchLibrary}.
+
+One of the more promising architectures was ResNet~\cite{resNet}, with a deep architecture boasting a high top-1 accuracy on the imageNet dataset.
+Several versions of the ResNet architecture exist, with the 18, 34 and 50 layer versions trialled in the experiments.
+
+Other tested architectures included the EfficientNet V2~\cite{efficientNet} and the Swin transformer~\cite{swinTransformer},
+which were selected for their reported accuracy on the imageNet dataset.
+
+An important step in this set of experiments was the readjusting of the model before making predictions on the bean dataset:
+since all models were tailored to ImageNet, the number of output neurons in their final fully-connected layers was mismatched.
+The fixes involved inspecting the models' architectures, identifying the attribute name of the final layer, and replacing it with an
+instance of the \verb|torch.nn.Linear()| class, where the number of input neurons matched that of the old fully connected layer,
+and the number of outputs was equal to the number of classes in the dataset.
 
 \section{Model development results}
 \label{sec:model-development-results}
