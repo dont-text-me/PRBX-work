@@ -328,6 +328,3 @@ since all models were tailored to ImageNet, the number of output neurons in thei
 The fixes involved inspecting the models' architectures, identifying the attribute name of the final layer, and replacing it with an
 instance of the \verb|torch.nn.Linear()| class, where the number of input neurons matched that of the old fully connected layer,
 and the number of outputs was equal to the number of classes in the dataset.
-
-\section{Model development results}
-\label{sec:model-development-results}
