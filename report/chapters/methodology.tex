@@ -261,7 +261,7 @@ It should be noted that the method is not without its criticisms: while colour m
 between the beans, properties like texture and shape are removed by the dimensionality reduction process.
 Also, the size of the image itself can skew the distribution simply due to the difference in the numbers of pixels.
 
-It should be noted that another approach to a KNN classifier was tested in a preliminary experiment:
+Another approach to a KNN classifier was tested in a preliminary experiment:
 there, the images were converted into long vectors by extracting colour information from each channel (red, green or blue)
 and concatenating the three resulting grids into a one-dimensional representation.
 While this approach was able to correctly classify some images, especially those belonging to the ''normal`` and ''quaker``
@@ -280,7 +280,24 @@ Loading the data was done by creating a \verb|DataLoader| class provided by the 
 for the data loading to be easily shared between this classifier and ones developed later.
 \subsection{Compact CNN classifier}
 \label{subsec:deep-learning}
+The aims in developing this classifier were centered around addressing the weaknesses of the one described above,
+namely its high prediction cost and its lack of ability to extract complex features from input images.
 
+To achieve these aims, a convolutional neural network (CNN) was selected as a design candidate, based on their
+efficiency at classifying images and common use in industry.
+Furthermore, the principles behind the functionality of convolution layers suggest that the high resolution of the input
+images would be a benefit, with the classifier being able to extract texture and shape information from each image.
+
+While countless network architectures exist, the goal with this classifier was ensuring the smallest possible classification time,
+and, therefore, smaller designs were considered.
+The MobileNet V2 architecture stood out for its relatively small number of parameters and a promised ability to run even on
+a mobile device.
+Therefore, a high performance result from such a small architecture would result in a classifier that is able to be deployed
+on any system, removing the cost barrier between coffee roasters and automatic quality control methods.
+Furthermore, a smaller architecture would be faster to train on a custom dataset, providing greater flexibility.
+
+Other smaller architectures such as EfficientNet were considered and trialled in preliminary experiments,
+however, MobileNet consistently outperformed the others and was therefore selected as the final model of this type.
 \subsection{Application of transfer learning to large models}
 \label{subsec:transfer-learning}
 
