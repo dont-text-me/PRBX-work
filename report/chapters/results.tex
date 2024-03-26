@@ -87,7 +87,38 @@ The experiments produced two noteworthy classifiers, whose hyperparameter choice
 As seen from the above table, both classifiers achieved a relatively high accuracy.
 However, inspecting the per-class performance of these classifiers reveals a significant difference.
 A metric that can be used to compare per-class performance is the f1-score:
-$f_1 = \frac{2tp}{2tp + fp + fn}$, where $tp$, $fp$ and $fn$ are the true positive, false positive and false negative rates respectively.,
+$f_1 = \frac{2tp}{2tp + fp + fn}$, where $tp$, $fp$ and $fn$ are the true positive, false positive and false negative rates respectively.
+It should be noted that even the f1 score may not show the full picture: it may be insightful to also look at the precision
+($\frac{tp}{tp + fp}$) and recall ($\frac{tp}{tp + fn}$) values per each class.
+These metrics for KNN-1 and KNN-2 are presented in table~\ref{tab:knnScores}.
+\begin{table}
+    \centering
+    \begin{tabular}{*7l}
+        \toprule
+        \textbf{Class} & \multicolumn{2}{c}{Precision} & \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{F1 score} \\
+        \midrule
+        {} & KNN-1 & KNN-2 & KNN-1 & KNN-2 & KNN-1 & KNN-2 \\
+            \textbf{Normal} & 0.77 & 0.78 & 0.95 & 0.92 & 0.85 & 0.84  \\
+            \textbf{Quaker} & 0.73 & 0.74 & 0.83 & 0.81 & 0.76 & 0.77 \\
+            \textbf{Bean fragment} & 0.82 & 0.58 & 0.15 & 0.12 & 0.25 & 0.20 \\
+            \textbf{Underroasted} & 1.00 & 0.71 & 0.05 & 0.57 & 0.09 & 0.63 \\
+            \textbf{Burnt} & 0.00 & 1.00 & 0.00 & 0.30 & 0.00 & 0.46 \\
+            \textbf{Insect/Mould} & 0.00 & 0.50 & 0.00 & 0.11 & 0.00 & 0.18  \\
+
+        \bottomrule
+    \end{tabular}
+    \caption{KNN classifier evaluation metrics}
+    \label{tab:knnScores}
+\end{table}
+
+The above data suggests that the canberra distance metric allows the classifier to gain better
+performance with the under-represented classes, while slightly reducing the performance on larger ones.
+This is an important insight, suggesting that the metric can be picked according to the classifier's use case:
+the manhattan metric can provide a powerful sorter where one may only be concerned from separating defective and normal beans,
+while the canberra metric can provide insights into the distribution of the defects themselves.
+It is clear, however, that the colour histogram may not be a powerful enough technique to explain the differences between
+the defects and that a more sophisticated solution may be needed if an understanding of defect frequencies (or, an even more accurate sorter)
+is the goal.
 
 
 \section{Compact CNN results}
