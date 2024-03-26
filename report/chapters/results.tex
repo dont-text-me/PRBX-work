@@ -24,6 +24,7 @@ package and consisted of the following items:
 
 After applying a stratified train/test split, with 80\% of images used for training, the class counts for the two sets are
 shown in table~\ref{tab:finalTrainTestClassCuts}.
+The split was applied with a constant random state value for repeatable results.
 \begin{table}[h]
     \centering
     \begin{tabular}{lll}
@@ -42,15 +43,52 @@ shown in table~\ref{tab:finalTrainTestClassCuts}.
     \label{tab:finalTrainTestClassCuts}
 \end{table}
 
-TODO \cite{imbalancedSampler}
-\subsection{KNN hyperparameter selection}
-\label{subsec:knn-hyperparameter-selection}
-\subsection{Neural network hyperparameter selection}
-\label{subsec:neural-network-hyperparameter-selection}
+As seen from the the above table, despite the initial aims of the project, the distribution of the classes was quite unbalanced.
+While no ill effect on the KNN performance has been observed, such a skewed distribution is highly likely to negatively
+affect the performance of a neural network due to the low chance of a smaller class' sample being picked in a given epoch.
 
+While Pytorch provides facilities for sampling from a given list of indices and sampling with a manually set probability for each class,
+there is no built-in method for combining the two, making it difficult to apply a weighted sampler to a subset of the total dataset.
+The solution to this problem was found in a third-party library~\cite{imbalancedSampler} providing the \verb|ImbalancedDatasetSampler| class.
+This sampler draws from a given list of indices with the probability of each class' sample being picked equal to
+$P(Class_{sample} = C) = \frac{1}{\arrowvert\{x \in X \colon Class_x = C\}\arrowvert}$ for class $C$ and dataset $X$.
 
-\section{KNN classifier results}
-\label{sec:knn-classifier-results}
+Overall, by combining the techniques of over and under sampling as well as data augmentation, the networks were able to learn on a relatively
+evenly balanced and varied dataset.
+\subsection{KNN classifier results}
+\label{subsec:knn-results}
+The experiments with a KNN classifier followed the methods outlined in section~\ref{subsec:knn-classifier}.
+The sets of hyperparameters used to tune the classifier were as follows:
+\begin{itemize}
+    \item Distance calculation metric $M = \{Euclidean, Manhattan, Canberra\}$
+    \item Number of nearest neighbours $K = [1, 30]$
+    \item Nearest neighbour calculation algorithm $A = \{KDTree, Brute-force\}$
+    \item Number of bins in colour histogram $N = \{32, 64, 128, 256\}$
+\end{itemize}
+
+All but the last hyperparameter were added to a set of nested loops with the candidate classifier being initialized with the
+chosen values.
+The number of bins was set separately as it was applied to the dataset itself prior to fitting the classifier.
+
+The experiments produced two noteworthy classifiers, whose hyperparameter choices and overall accuracy are presented in table~\ref{tab:knnResults}.
+\begin{table}[h]
+    \begin{tabular}{@{}llllll}
+        \toprule
+        & \textbf{\makecell{Distance\\metric}} & \textbf{K value} & \textbf{\makecell{Calculation\\algorithm}} & \textbf{\makecell{Histogram\\bin count}} & \textbf{\makecell{Overall\\accuracy(\%)}} \\
+        \midrule
+        \textbf{KNN-1} & Manhattan & 28 & KDTree & 32 & 75.6 \\
+        \textbf{KNN-2} & Canberra & 7 & KDTree & 32 & 75.8 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Finalised KNN classifiers}
+    \label{tab:knnResults}
+\end{table}
+
+As seen from the above table, both classifiers achieved a relatively high accuracy.
+However, inspecting the per-class performance of these classifiers reveals a significant difference.
+A metric that can be used to compare per-class performance is the f1-score:
+$f_1 = \frac{2tp}{2tp + fp + fn}$, where $tp$, $fp$ and $fn$ are the true positive, false positive and false negative rates respectively.,
+
 
 \section{Compact CNN results}
 \label{sec:compact-cnn-results}
