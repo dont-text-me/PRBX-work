@@ -52,7 +52,7 @@ in google images and GitHub.
 Overall, the dataset contained 2786 images, each annotated with the bean variety,
 the processing method used and the defect (or lack thereof) present in the bean.
 It should be noted that despite the initial aims, the distribution of defects in
-the final dataset was imbalanced, with certain defects occuring much less
+the final dataset was imbalanced, with certain defects occurring much less
 frequently than others.
 To attempt to combat this, in cases where a bean
 exhibited several defects at once, it was labelled as the rarer defect.
@@ -315,7 +315,7 @@ specific to the given task.
 
 A commonly used general-purpose dataset is ImageNet~\cite{imageNet}, containing over a million images belonging to a thousand
 classes.
-Pre-trained modules were loaded from the \verb|torchvision.models| package provided by PyTorch~\cite{pytorchLibrary}.
+Pre-trained models were loaded from the \verb|torchvision.models| package provided by PyTorch~\cite{pytorchLibrary}.
 
 One of the more promising architectures was ResNet~\cite{resNet}, with a deep architecture boasting a high top-1 accuracy on the imageNet dataset.
 Several versions of the ResNet architecture exist, with the 18, 34 and 50 layer versions trialled in the experiments.
