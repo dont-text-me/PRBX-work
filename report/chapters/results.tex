@@ -123,6 +123,39 @@ is the goal.
 
 \section{Compact CNN results}
 \label{sec:compact-cnn-results}
+Similar to the above section, several model architectures have been tested.
+Unlike with KNN classifiers, the hyperparameter space for neural networks is much greater, with many options of loss functions,
+optimizer algorithms and more.
+This meant that a simple grid search would be incredibly time and resource intensive and that a more thoughtful approach was needed.
+
+The first item considered was the optimizer selection, with the Adam~\cite{adamGrad} and Stochastic gradient descent (SGD) algorithms being
+the main candidates due to their wide adoption in industry and strong results on existing datasets.
+While both optimizers showed good results when training the models, the SGD optimizer was chosen in the end for its ability
+to be customized with momentum (with a value of 0.9 used) and its more intuitive operation.
+
+A loss function needed to be picked next - being a classification problem with multiple classes, binary methods were not applicable,
+therefore the choice fell on the binary cross-entropy function, which at a high level, measures the extent to which the
+probability distribution of the model's prediction matches that of the actual data.
+It should be noted that the Pytorch implementation of this loss function differs slightly from the commonly seen definition,
+requiring that the input to the loss function consists of the actual class labels rather than the probability of each class
+for each item in a batch for best performance.
+
+Finally, the batch size and epoch number were selected experimentally - initial attempts showed a significant boost in accuracy
+(though, at the expense of longer training times) when a smaller batch size was used: switching from 32 down to 8 led
+to the biggest increase, with little to no gain seen from further reductions.
+The number of epochs was determined from the size of the batches and from observing the magnitude of the changes in the loss function
+with the optimal number being 40 for the shuffleNet and mobileNet architectures.
+
+The optimal learning rate for the optimizer was different depending on the number of the current epoch.
+While larger ''jumps`` were acceptable and even welcome at the earlier stages, a large learning rate could ruin tens of epochs
+of training nearing the end of the training loop.
+Therefore, instead of attempting to pick a single learning rate value, a scheduler provided by PyTorch was used.
+The chosen solution was an instance of the \verb|StepLR| class, halving the learning rate every 10 epochs for both
+ShuffleNet and MobileNet.
+
+Overall, the two selected architectures achieved a significant improvement in both overall accuracy and per-class
+metrics over the KNN classifier, with the results presented below %TODO finish this table
+
 
 \section{Transfer learning results}
 \label{sec:transfer-learning-results}
