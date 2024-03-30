@@ -183,6 +183,52 @@ data samples the dataset provides.
 The next section will look at addressing these shortcomings by applying transfer learning to a much larger model.
 \section{Transfer learning results}
 \label{sec:transfer-learning-results}
+When selecting the models here, much less concern was given to the size of the model - the main criteria instead were
+their performance on a known dataset like ImageNet~\cite{imageNet}.
 
+The ResNet architecture stood out as having great performance on the dataset and a good track record of successful
+transfer learning applications.
+Several versions of the architecture exist, with 18, 34, 50 and 152 layers.
+The first three were selected for experiments, with the extremely large size of the 152 layer version leading to excessively long
+training loops and marginal gains over the smaller architectures in preliminary experiments.
+For comparison, the EfficientNet V2~\cite{efficientNet} and Swin transformer~\cite{swinTransformer} were also trained,
+with the latter serving as an example of a transformer network.
+
+As mentioned in section \ref{subsec:transfer-learning}, each network was adjusted to predict 6 classes and trained using a similar
+iterative approach as described in section \ref{sec:compact-cnn-results}.
+
+While training the models, it was discovered that they benefitted from a lower learning rate and more aggressive scheduling,
+with the ResNet models performing best with the learning rate reduced by ten times every eight epochs.
+The best performing optimizer and loss function were SGD and Cross entropy loss respectively, though, with slightly different settings
+from the ones described in section~\ref{sec:compact-cnn-results}.
+
+It should be noted that EfficientNet and ResNet were trained entirely - that is, every weight was updated during training.
+The Swin transformer on the other hand, had all its weights frozen except those in the last layer.
+This was done as the extreme size of the Swin transformer network caused poorer performance on the smaller classes when all weights were updated -
+retaining the weights trained on ImageNet allowed it to better classify the smaller bean categories.
+
+Overall, the ResNet architecture showed the best results, with the 34 layer version achieving the best accuracy, though at the cost of a slightly longer
+training time.
+The best results were achieved on the white-background dataset (as described in section~\ref{subsec:data-pre-processing}),
+with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{*{10}l}
+        \toprule
+        \textbf{Class} & \multicolumn{3}{c}{ResNet 18} & \multicolumn{3}{c}{ResNet 34} & \multicolumn{3}{c}{ResNet 50} \\
+        \midrule
+        {} & Precision & Recall & F1 & Precision & Recall & F1 & Precision & Recall & F1 \\
+        \textbf{Normal} & 0.93 & 0.95 & 0.94 & 0.92 & 0.94 & 0.93 & & & \\
+        \textbf{Quaker} & 0.77 & 0.90 & 0.83 & 0.82 & 0.75 & 0.78 & & &\\
+        \textbf{Bean fragment} & 0.93 & 0.50 & 0.64 & 0.77 & 0.63 & 0.69 & & & \\
+        \textbf{Underroasted} & 0.57 & 0.62 & 0.60 & 0.28 & 0.76 & 0.41 & & & \\
+        \textbf{Burnt} & 1.00 & 0.40 & 0.57 & 0.75 & 0.30 & 0.43 & &  &\\
+        \textbf{Insect \\/Mould} & 0.50 & 0.11 & 0.20 & 0.00 & 0.00 & 0.00 & &  & \\
+        \bottomrule
+    \end{tabular}
+    \caption{ResNet architecture evaluation metrics}
+    \label{tab:resnet-scores}
+\end{table}
 \section{Evaluation}
 \label{sec:evaluation}

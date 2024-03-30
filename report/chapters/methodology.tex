@@ -197,6 +197,12 @@ Each row in the CSV file corresponded to a single bean, with the columns contain
 aforementioned class information.
 
 A visualisation of the data processing pipeline is shown on figure~\ref{fig:imgProcessing}.
+
+It should be noted that preliminary experiments led to another addition to the image processing steps:
+it was found that better performance was achieved when the natural background of the images was replaced with pure white pixels.
+To achieve that, the thresholded images were used to manually set all non-bean (i.e. black) pixels to a value of (255, 255, 255),
+resulting in a pure white background.
+Both versions of the datasets were retained and used in classifier training.
 \pagebreak
 \begin{figure}[h]
 	\centering
