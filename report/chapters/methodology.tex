@@ -198,12 +198,6 @@ aforementioned class information.
 
 A visualisation of the data processing pipeline is shown on figure~\ref{fig:imgProcessing}.
 
-It should be noted that preliminary experiments led to another addition to the image processing steps:
-it was found that better performance was achieved when the natural background of the images was replaced with pure white pixels.
-To achieve that, the thresholded images were used to manually set all non-bean (i.e. black) pixels to a value of (255, 255, 255),
-resulting in a pure white background.
-Both versions of the datasets were retained and used in classifier training.
-\pagebreak
 \begin{figure}[h]
 	\centering
 \begin{tikzpicture}
@@ -224,11 +218,14 @@ Both versions of the datasets were retained and used in classifier training.
 	\label{fig:imgProcessing}
 \end{figure}
 
-Overall, the data processing pipeline yielded a dataset containing the individual images in a nested directory, with
-a CSV annotations file in the top-level directory.
-This structure allowed the images to be easily accessed by a machine learning framework, allowing progress towards the
-aims of the project.
+It should be noted that preliminary experiments led to another addition to the image processing steps:
+it was found that better performance was achieved when the natural background of the images was replaced with pure white pixels.
+To achieve that, the thresholded images were used to manually set all non-bean (i.e. black) pixels to a value of (255, 255, 255),
+resulting in a pure white background.
+Both versions of the datasets were retained and used in classifier training.
 
+Overall, the data processing pipeline yielded a dataset containing the individual images in a nested directory, with
+a CSV annotations file in the top-level directory to be used by a machine learning framework.
 
 \section{Approaches to model development}
 \label{sec:approaches-to-model-development}
@@ -289,7 +286,7 @@ for the data loading to be easily shared between this classifier and ones develo
 The aims in developing this classifier were centered around addressing the weaknesses of the one described above,
 namely its high prediction cost and its lack of ability to extract complex features from input images.
 
-To achieve these aims, a convolutional neural network (CNN) was selected as a design candidate, based on their
+For this, a convolutional neural network (CNN) was selected as a design candidate, based on their
 efficiency at classifying images and common use in industry.
 Furthermore, the principles behind the functionality of convolution layers suggest that the high resolution of the input
 images would be a benefit, with the classifier being able to extract texture and shape information from each image.
@@ -308,12 +305,12 @@ however, MobileNet consistently outperformed the others and was therefore select
 \label{subsec:transfer-learning}
 The models trialled in this set of experiments were the largest in terms of the number of parameters and
 architectural complexity.
-The idea behind using these modules was that the large number of parameters could allow them to extract even more information
-from the input images and gain better performance, especially in comparing the defects to each other.
+The idea behind using these models was that the large number of parameters could allow them to extract even more information
+from the input images and gain better performance, especially in smaller classes.
 
 A drawback of such large modules is their need for large dataset during training, a requirement which the gathered data would
 struggle to fulfil.
-To overcome this limitation, a techique called transfer learning was employed.
+To overcome this limitation, a technique called transfer learning was employed.
 In this technique, the model is first trained on a large, not necessarily domain-specific dataset and then
 ''fine-tuned`` on a smaller selection of domain-specific data.
 This technique allows the models to learn to extract features from images and then sharpen that knowledge by training on a dataset
