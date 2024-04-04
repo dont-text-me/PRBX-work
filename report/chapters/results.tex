@@ -191,10 +191,8 @@ transfer learning applications.
 Several versions of the architecture exist, with 18, 34, 50 and 152 layers.
 The first three were selected for experiments, with the extremely large size of the 152 layer version leading to excessively long
 training loops and marginal gains over the smaller architectures in preliminary experiments.
-For comparison, the EfficientNet V2~\cite{efficientNet} and Swin transformer~\cite{swinTransformer} were also trained,
+For comparison, the MobileNet architecture from the previous section and Swin transformer~\cite{swinTransformer} were also trained,
 with the latter serving as an example of a transformer network.
-It should be noted that the architectures trained from scratch in the previous section were not picked for transfer learning
-due to their worse reported performance on the ImageNet dataset.
 
 As mentioned in section~\ref{subsec:transfer-learning}, each network was adjusted to predict 6 classes and trained using a similar
 iterative approach as described in section~\ref{sec:compact-cnn-results}.
@@ -204,17 +202,18 @@ with the ResNet models performing best with the learning rate reduced by ten tim
 The best performing optimizer and loss function were SGD and Cross entropy loss respectively, though, with slightly different settings
 from the ones described in section~\ref{sec:compact-cnn-results}.
 
-It should be noted that EfficientNet and ResNet were trained entirely - that is, every weight was updated during training.
+It should be noted that MobileNet and ResNet were trained entirely - that is, every weight was updated during training.
 The Swin transformer on the other hand, had all its weights frozen (by marking them as not requiring gradient calculations in PyTorch)
 except those in the final layer.
 This was done as the extreme size of the Swin transformer network caused poorer performance on the smaller classes when all weights were updated -
 retaining the weights trained on ImageNet allowed it to better classify the smaller bean categories.
 
-Overall, the ResNet architecture showed the best results, with the 34 layer version achieving the best accuracy, though at the cost of a slightly longer
+Overall, the ResNet and MobileNet architectures showed the best results, with the 34 layer version achieving the best accuracy, though at the cost of a slightly longer
 training time.
 The best results were achieved on the white-background dataset (as described in section~\ref{subsec:data-pre-processing}),
 with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
-The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 50 layer architectures respectively.
+The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 50 layer architectures respectively, with the
+pre-trained MobileNet also achieving a 95\% result.
 
 \begin{table}[h]
     \centering
@@ -240,22 +239,22 @@ The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 5
     \label{tab:resnet-scores}
 \end{table}
 
-The same metrics for EfficientNet and Swin transformer networks are displayed in table~\ref{tab:transfer-results-2}.
-The overall accuracy scores achieved were 90\% and 85\% for EfficientNet and Swin transformer respectively.
+The same metrics for the pre-trained MobileNet and Swin transformer networks are displayed in table~\ref{tab:transfer-results-2}.
+The overall accuracy scores achieved were 95\% and 85\% for EfficientNet and Swin transformer respectively.
 
 \begin{table}[h]
     \centering
     \begin{tabular}{*7l}
         \toprule
-        \textbf{Class} & \multicolumn{3}{c}{EfficientNet V2} & \multicolumn{3}{c}{Swin transformer} \\
+        \textbf{Class} & \multicolumn{3}{c}{MobileNet (pre-trained)} & \multicolumn{3}{c}{Swin transformer} \\
         \midrule
         {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-        \textbf{Normal} & 0.93 & 0.98 & 0.96 & 0.88 & 0.95 & 0.91  \\
-        \textbf{Quaker} & 0.92 & 0.87 & 0.89 & 0.79 & 0.87 & 0.83 \\
-        \textbf{Bean fragment} & 0.87 & 0.81 & 0.84 & 0.86 & 0.71 & 0.78 \\
-        \textbf{Underroasted} & 0.64 & 0.86 & 0.73 & 1.00 & 0.19 & 0.32 \\
-        \textbf{Burnt} & 0.83 & 0.50 & 0.62 & 0.00 & 0.00 & 0.00 \\
-        \textbf{Insect/Mould} & 0.50 & 0.33 & 0.40 & 0.75 & 0.33 & 0.46  \\
+        \textbf{Normal} & 0.97 & 0.98 & 0.98 & 0.88 & 0.95 & 0.91  \\
+        \textbf{Quaker} & 0.95 & 0.97 & 0.96 & 0.79 & 0.87 & 0.83 \\
+        \textbf{Bean fragment} & 0.91 & 0.85 & 0.88 & 0.86 & 0.71 & 0.78 \\
+        \textbf{Underroasted} & 1.00 & 0.90 & 0.95 & 1.00 & 0.19 & 0.32 \\
+        \textbf{Burnt} & 0.89 & 0.80 & 0.84 & 0.00 & 0.00 & 0.00 \\
+        \textbf{Insect/Mould} & 1.00 & 0.67 & 0.80 & 0.75 & 0.33 & 0.46  \\
         \bottomrule
     \end{tabular}
     \caption{ResNet alternatives evaluation metrics}
