@@ -17,7 +17,7 @@ hardware capabilities.
 
 On the simpler side of image classification algorithms lies an application of a
 KNN classifier~\cite{knnOverview}, a method of unsupervised learning, where the
-classifier ``learns'' from the differences between the datapoints rather than
+classifier ''learns`` from the differences between the datapoints rather than
 their labels. A KNN classifier's main benefit is the lack of training time:
 instead, the images are compared to the others as soon as they are available.
 This allows for rapid prototyping and a quick implementation time at the cost of
@@ -27,7 +27,7 @@ classification to this day, and, with some modification, solve the large resourc
 requirements by utilising advanced data structures, such as in the case of the
 KD-KNN algorithm \cite{kdtreeKNN}.
 
-Since the algorithm requires the calculation of ``distance'' between any given
+Since the algorithm requires the calculation of ''distance`` between any given
 datapoints, several metrics of calculation exist, such as Euclidean, Manhatan and
 more. The choice of the distance metric as well as the value of K must be picked
 experimentally, with a technique such as grid searching. Overall, the KNN algorithm
@@ -36,7 +36,7 @@ the simplicity comes at a cost of the need to manually pick the necessary
 hyperparameters to get the best out of the architecture.
 
 A more modern and complex solution can be found in neural networks. These classifiers
-attempt to mimic the human neuron, where each neuron activates or ``fires'' only
+attempt to mimic the human neuron, where each neuron activates or ''fires`` only
 if some condition (the ``activation function'') passes a certain threshold.
 
 Neural networks can be used for more than image classification and are an
@@ -180,14 +180,14 @@ in reporting, suggest the possibility of developing a classifier that:
 	\includegraphics[width=0.5\textwidth]{figures/litReview/peaberry-vs-normal}
 	\caption*
 	{Source: \cite{peaberryImg}}
-	\caption{An example of a ``peaberry'' coffee bean (left)}
+	\caption{An example of a ''peaberry`` coffee bean (left)}
 	\caption*
 	{Note the smaller size and round shape.} \label{fig:peaberryComparison}
 \end{wrapfigure}
 A paper with one of the closest aims to this project was written by Shao et al.\ in
 2022\cite{rgbDeepLearningShao}. Similar to this project, the paper aims to
 classify roasted beans, with the authors identifying a similar number of bean defects.
-Interestingly, the authors identify ``peaberry'' beans or beans with an exceptionally
+Interestingly, the authors identify ''peaberry`` beans or beans with an exceptionally
 small, round shape as seen on figure \ref{fig:peaberryComparison}, as a defect,
 whereas many coffee consumers and producers believe that such beans provide a
 flavour advantage over regular beans and market them as the more desirable
