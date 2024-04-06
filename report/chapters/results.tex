@@ -228,7 +228,7 @@ retaining the weights trained on ImageNet allowed it to better classify the smal
     \label{tab:resnet-scores}
 \end{table}
 
-Overall, the ResNet and MobileNet architectures showed the best results, with the 34 layer version achieving the best accuracy, though at the cost of a slightly longer
+Overall, the ResNet and MobileNet architectures showed the best results, with the 50 layer version achieving the best accuracy, though at the cost of a slightly longer
 training time.
 The best results were achieved on the white-background dataset (as described in section~\ref{subsec:data-pre-processing}),
 with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
@@ -313,7 +313,12 @@ It can be said that the knowledge gained from a large general-purpose dataset tr
 application area, with the MobileNet's gain in identifying underrepresented classes being clear proof of this hypothesis.
 While the predictions are not perfect, it is difficult to imagine the labour and time commitment needed for a human to match
 them on a daily basis.
+The usage of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs
+to achieve the peak result.
+Overall, the quick training time and high performance, especially on larger classes, suggest a great potential of this approach
+on a larger dataset showcasing more examples of rarer defects.
 
+%TODO compare classification time
 
 
 
