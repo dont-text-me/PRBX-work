@@ -1,5 +1,8 @@
+# LaTeX related output files
 report/out
+# Processed images and their zip archives
 data/processed
 data/archives
 data/processed-whitebg
+# model weights
 *.pt

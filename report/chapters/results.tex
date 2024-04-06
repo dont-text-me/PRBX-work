@@ -1,9 +1,5 @@
-\section{Training and evaluating setup}
-\label{sec:training-and-evaluating-setup}
-This section will outline the approaches taken in training (where applicable) the models developed in chapter~\ref{ch:methods}.
-
-\subsection{Loading and pre-processing the dataset}
-\label{subsec:loading-and-pre-processing-the-dataset}
+\section{Loading and pre-processing the dataset}
+\label{sec:loading-and-pre-processing-the-dataset}
 As mentioned in section~\ref{subsec:data-pre-processing}, a PyTorch \verb|DataLoader| was used to label and load the images
 for each classifier.
 After the images were loaded, they were resized to the same $400 \times 400$ resolution, ensuring that most images are
@@ -55,8 +51,8 @@ $P(Class_{sample} = C) = \frac{1}{\arrowvert\{x \in X \colon Class_x = C\}\arrow
 
 Overall, by combining the techniques of over and under sampling as well as data augmentation, the networks were able to learn on a relatively
 evenly balanced and varied dataset.
-\subsection{KNN classifier results}
-\label{subsec:knn-results}
+\section{KNN classifier results}
+\label{sec:knn-results}
 The experiments with a KNN classifier followed the methods outlined in section~\ref{subsec:knn-classifier}.
 The sets of hyperparameters used to tune the classifier were as follows:
 \begin{itemize}
@@ -208,20 +204,13 @@ except those in the final layer.
 This was done as the extreme size of the Swin transformer network caused poorer performance on the smaller classes when all weights were updated -
 retaining the weights trained on ImageNet allowed it to better classify the smaller bean categories.
 
-Overall, the ResNet and MobileNet architectures showed the best results, with the 34 layer version achieving the best accuracy, though at the cost of a slightly longer
-training time.
-The best results were achieved on the white-background dataset (as described in section~\ref{subsec:data-pre-processing}),
-with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
-The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 50 layer architectures respectively, with the
-pre-trained MobileNet also achieving a 95\% result.
-
 \begin{table}[h]
     \centering
     \begin{tabular}{*{10}l}
         \toprule
         \textbf{Class} & \multicolumn{3}{c}{ResNet 18} & \multicolumn{3}{c}{ResNet 34} & \multicolumn{3}{c}{ResNet 50} \\
         \midrule
-        {} & Prec. & Rec. & F1 & Prec. & Rec. & F1 & Prec. & Rec. & F1 \\
+        {} & {Prec.} & {Rec.} & F1 & {Prec.} & {Rec.} & F1 & {Prec.} & {Rec.} & F1 \\
         \textbf{Normal} & 0.93 & 0.98 & 0.96 & 0.96 & 0.99 & 0.98 & 0.99 & 0.99 & 0.99\\
         \addlinespace[0.5em]
         \textbf{Quaker} & 0.93 & 0.89 & 0.91 & 0.94 & 0.92 & 0.93 & 0.95 & 0.92 & 0.94\\
@@ -238,6 +227,13 @@ pre-trained MobileNet also achieving a 95\% result.
     \caption{ResNet architecture evaluation metrics}
     \label{tab:resnet-scores}
 \end{table}
+
+Overall, the ResNet and MobileNet architectures showed the best results, with the 34 layer version achieving the best accuracy, though at the cost of a slightly longer
+training time.
+The best results were achieved on the white-background dataset (as described in section~\ref{subsec:data-pre-processing}),
+with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
+The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 50 layer architectures respectively, with the
+pre-trained MobileNet also achieving a 95\% result.
 
 The same metrics for the pre-trained MobileNet and Swin transformer networks are displayed in table~\ref{tab:transfer-results-2}.
 The overall accuracy scores achieved were 95\% and 85\% for EfficientNet and Swin transformer respectively.
@@ -266,3 +262,41 @@ It is important, however, to consider the real-world application potential of ea
 The next section will take a critical look at the classifiers' performance in the context of a real-world system.
 \section{Evaluation}
 \label{sec:evaluation}
+While the high accuracy of the classifiers developed during the project makes a relatively strong case for it being a success,
+it is still important to take a deeper look at the weaknesses and imperfections that might affect their usefulness in the industry.
+
+First, it is important to consider the impact each defect has on the finished product: while both coffee roasters whose
+samples were used in the project agreed that a defect-free product is the ultimate goal, they mentioned placing much more
+effort and attention into removing quaker and insect/mould damaged beans than other defects.
+This is due to the fact that while under and over-roasted coffee beans do affect the flavour of the cup, they do not
+do so to nearly the same extent.
+In other words, a small number of beans with no defects other than a wrong roast level is unlikely to damage their company's
+reputation or economic prospects.
+
+Second, the success criteria for a classifier can differ depending on the user's own goals - while some may only look for
+a separation between normal and defective classes, others may wish for more thorough statistics on their product, with
+the latter audience paying more attention to the model's performance in every class.
+
+In any case, a balance of precision, recall and accuracy for the ''Normal`` class are equally
+important for a classifier's viability: while an imprecise model will fail to identify normal beans leading to
+a waste of good product and a negative impact on the finances of a roaster, a model with poor recall will mark too many
+defective beans as normal, affecting the quality of the resulting product and the roaster's marketing potential.
+
+With this in mind, the three kinds of models developed here can be evaluated.
+
+The KNN classifier's performance leaves a lot to be desired - while KNN-1 achieved a good recall score for the ''Normal``
+class, its precision is relatively low: a batch of coffee processed using this classifier will likely be sorted too agressively
+with many good beans needlessly discarded.
+Furthermore, the performance on smaller classes is quite poor, with only the ''Quaker`` classes achieving an F1 score above
+0.5.
+Despite this, the KNN approach still has its strenghts, which mainly relate to its simplicity and transparency -
+the general principle behind it is likely to be understood even by a non-technical audience and the dimensionality reduction
+method is relatively straightforward and relies on simple observations of the beans.
+Using a highly optimised algorithm such as the one implemented in \verb|SkLearn| can also dramatically reduce the resources
+needed for a single prediction, even though the scaling potential of this classifier is slightly lower due to the need to
+compare each incoming image to the entire dataset.
+
+Switching to a simple neural network architecture
+
+
+
