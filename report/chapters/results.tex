@@ -294,7 +294,7 @@ the general principle behind it is likely to be understood even by a non-technic
 method is relatively straightforward and relies on simple observations of the beans.
 Using a highly optimised algorithm such as the one implemented in Scikit-learn can also dramatically reduce the resources
 needed for a single prediction, even though the scaling potential of this classifier is slightly lower due to the need to
-compare each incoming image to the entire dataset.
+compare each incoming image to the entire dataset, which could impact prediction times as more data is gathered.
 
 Switching to a simple neural network architecture results in a much more viable model: with the MobileNet architecture
 being the best performer in that category, the precision and recall scores for the ''Normal`` class could potentially allow it
@@ -304,8 +304,6 @@ making it highly useful as, for example, a first-stage sorter before a second, m
 needed to sort a batch of beans.
 Despite those good results, the performance on underrepresented classes is still relatively low, limiting the model's
 potential in producing statistics of the occurrences of various defects.
-Furthermore, the neural network approach is likely to scale much better, as the time per calculation is lower than that of
-the KNN classifiers and does not require repeated comparisons.
 
 Finally, transfer learning produced the most versatile and high-performing models, with the ResNet and MobileNet achieving
 quite similar results despite their significant size difference.
@@ -318,7 +316,6 @@ to achieve the peak result.
 Overall, the quick training time and high performance, especially on larger classes, suggest a great potential of this approach
 on a larger dataset showcasing more examples of rarer defects.
 
-%TODO compare classification time
 
 
 
