@@ -316,6 +316,8 @@ to achieve the peak result.
 Overall, the quick training time and high performance, especially on larger classes, suggest a great potential of this approach
 on a larger dataset showcasing more examples of rarer defects.
 
+To judge the models' performance as a sorting assistant, their error statics are presented on
+figure~\ref{fig:real-world-scores}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{results/best-performers-results}
@@ -323,13 +325,14 @@ on a larger dataset showcasing more examples of rarer defects.
     \label{fig:real-world-scores}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{results/best-performers-timings}
-    \caption{Time taken to classify the test dataset for best performers}
-    \label{fig:real-world-timings}
-\end{figure}
+From the above figure, it is clear that neural networks vastly outperform the KNN classifier,
+with pre-training greatly reducing the waste of good beans and the chance of a defective bean,
+especially one with a high-impact defect, making it into the final product.
 
+Considering the evaluation time and these metrics, the MobileNet architecture stands out as one with the most potential
+in a real-world environment.
+Its classification time would also allow it to be used in a high-throughput system, with the ResNet being the best choice for a roaster
+willing to trade real-time classifications for the best possible results.
 
 
 
