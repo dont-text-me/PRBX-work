@@ -1,0 +1,23 @@
+The popularity of coffee has shown steady growth over the last few years.
+With the coffee industry going through several ''waves``, the latest shift in consumer focus has been towards
+the clarity of flavour and the complex tasting notes that can only be extracted through careful sourcing, processing and roasting.
+While green coffee production is usually a medium-to-large scale operation, coffee roasters, particularly ones targeting a
+''specialty`` market tend to be very small companies, often roasting a few kilograms at a time.
+Because of this, automated quality control for roasted coffee is out of reach for a significant number of coffee roasters,
+for reasons including prohibitive pricing, noise, space constraints and energy consumption, requiring roasters to commit
+significant manual and mental labour into manually sorting each batch.
+
+In a collaboration with two UK-based roasters, a dataset of normal and defective roasted beans has been developed, amassing
+over 2700 beans belonging to nine species and processed with six different techniques.
+An image processing pipeline has been implemented using a computer vision library, digitizing and pre-processing the images.
+
+The resulting dataset has been used to train a suite of classifiers, ranging in complexity from a KNN-based classifier to
+a pre-trained state-of-the-art network, with the MobileNet V2~\cite{mobileNet} architecture displaying the best results.
+
+The model showed potential for use in low-power or real-time systems, achieving an overall accuracy score of 95\% over 6 total classes with
+1.14\% of normal beans falsely classified as defective and 2.03\% of defective beans classified as normal, making the model
+a powerful tool that can assist even the smallest-scale operations at a low computational cost.
+
+Further work has been identified as the development of a hardware prototype as well as in further developing the dataset,
+with a proposal of a commmunity-driven shared knowledge base, with roasters working together to represent the variety of coffee
+available on the market.
