@@ -28,12 +28,12 @@ roast defects in coffee beans.}
 \begin{document}
 	\pagenumbering{roman}
 	\maketitle
-	\listoffigures \listoftables
-	%\renewcommand*{\lstlistlistingname}{List of Listings}
-	%\lstlistoflistings
+
+	\listoffigures
+	\listoftables
 
 	\begin{summary}
-		THIS IS A DRAFT TODO TODO todo.
+		\input{chapters/execSummary}
 	\end{summary}
 
 	\chapter{Introduction}
@@ -48,17 +48,21 @@ roast defects in coffee beans.}
 	\label{ch:methods}
 	\input{chapters/methodology}
 
-	\chapter{Results}\label{ch:results}
+	\chapter{Results}
+	\label{ch:results}
     \input{chapters/results}
 
-	\chapter{Conclusion}\label{ch:conclusion}
+	\chapter{Conclusion}
+	\label{ch:conclusion}
 	\input{chapters/conclusion}
 
 	\appendix
-	\chapter{Additional bean defect examples}\label{ch:appendix1}
+	\chapter{Additional bean defect examples}
+	\label{ch:appendix1}
 	\input{appendices/beanPhotos}
 
-	\chapter{Classifier confusion matrices}\label{ch:appendix2}
+	\chapter{Classifier confusion matrices}
+	\label{ch:appendix2}
 	\input{appendices/confusionMatrices}
 
 	\printbibliography

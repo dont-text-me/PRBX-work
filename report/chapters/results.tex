@@ -33,6 +33,8 @@ The split was applied with a constant random state value for repeatable results.
         Underroasted & 83 & 21 \\
         Burnt & 40 & 10 \\
         Insect/Mould & 38 & 9 \\
+        \midrule
+        \textbf{Total} & 2228 & 558 \\
         \bottomrule
     \end{tabular}
     \caption{Finalised training and testing set class counts}
@@ -281,7 +283,6 @@ In any case, a balance of precision, recall and accuracy for the ''Normal`` clas
 important for a classifier's viability: while an imprecise model will fail to identify normal beans leading to
 a waste of good product and a negative impact on the finances of a roaster, a model with poor recall will mark too many
 defective beans as normal, affecting the quality of the resulting product and the roaster's marketing potential.
-
 With this in mind, the three kinds of models developed here can be evaluated.
 
 The KNN classifier's performance leaves a lot to be desired - while KNN-1 achieved a good recall score for the ''Normal``
@@ -311,8 +312,7 @@ It can be said that the knowledge gained from a large general-purpose dataset tr
 application area, with the MobileNet's gain in identifying underrepresented classes being clear proof of this hypothesis.
 While the predictions are not perfect, it is difficult to imagine the labour and time commitment needed for a human to match
 them on a daily basis.
-The usage of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs
-to achieve the peak result.
+The usage of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs and less than an hour of training time.
 Overall, the quick training time and high performance, especially on larger classes, suggest a great potential of this approach
 on a larger dataset showcasing more examples of rarer defects.
 
@@ -324,15 +324,34 @@ figure~\ref{fig:real-world-scores}.
     \caption{Real-world application results for best performers}
     \label{fig:real-world-scores}
 \end{figure}
-
-From the above figure, it is clear that neural networks vastly outperform the KNN classifier,
-with pre-training greatly reducing the waste of good beans and the chance of a defective bean,
+\begin{wraptable}{r}{0.35\textwidth}
+    \centering
+    \begin{tabular}{lc}
+        \toprule
+        \textbf{Model} &  \textbf{\makecell{Prediction\\time (ms)}}\\
+        \midrule
+        KNN-1 & 0.079 \\
+        MobileNet & 10.44 \\
+        ResNet 50 & 20.34 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Average prediction time per bean (ms)}
+    \label{tab:execTimes}
+\end{wraptable}
+From the above figure, it is evident that neural networks vastly outperform the KNN classifier,
+with pre-training greatly reducing the waste of normal beans and the chance of a defective bean,
 especially one with a high-impact defect, making it into the final product.
+Overall, the pre-trained MobileNet architecture stands out as the best compromise between prediction time, accuracy and
+real-world utility, with its prediction time (shown in table~\ref{tab:execTimes}) potentially allowing it to be used in real-time systems.
+The ResNet architecture, could be of great use in environments where the importance of peak accuracy outweighs that of the
+system's speed, such as when analysing a sample taken from a larger batch before agreeing on its purchase.
 
-Considering the evaluation time and these metrics, the MobileNet architecture stands out as one with the most potential
-in a real-world environment.
-Its classification time would also allow it to be used in a high-throughput system, with the ResNet being the best choice for a roaster
-willing to trade real-time classifications for the best possible results.
+Overall, the dataset and models developed in this project show good potential of achieving the success criteria outlined
+in section~\ref{sec:research-aims}: the dataset was developed entirely from scratch and showcases a range of origins and
+processing methods that is reflective of the products offered by modern coffee roasters today.
+The models' training was entirely achievable on consumer-grade hardware and took a reasonable amount of time to complete,
+enabling roasters to quickly train their own models or instantly begin classifying by downloading the model weights developed here.
+The next section will provide some closing comments as well as identify areas of future work.
 
 
 
