@@ -52,7 +52,7 @@ in google images and GitHub.
 Overall, the dataset contained 2786 images, each annotated with the bean variety,
 the processing method used and the defect (or lack thereof) present in the bean.
 It should be noted that despite the initial aims, the distribution of defects in
-the final dataset was imbalanced, with certain defects occuring much less
+the final dataset was imbalanced, with certain defects occurring much less
 frequently than others.
 To attempt to combat this, in cases where a bean
 exhibited several defects at once, it was labelled as the rarer defect.
@@ -126,7 +126,7 @@ contained in the dataset.
 Overall, the beans exhibited five various defects, whose
 counts and short descriptions are presented in table~\ref{tab:beanDefectCounts}.
 Figure~\ref{fig:beanDefects} provides a brief look at the various defects, with more
-examples shown in the appendix % TODO add appendix with more images
+examples available in appendix~\ref{ch:appendix1}.
 
 \begin{table}[h]
 	\centering
@@ -150,13 +150,13 @@ The number of beans belonging to each processing method and variety method is sh
 on figures~\ref{fig:beanProcessingCounts} and~\ref{fig:beanVarietyCounts} respectively.
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=\linewidth, height=2.5cm]{
+		\includegraphics[width=\linewidth, height=2.5cm, keepaspectratio]{
 			./figures/methodology/processing-counts
 		}
 	\caption{Bean processing method counts}
 	\label{fig:beanProcessingCounts}
 
-	\includegraphics[width=\linewidth, height=2.5cm]{
+	\includegraphics[width=\linewidth, height=2.5cm, keepaspectratio]{
 			./figures/methodology/variety-counts
 		}
 	\caption{Bean variety counts}
@@ -197,7 +197,7 @@ Each row in the CSV file corresponded to a single bean, with the columns contain
 aforementioned class information.
 
 A visualisation of the data processing pipeline is shown on figure~\ref{fig:imgProcessing}.
-\pagebreak
+
 \begin{figure}[h]
 	\centering
 \begin{tikzpicture}
@@ -218,11 +218,14 @@ A visualisation of the data processing pipeline is shown on figure~\ref{fig:imgP
 	\label{fig:imgProcessing}
 \end{figure}
 
-Overall, the data processing pipeline yielded a dataset containing the individual images in a nested directory, with
-a CSV annotations file in the top-level directory.
-This structure allowed the images to be easily accessed by a machine learning framework, allowing progress towards the
-aims of the project.
+It should be noted that preliminary experiments led to another addition to the image processing steps:
+it was found that better performance was achieved when the natural background of the images was replaced with pure white pixels.
+To achieve that, the thresholded images were used to manually set all non-bean (i.e. black) pixels to a value of (255, 255, 255),
+resulting in a pure white background.
+Both versions of the datasets were retained and used in classifier training.
 
+Overall, the data processing pipeline yielded a dataset containing the individual images in a nested directory, with
+a CSV annotations file in the top-level directory to be used by a machine learning framework.
 
 \section{Approaches to model development}
 \label{sec:approaches-to-model-development}
@@ -283,7 +286,7 @@ for the data loading to be easily shared between this classifier and ones develo
 The aims in developing this classifier were centered around addressing the weaknesses of the one described above,
 namely its high prediction cost and its lack of ability to extract complex features from input images.
 
-To achieve these aims, a convolutional neural network (CNN) was selected as a design candidate, based on their
+For this, a convolutional neural network (CNN) was selected as a design candidate, based on their
 efficiency at classifying images and common use in industry.
 Furthermore, the principles behind the functionality of convolution layers suggest that the high resolution of the input
 images would be a benefit, with the classifier being able to extract texture and shape information from each image.
@@ -302,12 +305,12 @@ however, MobileNet consistently outperformed the others and was therefore select
 \label{subsec:transfer-learning}
 The models trialled in this set of experiments were the largest in terms of the number of parameters and
 architectural complexity.
-The idea behind using these modules was that the large number of parameters could allow them to extract even more information
-from the input images and gain better performance, especially in comparing the defects to each other.
+The idea behind using these models was that the large number of parameters could allow them to extract even more information
+from the input images and gain better performance, especially in smaller classes.
 
 A drawback of such large modules is their need for large dataset during training, a requirement which the gathered data would
 struggle to fulfil.
-To overcome this limitation, a techique called transfer learning was employed.
+To overcome this limitation, a technique called transfer learning was employed.
 In this technique, the model is first trained on a large, not necessarily domain-specific dataset and then
 ''fine-tuned`` on a smaller selection of domain-specific data.
 This technique allows the models to learn to extract features from images and then sharpen that knowledge by training on a dataset
@@ -315,7 +318,7 @@ specific to the given task.
 
 A commonly used general-purpose dataset is ImageNet~\cite{imageNet}, containing over a million images belonging to a thousand
 classes.
-Pre-trained modules were loaded from the \verb|torchvision.models| package provided by PyTorch~\cite{pytorchLibrary}.
+Pre-trained models were loaded from the \verb|torchvision.models| package provided by PyTorch~\cite{pytorchLibrary}.
 
 One of the more promising architectures was ResNet~\cite{resNet}, with a deep architecture boasting a high top-1 accuracy on the imageNet dataset.
 Several versions of the ResNet architecture exist, with the 18, 34 and 50 layer versions trialled in the experiments.

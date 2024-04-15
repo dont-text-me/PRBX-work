@@ -1,0 +1,36 @@
+The popularity of coffee has shown steady growth over the last few years,
+with the coffee industry going through several ''waves`` of priority shifts.
+The latest shift in consumer focus has been towards the clarity of flavour and the complex tasting notes that
+can only be extracted through careful sourcing, processing and roasting.
+While green coffee production is usually a medium-to-large scale operation, coffee roasters, particularly ones targeting a
+''specialty`` market tend to be very small companies, often roasting a few kilograms at a time.
+Because of this, automated quality control for roasted coffee is out of reach for a significant number of coffee roasters,
+for reasons including prohibitive pricing, noise, space constraints and energy consumption, requiring roasters to commit
+significant manual and mental labour into manually sorting each batch.
+
+The Specialty Coffee Association (SCA) is the main authoritative body in the coffee industry, with strict requirements
+for beans that may earn the ''specialty`` badge.
+In order to market their coffee as specialty, the roasters must ensure a near complete lack of defective beans in their
+product, with the lack of availability of QC equipment preventing many smaller roasters from targeting the specialty market with
+their product, hurting both the consumers, the roasters and smaller-scale farmers, whose livelihood depends on their crop.
+
+To propose a fix to this issue, this project identified several requirements for a small-scale image classifier,
+with the ideal solution not requiring many computational resources to develop and operate, as well as exhibiting a high degree
+of precision and recall as to avoid both waste of normal beans and erroneously including defective beans in the final product.
+
+In a collaboration with two UK-based roasters, a dataset of normal and defective roasted beans has been developed, amassing
+over 2700 beans belonging to nine species and processed with six different techniques.
+An image processing pipeline has been implemented using a computer vision library, digitizing and pre-processing the images.
+
+The resulting dataset has been used to train a suite of classifiers, ranging in complexity from a KNN-based classifier combined with a grid-search
+approach to select the best hyperparameters to a pre-trained state-of-the-art neural network,
+with the MobileNet V2~\cite{mobileNet} architecture displaying the best results.
+
+Fine-tuned on the developed dataset, the model showed potential for use in low-power or real-time systems as well as high accuracy,
+achieving an overall score of 95\% over 6 total classes with
+1.90\% of normal beans falsely classified as defective and 2.03\% of defective beans classified as normal, making the model
+a powerful tool that can assist even the smallest-scale operations at a low computational cost.
+
+Further work has been identified as the development of a hardware prototype as well as in further developing the dataset,
+with a proposal of a community-driven shared knowledge base, with roasters working together to represent the variety of coffee
+available on the market.

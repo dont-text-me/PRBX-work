@@ -4,6 +4,9 @@
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{makecell}
 \usetikzlibrary{positioning}
 
 \addbibresource{main.bib}
@@ -12,23 +15,25 @@
 \title{An evaluation of various image classification methods for identifying
 roast defects in coffee beans.}
 \supervisor{Adrian Bors}
-\BSc
+\MEng
 
 \acknowledgements{
-	I would like to thank Ben at Harmony coffee roasters and Levi and Vanessa at Vibe With coffee roasters
+	I would like to thank Ben Rowe at Harmony coffee roasters and Levi and Vanessa at Vibe With coffee roasters
 	for their invaluable help with sourcing and identifying the materials for the dataset and their insightful comments
 	which helped inform the discussion and evaluation of the results of my project.
+
+	I would also like to thank Adrian Bors for his advice and feedback as my project supervisor.
 }
 
 \begin{document}
 	\pagenumbering{roman}
 	\maketitle
-	\listoffigures \listoftables
-	%\renewcommand*{\lstlistlistingname}{List of Listings}
-	%\lstlistoflistings
+
+	\listoffigures
+	\listoftables
 
 	\begin{summary}
-		THIS IS A DRAFT TODO TODO todo.
+		\input{chapters/execSummary}
 	\end{summary}
 
 	\chapter{Introduction}
@@ -42,12 +47,22 @@ roast defects in coffee beans.}
 	\chapter{Methods}
 	\label{ch:methods}
 	\input{chapters/methodology}
-	%\chapter{Results}\label{ch:results}
-	%
-	%\chapter{Conclusion}\label{ch:conclusion}
-	%
-	%\appendix
-	%\chapter{Appendix}\label{ch:appendix}
+
+	\chapter{Results}
+	\label{ch:results}
+    \input{chapters/results}
+
+	\chapter{Conclusion}
+	\label{ch:conclusion}
+	\input{chapters/conclusion}
+
+	\appendix
+	\chapter{Additional bean defect examples}
+	\label{ch:appendix1}
+	\input{appendices/beanPhotos}
+	\chapter{Classifier confusion matrices}
+	\label{ch:appendix2}
+	\input{appendices/confusionMatrices}
 
 	\printbibliography
 \end{document}
