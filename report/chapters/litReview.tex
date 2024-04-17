@@ -10,7 +10,7 @@ classification as a field and its applications in the coffee industry built the
 information background that enabled the development of the prototypes in this
 project.
 
-\section{An overview of image classification algorithms}
+\section{Applications of image classifiers to coffee classification and beyond}
 \label{sec:lit-review-general} The topic of image classification is one of the
 most researched and explored topics in the field of artificial intelligence.
 Over
@@ -18,7 +18,7 @@ the years, several approaches to image classification have been proposed, with e
 tailored to perform best with certain kinds of images, sizes of datasets or
 hardware capabilities.
 
-On the simpler side of image classification algorithms lies an application of a
+On the simpler side of image classification algorithms lies an application of a %--------------KNN section----------------
 KNN classifier~\cite{knnOverview}, a method of unsupervised learning, where the
 classifier ''learns`` from the differences between the datapoints rather than
 their labels.
@@ -40,9 +40,9 @@ experimentally, with a technique such as grid searching.
 Overall, the KNN algorithm
 provides a quick and efficient way of prototyping an image classifier, however
 the simplicity comes at a cost of the need to manually pick the necessary
-hyperparameters to get the best out of the architecture.
+hyperparameters to get the best out of the architecture. %-------------------------------------------------
 
-A more modern and complex solution can be found in neural networks.
+A more modern and complex solution can be found in neural networks. %--------------------------Neural nets section----
 These classifiers
 attempt to mimic the human neuron, where each neuron activates or ''fires`` only
 if some condition (the ``activation function'') passes a certain threshold.
@@ -51,7 +51,7 @@ Neural networks can be used for more than image classification and are an
 actively developing topic to this day, however some network architectures are known
 for their performance with images and are commonly used as the baseline for more
 domain specific applications.
-Some examples of such architectures include LeNet~\cite{leNetOverview}
+Some classic examples of such architectures include LeNet~\cite{leNetOverview}
 and AlexNet~\cite{alexNetOverview}, which are often used for datasets containing
 smaller (in terms of pixel resolution) images, making them a good potential
 starting point for use in this project.
@@ -69,7 +69,7 @@ even allowing real-time classification.
 While not explicitly a goal of this
 project, the potentially faster classification time would make a neural network-based
 prototype a better fit for use in industry, allowing the classifier to be used
-at scale.
+at scale. %----------------------------------------------------------------------------------------------------
 
 Data normalization is an important point to consider when using image
 classifiers.
@@ -84,8 +84,7 @@ The following section will contain a deeper look at previous attempts of
 classifying roasted coffee beans with KNN as well as more complex, neural network
 based models.
 
-\section{Coffee bean classification}
-\label{sec:lit-review-coffee} The overall picture gathered from reviewing the literature
+The overall picture gathered from reviewing the literature
 under this topic suggests that identifying items as small as coffee beans is definitely
 possible, although not without some degree of effort invested in the process.
 Several
@@ -93,7 +92,7 @@ of the reviewed papers claimed great results, though for many, the data gatherin
 and cleaning process involved rare or expensive equipment.
 
 An example of such study has been conducted by Chen et al.
-\cite{hyperspectralChen}, who have achieved an accuracy of 98.6\% when
+\cite{hyperspectralChen}, who have achieved an accuracy of 98.6\% when %--------Neural net-------
 classifying green coffee beans.
 While the purpose of their paper is slightly different,
 focusing on optimising a different stage in the coffee supply chain, their approach
@@ -140,7 +139,7 @@ This project aims to cover this
 gap by utilising beans processed by various methods, from several distinct origins
 and species.
 
-Oliveri et al.\  take a slightly different approach in their 2019 paper~\cite{hyperspectralGreenOliveri}.
+Oliveri et al.\  take a slightly different approach in their 2019 paper~\cite{hyperspectralGreenOliveri}. %-----KNN----
 Rather than utilising a deep learning network, they instead used a K-nearest-neighbour
 (KNN) classifier to assign the closest category to a given bean image.
 Similar
@@ -176,7 +175,7 @@ The application of the model and its
 design have influenced the research process for this project, which, with a more
 varied dataset, aims to explore the topic of KNN classification further.
 
-A 2017 paper by Nasution and Andayani~\cite{manyRoastLevelsNasution} shows a
+A 2017 paper by Nasution and Andayani~\cite{manyRoastLevelsNasution} shows a %-------Neural net------
 departure from the previous two paper both in its approach to data gathering as
 well as the overall aim.
 Instead of focusing on green coffee defects, they
@@ -219,7 +218,7 @@ in reporting, suggest the possibility of developing a classifier that:
 	\caption{A ''peaberry`` coffee bean (left)}
 	\label{fig:peaberryComparison}
 \end{wrapfigure}
-A paper with one of the closest aims to this project was written by Shao et al.\ in
+A paper with one of the closest aims to this project was written by Shao et al.\ in %----------Neural net-----
 2022\cite{rgbDeepLearningShao}.
 Similar to this project, the paper aims to
 classify roasted beans, with the authors identifying a similar number of bean defects.
@@ -234,7 +233,7 @@ could be implemented to sort the beans, allowing the producers to discard or
 separate the bean classes they deem valuable or defective.
 In that regard, Shao
 et al's paper is an important showcase of the economic benefits brought along by
-automatization of the coffee quality control process.
+automation of the coffee quality control process.
 
 The authors have also provided an automated method of data gathering, utilizing a
 rotating wheel to briefly hold the beans in front of a camera.
@@ -257,7 +256,7 @@ data to train the model.
 A potential improvement could be seen in a more varied
 dataset with a more even breakdown of classes.
 
-Apart from the described usage of expensive and complex machinery to
+Apart from the described usage of expensive and complex machinery to %------- Neural net
 automatically gather the images and remove the defective beans, the approach taken
 by Shao et al.\cite{rgbDeepLearningShao} showcases a low-cost approach, requiring only a visible-light camera
 and sufficiently powerful hardware to train the model.
@@ -268,7 +267,7 @@ and may be in search of a more resilient solution that requires less manual
 interaction compared to manually laying the beans out to take images of them.
 A possible
 solution to this problem can be seen in a 2024 paper by Eron et al.
-\cite{eronCoffeeCherryOnTrees}, proposing the use of image classifiers at two stages
+\cite{eronCoffeeCherryOnTrees}, proposing the use of image classifiers at two stages %------- Neural net + KNN (neural net section)
 of the process.
 Their study takes a departure from the ones described in this
 section, with the aim being the detection of defective coffee cherries while they
@@ -294,7 +293,8 @@ as well as showcases a potential application of neural networks to assist in dat
 gathering if the prototype developed here is applied at scale.
 
 \section{Summary}
-\label{sec:lit-review-summary} Overall, the papers mentioned above provide a
+\label{sec:lit-review-summary}
+Overall, the papers mentioned above provide a
 clear indication that classifying small items such as coffee beans is possible
 using the state-of-the-art in image classification models.
 
