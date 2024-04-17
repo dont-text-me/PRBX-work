@@ -4,7 +4,7 @@ The latest shift in consumer focus has been towards the clarity of flavour and t
 can only be extracted through careful sourcing, processing and roasting.
 While green coffee production is usually a medium-to-large scale operation, coffee roasters, particularly ones targeting a
 ''specialty`` market tend to be very small companies, often roasting a few kilograms at a time.
-Because of this, automated quality control for roasted coffee is out of reach for a significant number of coffee roasters,
+Due to this, automated quality control for roasted coffee is out of reach for a significant number of coffee roasters,
 for reasons including prohibitive pricing, noise, space constraints and energy consumption, requiring roasters to commit
 significant manual and mental labour into manually sorting each batch.
 
@@ -23,10 +23,10 @@ over 2700 beans belonging to nine species and processed with six different techn
 An image processing pipeline has been implemented using a computer vision library, digitizing and pre-processing the images.
 
 The resulting dataset has been used to train a suite of classifiers, ranging in complexity from a KNN-based classifier combined with a grid-search
-approach to select the best hyperparameters to a pre-trained state-of-the-art neural network,
+approach to select the best hyperparameters, to a pre-trained state-of-the-art neural network,
 with the MobileNet V2~\cite{mobileNet} architecture displaying the best results.
 
-Fine-tuned on the developed dataset, the model showed potential for use in low-power or real-time systems as well as high accuracy,
+Fine-tuned on the developed dataset, the model shows potential for use in low-power or real-time systems as well as high accuracy,
 achieving an overall score of 95\% over 6 total classes with
 1.90\% of normal beans falsely classified as defective and 2.03\% of defective beans classified as normal, making the model
 a powerful tool that can assist even the smallest-scale operations at a low computational cost.
