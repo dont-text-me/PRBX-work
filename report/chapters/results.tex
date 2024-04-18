@@ -279,8 +279,8 @@ The experiments produced two noteworthy classifiers, whose hyperparameter choice
         \toprule
         & \textbf{\makecell{Distance\\metric}} & \textbf{K value} & \textbf{\makecell{Calculation\\algorithm}} & \textbf{\makecell{Histogram\\bin count}} & \textbf{\makecell{Overall\\accuracy(\%)}} \\
         \midrule
-        \textbf{KNN-1} & Manhattan & 28 & KDTree & 32 & 75.6 \\
-        \textbf{KNN-2} & Canberra & 7 & KDTree & 32 & 75.8 \\
+        \textbf{KNN-1} & Manhattan & 11 & KDTree & 32 & 77.1 \\
+        \textbf{KNN-2} & Canberra & 6 & KDTree & 256 & 79.7 \\
         \bottomrule
     \end{tabular}
     \caption{Finalised KNN classifiers}
@@ -301,12 +301,12 @@ These metrics for KNN-1 and KNN-2 are presented in table~\ref{tab:knnScores}.
         \textbf{Class} & \multicolumn{3}{c}{KNN-1} & \multicolumn{3}{c}{KNN-2} \\
         \midrule
         {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-            \textbf{Normal} & 0.77 & 0.95 & 0.85 & 0.78 & 0.92 & 0.84  \\
-            \textbf{Quaker} & 0.73 & 0.83 & 0.76 & 0.74 & 0.81 & 0.77 \\
-            \textbf{Bean fragment} & 0.82 & 0.15 & 0.25 & 0.58 & 0.12 & 0.20 \\
-            \textbf{Underroasted} & 1.00 & 0.05 & 0.09 & 0.71 & 0.57 & 0.63 \\
-            \textbf{Burnt} & 0.00 & 0.00 & 0.00 & 1.00 & 0.30 & 0.46 \\
-            \textbf{Insect/Mould} & 0.00 & 0.00 & 0.00 & 0.50 & 0.11 & 0.18  \\
+            \textbf{Normal} & 0.80 & 0.96 & 0.88 & 0.80 & 0.96 & 0.87  \\
+            \textbf{Quaker} & 0.74 & 0.84 & 0.78 & 0.80 & 0.80 & 0.80 \\
+            \textbf{Bean fragment} & 0.67 & 0.14 & 0.23 & 0.80 & 0.27 & 0.40 \\
+            \textbf{Underroasted} & 0.57 & 0.20 & 0.29 & 0.80 & 0.57 & 0.67 \\
+            \textbf{Burnt} & 1.00 & 0.10 & 0.19 & 0.57 & 0.40 & 0.47 \\
+            \textbf{Insect/Mould} & 0.00 & 0.00 & 0.00 & 1.00 & 0.33 & 0.50  \\
         \bottomrule
     \end{tabular}
     \caption{KNN classifier evaluation metrics}
@@ -535,7 +535,7 @@ figure~\ref{fig:real-world-scores}.
         \toprule
         \textbf{Model} &  \textbf{\makecell{Prediction\\time (ms)}}\\
         \midrule
-        KNN-2 & 0.079 \\
+        KNN-2 & 0.20 \\
         MobileNet & 10.44 \\
         ResNet 50 & 20.34 \\
         \bottomrule
