@@ -32,11 +32,13 @@ An example of such histogram is shown on figure~\ref{fig:histExample}.
     \caption{A colour histogram example (64 bins)}
     \label{fig:histExample}
 \end{figure}
-
+Placing each curve ''side-by-side`` allows for an image to be represented by a vector of shape $nbins \times nchannels$,
+where $nbins$ and $nchannels$ represent the number of histogram bins and the number of colour channels in an image respectively.
 
 It should be noted that the method is not without its criticisms: while colour makes up a significant amount of the difference
 between the beans, properties like texture and shape are removed by the dimensionality reduction process.
-Also, the size of the image itself can skew the distribution simply due to the difference in the numbers of pixels.
+Also, the size of the image itself can skew the distribution simply due to the difference in the numbers of pixels if the
+images are not resized prior to histogram calculations.
 
 Another approach to a KNN classifier was tested in a preliminary experiment:
 there, the images were converted into long vectors by extracting colour information from each channel (red, green or blue)
