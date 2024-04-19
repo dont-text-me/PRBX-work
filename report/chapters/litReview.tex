@@ -280,6 +280,15 @@ KNN classifier further reinforces the theory of its suitability for this project
 as well as showcases a potential application of neural networks to assist in data
 gathering if the prototype developed here is applied at scale.
 
+\subsection{Transfer learning}
+\label{sec:transfer-learning-litreview}
+As larger datasets, such as ImageNet~\cite{imageNet}, containing over a million images in a thousand classes,
+became available, it was theorised that training a model on large amounts of non domain-specific data would allow it
+to gain ''knowledge`` that can then be applied on a more specific dataset.
+A paper by Razavian et.\ al.\ suggests the use of large, pre-trained networks as ''feature extractors``, which,
+combined with an additional fully-connected layer, can display great performance on domain-specific data with little training
+required, reducing the resources and time needed to adjust a model to a particular task~\cite{transferLearning}.
+
 \section{Summary}
 \label{sec:lit-review-summary}
 Overall, the papers mentioned above provide a
@@ -293,6 +302,8 @@ Furthermore, data
 augmentation seems to be a popular technique, ensuring that the classifier is able
 to handle real-world data, where the images of beans are not guaranteed to be in
 the same orientation.
+Finally, transfer learning shows great potential for reducing the training time while extracting more
+features from the images, which would increase the likelihood of fulfilling criterion~\ref{itm:goal1} in section~\ref{sec:research-aims}.
 
 Some of the papers lacked clarity in their reporting of the makeup of their
 datasets, with some only gathering coffee of one origin or variety as well as omitting
