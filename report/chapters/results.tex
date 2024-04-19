@@ -160,7 +160,7 @@ Then, a threshold was applied to the resulting images to provide a binary separa
 An important step was inverting the thresholded images so that the background was represented by black pixels
 and the beans by white ones - this was required for the contour finding step that followed.
 
-Once the binary images were produced, the \verb |findContours| function was used to identify the contours and
+Once the binary images were produced, the \verb|findContours| function was used to identify the contours and
 bounding rectangles of each individual bean.
 At this stage, additional checks were conducted to ensure that no dust or foreign objects were captured by the algorithm:
 bounding rectangles whose areas were uncharacteristically small or large or whose aspect ratio was too imbalanced were rejected.
