@@ -1,0 +1,1360 @@
+{
+  "MobileNet (pretrained)": [
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-16.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-22.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-0-12.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-2-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-24.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-1.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "brazil-catuai-nat-quaker-3-2.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-1-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-1-16.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "normal",
+      "filename": "columbia-caturra-fruitInfused-normal-2-20.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-2-4.png"
+    },
+    {
+      "predicted": "burnt",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-1-2.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-0-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-25.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-0-8.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-7.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "ethiopia-yirga-CM-under-0-1.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-14-25.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-2-1.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-4-19.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-4-13.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-19.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "insectOrMold",
+      "filename": "ecuador-typica-anaerobicNat-insect-0-0.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-0-18.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-2-9.png"
+    },
+    {
+      "predicted": "insectOrMold",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-7-22.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-2-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-4-19.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "brazil-catuai-nat-quaker-0-21.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-8.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-17-0.png"
+    },
+    {
+      "predicted": "burnt",
+      "actual": "frag",
+      "filename": "ethiopia-guji-washed-frag-0-1.png"
+    }
+  ],
+  "MobileNet (no pre training)": [
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-4-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-6.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-0-12.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-3-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-0.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-6.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-3-10.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "burnt",
+      "filename": "ethiopia-guji-washed-burnt-0-2.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-8.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ecuador-typica-anaerobicNat-frag-1-5.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "brazil-wushwush-nat-insect-0-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-1-17.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-10-15.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-14.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "ethiopia-yirga-CM-under-1-6.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-2-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-4-19.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "brazil-wushwush-nat-quaker-0-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-0-7.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "columbia-caturra-fruitInfused-normal-2-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-22.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-0-5.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-3-16.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-18.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-3-22.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-1.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "brazil-wushwush-nat-quaker-0-19.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-19.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-16-12.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "brazil-wushwush-nat-quaker-1-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ecuador-typica-anaerobicNat-frag-0-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-0-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-11.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-5-23.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-17.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-2-2.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "burnt",
+      "filename": "brazil-wushwush-nat-burnt-0-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-2-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-0-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-22.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-1-2.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-6.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-5.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-0-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "brazil-catuai-nat-quaker-2-0.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-0-9.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-guji-washed-frag-0-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-3-13.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-3-17.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-0-8.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-25.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-2-21.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-2-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-4-8.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-4-13.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-0-4.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-1-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-23.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ecuador-typica-anaerobicNat-quaker-1-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-8.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-16.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-4-4.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-5-11.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-2-9.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-24.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-2-13.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-11-12.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-22.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-11-9.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "brazil-wushwush-nat-insect-0-3.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "burnt",
+      "filename": "brazil-wushwush-nat-burnt-1-2.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-4-19.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "insectOrMold",
+      "filename": "kenya-sl28-washed-insect-0-12.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-14.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "columbia-caturra-fruitInfused-normal-0-17.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-7.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-15-12.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "frag",
+      "filename": "ethiopia-guji-washed-frag-0-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-1-16.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-2.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "brazil-wushwush-nat-insect-0-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "ethiopia-yirga-CM-under-0-1.png"
+    }
+  ],
+  "Resnet 50": [
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-16.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-14-25.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-5-14.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-0.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "brazil-wushwush-nat-quaker-3-22.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-4-20.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-0-12.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-1-8.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-8.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-7-22.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "brazil-wushwush-nat-quaker-0-19.png"
+    },
+    {
+      "predicted": "insectOrMold",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-3-16.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-7.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-4-19.png"
+    },
+    {
+      "predicted": "burnt",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-1-2.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-0-0.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-21.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-1.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-3-8.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-2-0.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "brazil-wushwush-nat-quaker-1-0.png"
+    },
+    {
+      "predicted": "insectOrMold",
+      "actual": "frag",
+      "filename": "ethiopia-guji-washed-frag-0-1.png"
+    },
+    {
+      "predicted": "insectOrMold",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-7-14.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-8.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-19.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-22.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-22.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-1-6.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "brazil-wushwush-nat-insect-0-0.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-2-1.png"
+    }
+  ],
+  "KNN-2": [
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-3-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-8.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-guji-washed-frag-0-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-22.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-4-20.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "brazil-wushwush-nat-burnt-1-4.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-16.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-2-3.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-0-19.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-2-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "insectOrMold",
+      "filename": "kenya-sl28-washed-insect-0-12.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "brazil-catuai-nat-quaker-0-21.png"
+    },
+    {
+      "predicted": "burnt",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-15.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-3-16.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-19.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "columbia-caturra-fruitInfused-normal-2-20.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-16.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "ecuador-typica-anaerobicNat-insect-0-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-22.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ecuador-typica-anaerobicNat-frag-1-5.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-5-14.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-8.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-22.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-7.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-6.png"
+    },
+    {
+      "predicted": "burnt",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-9-18.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-1-19.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-3-16.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-0-22.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-1-17.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-1-12.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-12.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "under",
+      "filename": "ethiopia-yirga-CM-under-1-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-2-17.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-1-16.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-15-12.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-10-9.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "ethiopia-yirga-CM-frag-1-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-3-17.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-12.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-3-23.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-11-16.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "insectOrMold",
+      "filename": "brazil-catuai-nat-insect-0-3.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "ethiopia-yirga-CM-under-0-1.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-21.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-1-2.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "brazil-wushwush-nat-burnt-1-2.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-17.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-17.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-2.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "ecuador-typica-anaerobicNat-quaker-1-15.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "columbia-caturra-washed-frag-0-9.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "brazil-catuai-nat-quaker-2-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-0-10.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-3-17.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "brazil-catuai-nat-quaker-1-4.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-5.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-5-11.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-24.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "brazil-wushwush-nat-insect-0-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-16.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-5-5.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-4-3.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-18.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "brazil-wushwush-nat-burnt-0-3.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-10.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-0-5.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "brazil-catuai-nat-under-2-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-12.png"
+    },
+    {
+      "predicted": "under",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-4.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-10.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-24.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-6-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "ecuador-typica-anaerobicNat-frag-0-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-18.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-0-8.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-5-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ethiopia-guji-washed-quaker-0-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-2-0.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "burnt",
+      "filename": "ethiopia-yirga-CM-burnt-1-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-8.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-3-4.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-25.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "ecuador-typica-anaerobicNat-quaker-1-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "ethiopia-yirga-CM-insect-2-2.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-4-23.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "burnt",
+      "filename": "brazil-catuai-nat-burnt-0-6.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-4-4.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-22.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-1-18.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "columbia-caturra-washed-quaker-6-16.png"
+    },
+    {
+      "predicted": "burnt",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-3-23.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-3-13.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "insectOrMold",
+      "filename": "brazil-wushwush-nat-insect-0-1.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-catuai-nat-frag-2-23.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "peru-caturra-washed-normal-10-15.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-0-5.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "ethiopia-ethHeirloom-washed-normal-15-12.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "ecuador-typica-anaerobicNat-frag-1-1.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "frag",
+      "filename": "brazil-wushwush-nat-frag-1-3.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "quaker",
+      "filename": "kenya-sl28-washed-quaker-1-20.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "normal",
+      "filename": "guatemala-redBourbon-honey-normal-3-9.png"
+    },
+    {
+      "predicted": "frag",
+      "actual": "quaker",
+      "filename": "ethiopia-yirga-CM-quaker-2-0.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-8.png"
+    },
+    {
+      "predicted": "quaker",
+      "actual": "under",
+      "filename": "ethiopia-yirga-CM-under-1-3.png"
+    },
+    {
+      "predicted": "normal",
+      "actual": "frag",
+      "filename": "kenya-sl28-washed-frag-1-23.png"
+    }
+  ]
+}
