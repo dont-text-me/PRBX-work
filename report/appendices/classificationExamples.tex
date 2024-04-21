@@ -3,8 +3,8 @@
 \begin{figure}[!ht]
     \begin{minipage}[b]{.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{introduction/quaker-coffee-bean}
-        \caption{test figure}
+        \includegraphics[height=\textwidth, angle=90, keepaspectratio]{classificationExamples/ethiopia-yirga-CM-frag-0-12}
+        \subcaption{Actual defect: fragmented/chipped bean}
         \label{fig:testttt1}
     \end{minipage}
     \hfill
@@ -14,18 +14,19 @@
             \toprule
             \textbf{Classifier} & \textbf{Predicted class} \\
             \midrule
-            KNN-2               & long word                \\
+            KNN-2               & \badcell{quaker}               \\
             \addlinespace[0.5em]
-            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{incorrect} \\
+            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{quaker} \\
             \addlinespace[0.5em]
-            \makecell[l]{MobileNet\\(pre-trained)}           & \goodcell{correct}                \\
+            \makecell[l]{MobileNet\\(pre-trained)}           & \badcell{quaker}                \\
             \addlinespace[0.5em]
-            ResNet 50           & long word                \\
+            ResNet 50           & \badcell{quaker}                \\
             \bottomrule
         \end{tabular}
-        \captionof{table}{test table}
+        \subcaption{Classifier predictions}
         \label{tab:test1}
     \end{minipage}
+    \caption{Example 1}
 \end{figure}
 
 Some explanation here.
