@@ -4,8 +4,8 @@
     \begin{minipage}[b]{.45\textwidth}
         \centering
         \includegraphics[height=\textwidth, angle=90, keepaspectratio]{classificationExamples/ethiopia-yirga-CM-frag-0-12}
-        \subcaption{Actual defect: fragmented/chipped bean}
-        \label{fig:testttt1}
+        \subcaption{Actual class: fragmented/chipped bean}
+        \label{fig:ex1}
     \end{minipage}
     \hfill
     \hspace{0.5em}
@@ -24,7 +24,7 @@
             \bottomrule
         \end{tabular}
         \subcaption{Classifier predictions}
-        \label{tab:test1}
+        \label{tab:ex1}
     \end{minipage}
     \caption{Example 1}
 \end{figure}
@@ -35,9 +35,9 @@ Bla bla bla.
 \begin{figure}[!ht]
     \begin{minipage}[b]{.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{introduction/quaker-coffee-bean}
-        \caption{test figure}
-        \label{fig:testttt2}
+        \includegraphics[height=\textwidth, angle=270, keepaspectratio]{classificationExamples/brazil-wushwush-nat-frag-0-5}
+        \subcaption{Actual class: fragmented/chipped bean}
+        \label{fig:ex2}
     \end{minipage}
     \hfill
     \hspace{0.5em}
@@ -46,18 +46,211 @@ Bla bla bla.
             \toprule
             \textbf{Classifier} & \textbf{Predicted class} \\
             \midrule
-            KNN-2               & long word                \\
+            KNN-2               & \badcell{Normal}                \\
             \addlinespace[0.5em]
-            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{incorrect} \\
+            \makecell[l]{MobileNet\\(no pre-training)} & \goodcell{Fragmented/chipped} \\
             \addlinespace[0.5em]
-            \makecell[l]{MobileNet\\(pre-trained)}           & \goodcell{correct}                \\
+            \makecell[l]{MobileNet\\(pre-trained)}           & \goodcell{Fragmented/chipped}                \\
             \addlinespace[0.5em]
-            ResNet 50           & long word                \\
+            ResNet 50           & \goodcell{Fragmented/chipped}               \\
             \bottomrule
         \end{tabular}
-        \captionof{table}{test table}
-        \label{tab:test2}
+        \subcaption{Classifier predictions}
+        \label{tab:ex2}
     \end{minipage}
+    \caption{Example 2}
+\end{figure}
+
+Some explanation here.
+Bla bla bla
+\pagebreak
+\begin{figure}[!ht]
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{classificationExamples/ethiopia-ethHeirloom-washed-normal-15-12}
+        \subcaption{Actual class: normal}
+        \label{fig:ex3}
+    \end{minipage}
+    \hfill
+    \hspace{0.5em}
+    \begin{minipage}[b]{.5\textwidth}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Classifier} & \textbf{Predicted class} \\
+            \midrule
+            KNN-2               & \badcell{Quaker}                \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(no pre-training)} & \goodcell{Normal} \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(pre-trained)}           & \goodcell{Normal}                \\
+            \addlinespace[0.5em]
+            ResNet 50           & \goodcell{Normal}               \\
+            \bottomrule
+        \end{tabular}
+        \subcaption{Classifier predictions}
+        \label{tab:ex3}
+    \end{minipage}
+    \caption{Example 3}
+\end{figure}
+
+Some explanation here.
+Bla bla bla
+
+\begin{figure}[!ht]
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[height=\textwidth, angle=90]{classificationExamples/kenya-sl28-washed-frag-1-8}
+        \subcaption{Actual class: fragmented/chipped bean}
+        \label{fig:ex4}
+    \end{minipage}
+    \hfill
+    \hspace{0.5em}
+    \begin{minipage}[b]{.5\textwidth}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Classifier} & \textbf{Predicted class} \\
+            \midrule
+            KNN-2               & \badcell{Normal}                \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(no pre-training)} & \goodcell{Fragmented/chipped} \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(pre-trained)}           & \goodcell{Fragmented/chipped}                \\
+            \addlinespace[0.5em]
+            ResNet 50           & \goodcell{Fragmented/chipped}               \\
+            \bottomrule
+        \end{tabular}
+        \subcaption{Classifier predictions}
+        \label{tab:ex4}
+    \end{minipage}
+    \caption{Example 4}
+\end{figure}
+
+Some explanation here.
+Bla bla bla
+\pagebreak
+\begin{figure}[!ht]
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{classificationExamples/ethiopia-yirga-CM-burnt-0-8}
+        \subcaption{Actual class: burnt}
+        \label{fig:ex5}
+    \end{minipage}
+    \hfill
+    \hspace{0.5em}
+    \begin{minipage}[b]{.5\textwidth}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Classifier} & \textbf{Predicted class} \\
+            \midrule
+            KNN-2               & \badcell{Normal}                \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{Normal} \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(pre-trained)}           & \badcell{Fragmented/chipped}                \\
+            \addlinespace[0.5em]
+            ResNet 50           & \goodcell{Burnt}               \\
+            \bottomrule
+        \end{tabular}
+        \subcaption{Classifier predictions}
+        \label{tab:ex5}
+    \end{minipage}
+    \caption{Example 5}
+\end{figure}
+
+Some explanation here.
+Bla bla bla
+
+\begin{figure}[!ht]
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[height=\textwidth, angle=270]{classificationExamples/ethiopia-yirga-CM-insect-2-1}
+        \subcaption{Actual class: insect/mould damage}
+        \label{fig:ex6}
+    \end{minipage}
+    \hfill
+    \hspace{0.5em}
+    \begin{minipage}[b]{.5\textwidth}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Classifier} & \textbf{Predicted class} \\
+            \midrule
+            KNN-2               & \goodcell{Insect/mould}                \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{Quaker} \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(pre-trained)}           & \badcell{Quaker}                \\
+            \addlinespace[0.5em]
+            ResNet 50           & \goodcell{Insect/mould}               \\
+            \bottomrule
+        \end{tabular}
+        \subcaption{Classifier predictions}
+        \label{tab:ex6}
+    \end{minipage}
+    \caption{Example 5}
+\end{figure}
+
+Some explanation here.
+Bla bla bla
+
+\begin{figure}[!ht]
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{classificationExamples/ethiopia-guji-washed-frag-0-1}
+        \subcaption{Actual class: fragmented/chipped bean}
+        \label{fig:ex7}
+    \end{minipage}
+    \hfill
+    \hspace{0.5em}
+    \begin{minipage}[b]{.5\textwidth}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Classifier} & \textbf{Predicted class} \\
+            \midrule
+            KNN-2               & \goodcell{Fragmented/chipped}                \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{Quaker} \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(pre-trained)}           & \badcell{Burnt}                \\
+            \addlinespace[0.5em]
+            ResNet 50           & \badcell{Insect/mould}               \\
+            \bottomrule
+        \end{tabular}
+        \subcaption{Classifier predictions}
+        \label{tab:ex7}
+    \end{minipage}
+    \caption{Example 5}
+\end{figure}
+
+Some explanation here.
+Bla bla bla
+
+\begin{figure}[!ht]
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[height=\textwidth, angle=270]{classificationExamples/kenya-sl28-washed-frag-0-6}
+        \subcaption{Actual class: fragmented/chipped bean}
+        \label{fig:ex8}
+    \end{minipage}
+    \hfill
+    \hspace{0.5em}
+    \begin{minipage}[b]{.5\textwidth}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Classifier} & \textbf{Predicted class} \\
+            \midrule
+            KNN-2               & \badcell{Normal}                \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(no pre-training)} & \badcell{Quaker} \\
+            \addlinespace[0.5em]
+            \makecell[l]{MobileNet\\(pre-trained)}           & \goodcell{Fragmented/chipped}                \\
+            \addlinespace[0.5em]
+            ResNet 50           & \badcell{Quaker}               \\
+            \bottomrule
+        \end{tabular}
+        \subcaption{Classifier predictions}
+        \label{tab:ex8}
+    \end{minipage}
+    \caption{Example 5}
 \end{figure}
 
 Some explanation here.
