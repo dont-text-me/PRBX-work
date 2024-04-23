@@ -1,17 +1,16 @@
-The popularity of coffee has shown steady growth over the last few years,
-with the coffee industry going through several ''waves`` of priority shifts.
-The latest shift in consumer focus has been towards the clarity of flavour and the complex tasting notes that
+The popularity of coffee has shown steady growth over the last few years, with
+the latest shift in consumer focus being towards the clarity of flavour and the complex tasting notes that
 can only be extracted through careful sourcing, processing and roasting.
 While green coffee production is usually a medium-to-large scale operation, coffee roasters, particularly ones targeting a
 ''specialty`` market tend to be very small companies, often roasting a few kilograms at a time.
-Due to this, automated quality control for roasted coffee is out of reach for a significant number of coffee roasters,
-for reasons including prohibitive pricing, noise, space constraints and energy consumption, requiring roasters to commit
+Due to this, automated quality control solutions are out of reach for a significant number of coffee roasters,
+due to their prohibitive pricing, large dimensions, noise and energy consumption, requiring roasters to commit
 significant manual and mental labour into manually sorting each batch.
 
 The Specialty Coffee Association (SCA) is the main authoritative body in the coffee industry, with strict requirements
 for beans that may earn the ''specialty`` badge.
 In order to market their coffee as specialty, the roasters must ensure a near complete lack of defective beans in their
-product, with the lack of availability of QC equipment preventing many smaller roasters from targeting the specialty market with
+product, with many smaller roasters struggling to target the specialty market with
 their product, hurting both the consumers, the roasters and smaller-scale farmers, whose livelihood depends on their crop.
 
 To propose a fix to this issue, this project identified several requirements for a small-scale image classifier,
@@ -20,17 +19,38 @@ of precision and recall as to avoid both waste of normal beans and erroneously i
 
 In a collaboration with two UK-based roasters, a dataset of normal and defective roasted beans has been developed, amassing
 over 2700 beans belonging to nine species and processed with six different techniques.
-An image processing pipeline has been implemented using a computer vision library, digitizing and pre-processing the images.
+An image processing pipeline has been implemented using the OpenCV~\cite{opencvLibrary} computer vision library, digitizing and pre-processing the images.
 
 The resulting dataset has been used to train a suite of classifiers, ranging in complexity from a KNN-based classifier combined with a grid-search
-approach to select the best hyperparameters, to a pre-trained state-of-the-art neural network,
-with the MobileNet V2~\cite{mobileNet} architecture displaying the best results.
+approach to select the best hyperparameters, to a pre-trained state-of-the-art neural network.
 
-Fine-tuned on the developed dataset, the model shows potential for use in low-power or real-time systems as well as high accuracy,
-achieving an overall score of 95\% on an unseen testing set with 6 total classes with
-1.14\% of normal beans falsely classified as defective and 2.37\% of defective beans classified as normal, making the model
-a powerful tool that can assist even the smallest-scale operations at a low computational cost.
+The most notable results for each type of classifier were produced by the following models:
+\begin{itemize}
+    \item A KNN-based classifier, using the Canberra distance metric and the KDTree~\cite{kdtreeKNN} comparison algorithm,
+    utilising colour histograms as a means of dimensionality reduction, achieving a total accuracy of 79.7\%
+    \item A MobileNet V2~\cite{mobileNet} architecture trained from scratch, achieving a total accuracy of 84\%
+    \item Another instance of a MobileNet, pretrained on the ImageNet~\cite{imageNet} dataset, achieving a total accuracy of 95\%
+    \item A 50-layer ResNet~\cite{resNet} model, pretrained on the same dataset, achieving a total accuracy of 95\%
+\end{itemize}
 
-Further work has been identified as the development of a hardware prototype as well as in further developing the dataset,
-with a proposal of a community-driven shared knowledge base, with roasters working together to represent the variety of coffee
+The pretrained MobileNet model displayed the most potential in real-world applications, with its low classification time
+of 10.4 milliseconds allowing it to serve as tool for near real-time classification in a high throughput environment.
+With less than 1.2\% of normal beans classified as defective, the model is unlikely to lead to excessive waste, and its
+1.95\% error rate for classifying underdeveloped, mould or insect damaged beans makes it a powerful tool for adhering to
+the SCA guidelines.
+The ResNet model displayed even better results, with a 0.76\% error rate for normal beans and a 1.46\% rate of beans displaying
+the aforementioned defects, though at the cost of nearly double the prediction time, with the model being better suited
+for studying batches of beans in environments where real-time performance is less important.
+
+Further work has been identified as the development of a hardware prototype as well as in further developing the dataset.
+In particular, a study of misclassified beans revealed a need for more powerful lighting and higher resolution images in order to
+capture more information of the beans' surfaces as well as gathering more samples of beans with mould and insect damage to
+balance the dataset.
+The project also proposes a community-driven shared knowledge base, with roasters working together to represent the variety of coffee
 available on the market.
+
+While the results achieved in this project achieve its aims, it is important to consider everyone involved in the production chain:
+the models developed in this project are designed to be used at the very end of the production chain, with excessive reliance on
+them alone driving the cost of the finished product up without benefitting the people responsible for farming, shipping and processing the beans.
+Therefore, the models here must be used in a system of frequent quality control checks to ensure the fairest compensation for
+everyone involved and the lowest strain on the environment.
