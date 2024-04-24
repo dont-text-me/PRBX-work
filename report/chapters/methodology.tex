@@ -71,12 +71,27 @@ While countless network architectures exist, the goal with this classifier was e
 and, therefore, smaller designs were considered.
 The MobileNet V2 architecture~\cite{mobileNet} stood out for its relatively small number of parameters and a promised ability to run even on
 a mobile device.
-Therefore, a high performance result from such a small architecture would result in a classifier that is able to be deployed
+
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{methodology/depthwise-conv}
+    \caption{Depthwise convolutions~\cite{mobileNet}}
+    \label{fig:depthwiseConv}
+    \vspace{-1em}
+\end{wrapfigure}
+
+Such a small size has been achieved by the authors' usage of depthwise convolution layers seen on figure~\ref{fig:depthwiseConv},
+where a ''traditional`` convolution block is split into two stages: first, each channel is processed separately with a $1 \times W \times H$ filter.
+Then, the resulting intermediate representation is consolidated using a $nChannels \times 1 \times 1$ filter.
+Doing so still allows the network to learn the relationships between channels and achieve high benchmark results, with the models requiring
+a fraction of the number of parameters of conventional CNN's~\cite{mobileNet}.
+Achieving a high performance result from such a small architecture would result in a classifier that is able to be deployed
 on any system, removing the cost barrier between coffee roasters and automatic quality control methods.
 Furthermore, a smaller architecture would be faster to train on a custom dataset, providing greater flexibility.
 
 Other smaller architectures such as ShuffleNet V2`~\cite{shuffleNet} were considered and trialled in preliminary experiments,
-however, MobileNet consistently outperformed the others and was therefore selected as the final model of this type.
+however, MobileNet consistently outperformed the others and was therefore selected as the best performer of this section.
 \section{Application of transfer learning to large models}
 \label{sec:transfer-learning}
 The models trialled in this set of experiments were the largest in terms of the number of parameters and
@@ -105,7 +120,7 @@ Several versions of the ResNet architecture exist, with the 18, 34 and 50 layer 
     \caption{Residual block~\cite{resNet}}
     \label{fig:residualBlock}
 \end{wrapfigure}
-The main innovation behind this family of classifiers is their use of ''residual blocks``, an architecture where the output of
+The main innovation behind this family of classifiers is their use of ''residual blocks`` (with an example shown on figure~\ref{fig:residualBlock}), an architecture where the output of
 a chain of convolution layers is added to the input and passed along further rather than just the output being passed on.
 This architecture choice has led to improvements on ImageNet performance, and remains the state-of-the-art in image classification.
 By having access to both the unmodified input and the output of the convolution layers, it is possible to make use of both representations,
