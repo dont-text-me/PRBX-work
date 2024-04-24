@@ -275,12 +275,13 @@ set separately as it was applied to the dataset itself prior to fitting the clas
 The experiments produced two noteworthy classifiers, whose hyperparameter choices and overall accuracy are presented in table~\ref{tab:knnResults}.
 \pagebreak
 \begin{table}[h]
-    \begin{tabular}{@{}llllll}
+    \centering
+    \begin{tabular}{@{}lllll}
         \toprule
-        & \textbf{\makecell{Distance\\metric}} & \textbf{K value} & \textbf{\makecell{Calculation\\algorithm}} & \textbf{\makecell{Histogram\\bin count}} & \textbf{\makecell{Overall\\accuracy(\%)}} \\
+        & \textbf{\makecell{Distance\\metric}} & \textbf{K value} & \textbf{\makecell{Calculation\\algorithm}} & \textbf{\makecell{Histogram\\bin count}} \\
         \midrule
-        \textbf{KNN-1} & Manhattan & 11 & KDTree & 32 & 77.1 \\
-        \textbf{KNN-2} & Canberra & 6 & KDTree & 256 & 79.7 \\
+        \textbf{KNN-1} & Manhattan & 11 & KDTree & 32 \\
+        \textbf{KNN-2} & Canberra & 6 & KDTree & 256 \\
         \bottomrule
     \end{tabular}
     \caption{Finalised KNN classifiers}
@@ -301,12 +302,14 @@ These metrics for KNN-1 and KNN-2 are presented in table~\ref{tab:knnScores}.
         \textbf{Class} & \multicolumn{3}{c}{KNN-1} & \multicolumn{3}{c}{KNN-2} \\
         \midrule
         {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-            \textbf{Normal} & 0.80 & 0.96 & 0.88 & 0.80 & 0.96 & 0.87  \\
-            \textbf{Quaker} & 0.74 & 0.84 & 0.78 & 0.80 & 0.80 & 0.80 \\
-            \textbf{Bean fragment} & 0.67 & 0.14 & 0.23 & 0.80 & 0.27 & 0.40 \\
-            \textbf{Underroasted} & 0.57 & 0.20 & 0.29 & 0.80 & 0.57 & 0.67 \\
-            \textbf{Burnt} & 1.00 & 0.10 & 0.19 & 0.57 & 0.40 & 0.47 \\
-            \textbf{Insect/Mould} & 0.00 & 0.00 & 0.00 & 1.00 & 0.33 & 0.50  \\
+            Normal & 0.80 & 0.96 & 0.88 & 0.80 & 0.96 & 0.87  \\
+            Quaker & 0.74 & 0.84 & 0.78 & 0.80 & 0.80 & 0.80 \\
+            Bean fragment & 0.67 & 0.14 & 0.23 & 0.80 & 0.27 & 0.40 \\
+            Underroasted & 0.57 & 0.20 & 0.29 & 0.80 & 0.57 & 0.67 \\
+            Burnt & 1.00 & 0.10 & 0.19 & 0.57 & 0.40 & 0.47 \\
+            Insect/Mould & 0.00 & 0.00 & 0.00 & 1.00 & 0.33 & 0.50  \\
+        \midrule
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{77.1\%} & \multicolumn{3}{c}{\textbf{79.7\%}} \\
         \bottomrule
     \end{tabular}
     \caption{KNN classifier evaluation metrics}
@@ -356,7 +359,6 @@ The chosen solution was an instance of the \verb|StepLR| class, halving the lear
 ShuffleNet and MobileNet.
 Overall, the two selected architectures achieved a significant improvement in both overall accuracy and per-class
 metrics over the KNN classifier, with the results presented in table~\ref{tab:cnn-small-scores}.
-The total accuracy percentages were 84\% and 81\% for MobileNet and ShuffleNet respectively.
 
 \begin{table}
     \centering
@@ -365,12 +367,14 @@ The total accuracy percentages were 84\% and 81\% for MobileNet and ShuffleNet r
         \textbf{Class} & \multicolumn{3}{c}{MobileNet V2} & \multicolumn{3}{c}{ShuffleNet} \\
         \midrule
         {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-        \textbf{Normal} & 0.93 & 0.95 & 0.94 & 0.92 & 0.94 & 0.93  \\
-        \textbf{Quaker} & 0.77 & 0.90 & 0.83 & 0.82 & 0.75 & 0.78 \\
-        \textbf{Bean fragment} & 0.93 & 0.50 & 0.64 & 0.77 & 0.63 & 0.69 \\
-        \textbf{Underroasted} & 0.57 & 0.62 & 0.60 & 0.28 & 0.76 & 0.41 \\
-        \textbf{Burnt} & 1.00 & 0.40 & 0.57 & 0.75 & 0.30 & 0.43 \\
-        \textbf{Insect/Mould} & 0.50 & 0.11 & 0.20 & 0.00 & 0.00 & 0.00  \\
+        Normal & 0.93 & 0.95 & 0.94 & 0.92 & 0.94 & 0.93  \\
+        Quaker & 0.77 & 0.90 & 0.83 & 0.82 & 0.75 & 0.78 \\
+        Bean fragment & 0.93 & 0.50 & 0.64 & 0.77 & 0.63 & 0.69 \\
+        Underroasted & 0.57 & 0.62 & 0.60 & 0.28 & 0.76 & 0.41 \\
+        Burnt & 1.00 & 0.40 & 0.57 & 0.75 & 0.30 & 0.43 \\
+        Insect/Mould & 0.50 & 0.11 & 0.20 & 0.00 & 0.00 & 0.00  \\
+        \midrule
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{\textbf{84\%}} & \multicolumn{3}{c}{81\%} \\
         \bottomrule
     \end{tabular}
     \caption{Compact CNN evaluation metrics}
@@ -418,17 +422,19 @@ retaining the weights trained on ImageNet allowed it to better classify the smal
         \textbf{Class} & \multicolumn{3}{c}{ResNet 18} & \multicolumn{3}{c}{ResNet 34} & \multicolumn{3}{c}{ResNet 50} \\
         \midrule
         {} & {Prec.} & {Rec.} & F1 & {Prec.} & {Rec.} & F1 & {Prec.} & {Rec.} & F1 \\
-        \textbf{Normal} & 0.93 & 0.98 & 0.96 & 0.96 & 0.99 & 0.98 & 0.99 & 0.99 & 0.99\\
+        Normal & 0.93 & 0.98 & 0.96 & 0.96 & 0.99 & 0.98 & 0.99 & 0.99 & 0.99\\
         \addlinespace[0.5em]
-        \textbf{Quaker} & 0.93 & 0.89 & 0.91 & 0.94 & 0.92 & 0.93 & 0.95 & 0.92 & 0.94\\
+        Quaker & 0.93 & 0.89 & 0.91 & 0.94 & 0.92 & 0.93 & 0.95 & 0.92 & 0.94\\
         \addlinespace[0.5em]
-        \textbf{\makecell[l]{Bean\\fragment}} & 0.90 & 0.90 & 0.90 & 0.88 & 0.83 & 0.85 & 0.94 & 0.86 & 0.90\\
+        \makecell[l]{Bean\\fragment} & 0.90 & 0.90 & 0.90 & 0.88 & 0.83 & 0.85 & 0.94 & 0.86 & 0.90\\
         \addlinespace[0.5em]
-        \textbf{\makecell[l]{Under\\roasted}} & 0.80 & 0.76 & 0.78 & 0.77 & 0.81 & 0.79 & 0.60 & 1.00 & 0.75 \\
+        \makecell[l]{Under\\roasted} & 0.80 & 0.76 & 0.78 & 0.77 & 0.81 & 0.79 & 0.60 & 1.00 & 0.75 \\
         \addlinespace[0.5em]
-        \textbf{Burnt} & 0.86 & 0.60 & 0.57 & 1.00 & 0.60 & 0.75 & 0.91 & 1.00 & 0.95\\
+        Burnt & 0.86 & 0.60 & 0.57 & 1.00 & 0.60 & 0.75 & 0.91 & 1.00 & 0.95\\
         \addlinespace[0.5em]
-        \textbf{\makecell[l]{Insect/\\mould}} & 0.83 & 0.56 & 0.67 & 0.67 & 0.89 & 0.76 & 1.00 & 0.67 & 0.80 \\
+        \makecell[l]{Insect/\\mould} & 0.83 & 0.56 & 0.67 & 0.67 & 0.89 & 0.76 & 1.00 & 0.67 & 0.80 \\
+        \midrule
+        \textbf{\makecell[l]{Overall\\accuracy}} & \multicolumn{3}{c}{92\%} & \multicolumn{3}{c}{94\%} & \multicolumn{3}{c}{\textbf{95\%}} \\
         \bottomrule
     \end{tabular}
     \caption{ResNet architecture evaluation metrics}
@@ -439,11 +445,7 @@ Overall, the ResNet and MobileNet architectures showed the best results, with th
 training time.
 The best results were achieved on the white-background dataset (as described in section~\ref{sec:sample-gathering-and-dataset-development}),
 with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
-The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 50 layer architectures respectively, with the
-pre-trained MobileNet also achieving a 95\% result.
-
 The same metrics for the pre-trained MobileNet and Swin transformer networks are displayed in table~\ref{tab:transfer-results-2}.
-The overall accuracy scores achieved were 95\% and 85\% for EfficientNet and Swin transformer respectively.
 
 \begin{table}[h]
     \centering
@@ -452,12 +454,14 @@ The overall accuracy scores achieved were 95\% and 85\% for EfficientNet and Swi
         \textbf{Class} & \multicolumn{3}{c}{MobileNet (pre-trained)} & \multicolumn{3}{c}{Swin transformer} \\
         \midrule
         {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-        \textbf{Normal} & 0.97 & 0.98 & 0.98 & 0.88 & 0.95 & 0.91  \\
-        \textbf{Quaker} & 0.95 & 0.97 & 0.96 & 0.79 & 0.87 & 0.83 \\
-        \textbf{Bean fragment} & 0.91 & 0.85 & 0.88 & 0.86 & 0.71 & 0.78 \\
-        \textbf{Underroasted} & 1.00 & 0.90 & 0.95 & 1.00 & 0.19 & 0.32 \\
-        \textbf{Burnt} & 0.89 & 0.80 & 0.84 & 0.00 & 0.00 & 0.00 \\
-        \textbf{Insect/Mould} & 1.00 & 0.67 & 0.80 & 0.75 & 0.33 & 0.46  \\
+        Normal & 0.97 & 0.98 & 0.98 & 0.88 & 0.95 & 0.91  \\
+        Quaker & 0.95 & 0.97 & 0.96 & 0.79 & 0.87 & 0.83 \\
+        Bean fragment & 0.91 & 0.85 & 0.88 & 0.86 & 0.71 & 0.78 \\
+        Underroasted & 1.00 & 0.90 & 0.95 & 1.00 & 0.19 & 0.32 \\
+        Burnt & 0.89 & 0.80 & 0.84 & 0.00 & 0.00 & 0.00 \\
+        Insect/Mould & 1.00 & 0.67 & 0.80 & 0.75 & 0.33 & 0.46  \\
+        \midrule
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{\textbf{95\%}} & \multicolumn{3}{c}{85\%} \\
         \bottomrule
     \end{tabular}
     \caption{ResNet alternatives evaluation metrics}
@@ -524,12 +528,13 @@ on a larger dataset showcasing more examples of rarer defects.
 To judge the models' performance as a sorting assistant, their error statics are presented on
 figure~\ref{fig:real-world-scores}.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{results/best-performers-results}
     \caption{Real-world application results for best performers}
     \label{fig:real-world-scores}
 \end{figure}
+From the above figure, it is evident that neural networks vastly outperform the KNN classifier,
 \begin{wraptable}{r}{0.35\textwidth}
     \centering
     \begin{tabular}{lc}
@@ -544,7 +549,6 @@ figure~\ref{fig:real-world-scores}.
     \caption{Average prediction time per bean (ms)}
     \label{tab:execTimes}
 \end{wraptable}
-From the above figure, it is evident that neural networks vastly outperform the KNN classifier,
 with pre-training greatly reducing the waste of normal beans and the chance of a defective bean,
 especially one with a high-impact defect, making it into the final product.
 Overall, the pre-trained MobileNet architecture stands out as the best compromise between prediction time, accuracy and
