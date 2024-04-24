@@ -98,6 +98,18 @@ Pre-trained models were loaded from the \verb|torchvision.models| package provid
 
 One of the more promising architectures was ResNet~\cite{resNet}, with a deep architecture boasting a high top-1 accuracy on the imageNet dataset.
 Several versions of the ResNet architecture exist, with the 18, 34 and 50 layer versions trialled in the experiments.
+\newline
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{methodology/residual-block}
+    \caption{Residual block~\cite{resNet}}
+    \label{fig:residualBlock}
+\end{wrapfigure}
+The main innovation behind this family of classifiers is their use of ''residual blocks``, an architecture where the output of
+a chain of convolution layers is added to the input and passed along further rather than just the output being passed on.
+This architecture choice has led to improvements on ImageNet performance, and remains the state-of-the-art in image classification.
+By having access to both the unmodified input and the output of the convolution layers, it is possible to make use of both representations,
+leading to better accuracy~\cite{resNet}.
 
 Other tested architectures included the EfficientNet V2~\cite{efficientNet} and the Swin transformer~\cite{swinTransformer},
 which were selected for their reported accuracy on the imageNet dataset.
