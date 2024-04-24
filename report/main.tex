@@ -7,13 +7,14 @@
 \usepackage{amsmath}
 \usepackage{stmaryrd}
 \usepackage{makecell}
+\usepackage[table]{xcolor}
 \usetikzlibrary{positioning}
 
 \addbibresource{main.bib}
 \graphicspath{{./figures/}}
 \author{Ivan Barinskiy}
-\title{An evaluation of various image classification methods for identifying
-roast defects in coffee beans.}
+\date{\today}
+\title{Identifying defects in roasted coffee beans using image classification algorithms}
 \supervisor{Adrian Bors}
 \MEng
 
@@ -30,6 +31,7 @@ roast defects in coffee beans.}
 	\maketitle
 
 	\listoffigures
+
 	\listoftables
 
 	\begin{summary}
@@ -57,9 +59,10 @@ roast defects in coffee beans.}
 	\input{chapters/conclusion}
 
 	\appendix
-	\chapter{Additional bean defect examples}
+	\chapter{Examination of edge-case performance}
 	\label{ch:appendix1}
-	\input{appendices/beanPhotos}
+	\input{appendices/classificationExamples}
+
 	\chapter{Classifier confusion matrices}
 	\label{ch:appendix2}
 	\input{appendices/confusionMatrices}
