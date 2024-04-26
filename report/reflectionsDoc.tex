@@ -2,15 +2,12 @@
 \usepackage[left=2.1cm, right=2.1cm]{geometry}
 \usepackage[scaled]{helvet}
 \usepackage[T1]{fontenc}
-\usepackage{lipsum}
 \usepackage{fancyhdr}
 \renewcommand\familydefault{\sfdefault}
 \lhead{Reflection document}
 \rhead{Ivan barinskiy}
 \begin{document}
     \thispagestyle{fancy}
-
-
     \section{Project specification}
     \label{sec:section-1}
     The choices of learning outcomes for my project were based on real conversations I had with people in the coffee industry.
@@ -41,19 +38,36 @@
     coffee industry acquaintances - the excitement they showed for my results has removed any anxiety I had around the project's success.
     Seeing the positive change possible from my work has made me excited to develop my skills further and made for a great reminder of the power of computer science.
 
-    If i were to attempt the project again, my main changes would be around stricter (or, more well-defined) benchmarks my solution would need to achieve -
+    If I were to attempt the project again, my main changes would be around stricter (or, more well-defined) benchmarks my solution would need to achieve -
     in an ideal case, I would like to see my classifier compete against a coffee professional on the same set of samples.
     In that case, I would seek some financing from the university to make sure that any professionals whose help I seek are fairly compensated -
     this time, i got all the defective samples for free but made sure to purchase the ''normal`` beans for their usual retail price to ensure no one is taken advantage of.
 
     Overall, I would call my choice of project specification a success, placing it at an intersection of my hobbies and areas of software engineering I felt I could get more experience in.
 
-
     \section{Self-reflection}
     \label{sec:section-2}
 
     \subsection{Problem solving}
     \label{subsec:problem-solving}
+    One of this project's biggest challenges has been in the volume of work that was required to build the dataset.
+    In particular, I feel like I underestimated the amount of time it would take to digitize the images, going as far as
+    suggesting I photograph each bean individually to my supervisor in one of the early meetings.
+    By developing an image processing pipeline, i was able to process up to 25 beans at a time, greatly reducing the required work.
+    By doing so, I was also able to learn about blob detection and image masking, which are commonly used techniques in image processing,
+    giving me useful skills for any future projects involving image classification.
+
+    Later in the project, I identified a flaw in my dimensionality reduction algorithm, where I lost some image information
+    by not separating the colour channels.
+    This occurred due to me misreading the library's documentation when prototyping.
+    After visualising the processed images, I was able to increase my accuracy by nearly 5\% by applying the algorithm
+    correctly after re-visiting the documentation page and adjusting my code.
+    This experience was important for several reasons: first, it taught me the importance of making sure I fully understand
+    my issue before attempting to fix it.
+    Second, visualising the data has given me valuable experience with libraries such as Matplotlib, a tool widely used in
+    the industry and beyond, with the project greatly improving my familiarity with the tool and the quality of material I produce with it.
+    Finally, I improved my skills in navigating technical documentation and my understanding of the underlying algorithm, with the improved
+    accuracy score being solid proof of that.
 
     \subsection{Communication}
     \label{subsec:communication}
