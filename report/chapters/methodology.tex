@@ -2,6 +2,8 @@ The literature review identified 3 general paths that one could take when develo
 set of strengths, weaknesses, and aiming to address different priorities.
 The following sections will discuss the approaches taken to develop the three models to be evaluated further, in an
 increasing order of complexity.
+
+
 \section{Nearest-neighbor classifier}
 \label{sec:knn-classifier}
 The primary reasoning behind implementing a KNN-based classifier is its speed of deployment, simplicity of implementation
@@ -57,6 +59,8 @@ The classifiers and their evaluation were implemented using the Scikit-learn lib
 distributions provided by the Scikit-image library~\cite{skImageLibrary}.
 Loading the data was done by creating a \verb|DataLoader| class provided by the PyTorch library \cite{pytorchLibrary}, which allowed
 for the data loading to be easily shared between this classifier and ones developed later.
+
+
 \section{Compact CNN classifier}
 \label{sec:deep-learning}
 The aims in developing this classifier were centered around addressing the weaknesses of the one described above,
@@ -113,6 +117,8 @@ Furthermore, a smaller architecture would be faster to train on a custom dataset
 
 Other smaller architectures such as ShuffleNet V2`~\cite{shuffleNet} were considered and trialled in preliminary experiments,
 however, MobileNet consistently outperformed the others and was therefore selected as the best performer of this section.
+
+
 \section{Application of transfer learning to large models}
 \label{sec:transfer-learning}
 The models trialled in this set of experiments were the largest in terms of the number of parameters and
