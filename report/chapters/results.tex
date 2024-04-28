@@ -103,7 +103,7 @@ ensured a satisfactory number of images per class.
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{|p{0.25\linewidth}|p{0.6\linewidth}|p{0.15\linewidth}|}
+    \begin{tabular}{|p{0.2\textwidth}|p{0.7\textwidth}|p{0.1\textwidth}|}
         \toprule \textbf{Defect name} & \textbf{Visual features}                                                                                   & \textbf{Count} \\
         \midrule Normal bean          & Even colour, brown to dark-brown hue, no surface damage or blemishes and a round shape with no deformities                                                           & 1311           \\
         Quaker & Light brown to brown hue (due to less caramelisation of sugar), scorch marks, brown spots on surface.
@@ -119,8 +119,7 @@ ensured a satisfactory number of images per class.
 \end{table}
 Overall, the beans exhibited five various defects, whose
 counts and short descriptions are presented in table~\ref{tab:beanDefectCounts}.
-Figure~\ref{fig:beanDefects} provides a brief look at the various defects, with more
-examples available in appendix~\ref{ch:appendix1}.
+Figure~\ref{fig:beanDefects} provides a brief look at the various defects.
 
 The beans in the dataset belonged to a total of nine varieties and have been processed using six different methods.
 The number of beans belonging to each processing method and variety method is shown
@@ -265,10 +264,10 @@ evenly balanced and varied dataset.
 The experiments with a KNN classifier followed the methods outlined in section~\ref{sec:knn-classifier}.
 The sets of hyperparameters used to tune the classifier were as follows:
 \begin{itemize}
-    \item Distance calculation metric $M = \{Euclidean, Manhattan, Canberra\}$
-    \item Number of nearest neighbours $K = [1, 30]$
-    \item Nearest neighbour calculation algorithm $A = \{KDTree, Brute-force\}$
-    \item Number of bins in colour histogram $N = \{32, 64, 128, 256\}$
+    \item Distance calculation metric $M=\{Euclidean, Manhattan, Canberra\}$
+    \item Number of nearest neighbours $K=[1, 30]$
+    \item Nearest neighbour calculation algorithm $A=\{KDTree, Brute-force\}$
+    \item Number of bins in colour histogram $N=\{32, 64, 128, 256\}$
 \end{itemize}
 
 All but the last hyperparameter were chosen via a grid search, with the number of bins being
@@ -339,13 +338,17 @@ The first item considered was the optimizer selection, with the Adam~\cite{adamG
 the main candidates due to their wide adoption in industry and strong results on existing datasets.
 While both optimizers showed good results when training the models, the SGD optimizer was chosen in the end for its ability
 to be customized with momentum (with a value of 0.9 used) and its more intuitive operation.
+With momentum, the optimizer updates the weights each epoch the following way:
+$\theta_{t+1}=\theta_{t} - \gamma\nabla{f(\theta_{t})}+\mu\Delta\theta$, where $\gamma$ is the learning rate,
+$\mu$ is the momentum value and $\Delta\theta$ is the previous update of the weight vector $\theta$.
 
 A loss function needed to be picked next - being a classification problem with multiple classes, binary methods were not applicable,
-therefore the choice fell on the binary cross-entropy function, which at a high level, measures the extent to which the
+therefore the choice fell on the cross-entropy function, which at a high level, measures the extent to which the
 probability distribution of the model's prediction matches that of the actual data.
 It should be noted that the Pytorch implementation of this loss function differs slightly from the commonly seen definition,
-requiring that the input to the loss function consists of the actual class labels rather than the probability of each class
-for each item in a batch for best performance.
+requiring that the input to the loss function consists of the ''unnormalised logits for each class`` and the target is the class labels.
+The overall function can be defined by $-\log{\frac{\exp(x_{n, y_{n}})}{\sum_{c=1}^C\exp(x_{n, c})}}$,
+with each minibatch's loss being the average of the loss for each input~\cite{pytorchLibrary}.
 
 Finally, the batch size and epoch number were selected experimentally - initial attempts showed a significant boost in accuracy
 (though, at the expense of longer training times) when a smaller batch size was used: switching from 32 down to 8 led
@@ -471,11 +474,10 @@ The same metrics for the pre-trained MobileNet and Swin transformer networks are
     \caption{ResNet alternatives evaluation metrics}
     \label{tab:transfer-results-2}
 \end{table}
-With the exception of the Swin transformer, the application of transfer learning brought significant improvements in
+Except the Swin transformer, the application of transfer learning brought significant improvements in
 under-represented class performance as well as further increases in overall accuracy.
-It is important, however, to consider the real-world application potential of each of the classifiers.
-The next section will take a critical look at the classifiers' performance in the context of a real-world system.
-
+The confusion matrices for all classifiers discussed here are available in appendix~\ref{ch:appendix2}.
+The next section will discuss the real-world application potential of each of the classifiers.
 
 \section{Evaluation}
 \label{sec:evaluation}
@@ -518,8 +520,6 @@ to be used in industry, similarly to its performance with the ''Quaker`` class.
 On the testing set, the model displayed a good result, with its relatively low rate of normal beans classified as defective
 making it highly useful as, for example, a first-stage sorter before a second, manual pass, greatly reducing the labour
 needed to sort a batch of beans.
-Despite those good results, the performance on underrepresented classes is still relatively low, limiting the model's
-potential in producing statistics of the occurrences of various defects.
 
 Finally, transfer learning produced the most versatile and high-performing models, with the ResNet and MobileNet achieving
 quite similar results despite their significant size difference.
@@ -527,10 +527,12 @@ It can be said that the knowledge gained from a large general-purpose dataset tr
 application area, with the MobileNet's gain in identifying underrepresented classes being clear proof of this hypothesis.
 While the predictions are not perfect, it is difficult to imagine the labour and time commitment needed for a human to match
 them on a daily basis.
-The usage of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs and less than an hour of training time.
-Overall, the quick training time and high performance, especially on larger classes, suggest a great potential of this approach
+This improvement in performance likely comes from the convolution layers' ability to develop filters that assess both the texture
+and colour of the images, allowing the CNN models to better inform their classification.
+The impact of that additional information on performance can be seen in examples shown in appendix~\ref{ch:appendix1}.
+The use of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs and less than an hour of training time.
+Overall, the high performance, especially on larger classes, suggest a great potential of this approach
 on a larger dataset showcasing more examples of rarer defects.
-
 To judge the models' performance as a sorting assistant, their error statics are presented on
 figure~\ref{fig:real-world-scores}.
 
@@ -567,7 +569,6 @@ in section~\ref{sec:research-aims}: the dataset was developed entirely from scra
 processing methods that is reflective of the products offered by modern coffee roasters today.
 The models' training was entirely achievable on consumer-grade hardware and took a reasonable amount of time to complete,
 enabling roasters to quickly train their own models or instantly begin classifying by downloading the model weights developed here.
-The next section will provide some closing comments as well as identify areas of future work.
 
 
 
