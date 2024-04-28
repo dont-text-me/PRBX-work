@@ -95,7 +95,7 @@ Doing so still allows the network to learn the relationships between channels an
 a fraction of the number of parameters of conventional CNN's~\cite{mobileNet}.
 
 Another standout feature of the MobileNet architecture is its use of ''residual blocks``, first introduced in the ResNet~\cite{resNet} classifier family (with an example shown on figure~\ref{fig:residualBlock}), an architecture where the output of
-a chain of convolution layers is added to the input and passed along further rather than just the output being passed on.
+a chain of convolution, activation and/or batch normalisation layers is added to the input and passed along further rather than just the output being passed on.
 This architecture choice has led to improvements on ImageNet performance, and remains the state-of-the-art in image classification.
 By having access to both the unmodified input and the output of the convolution layers, it is possible to make use of both representations,
 leading to better accuracy~\cite{resNet}.
