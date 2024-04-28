@@ -525,14 +525,14 @@ Finally, transfer learning produced the most versatile and high-performing model
 quite similar results despite their significant size difference.
 It can be said that the knowledge gained from a large general-purpose dataset transfers well to this relatively niche
 application area, with the MobileNet's gain in identifying underrepresented classes being clear proof of this hypothesis.
-While the predictions are not perfect, it is difficult to imagine the labour and time commitment needed for a human to match
-them on a daily basis.
 This improvement in performance likely comes from the convolution layers' ability to develop filters that assess both the texture
 and colour of the images, allowing the CNN models to better inform their classification.
 The impact of that additional information on performance can be seen in examples shown in appendix~\ref{ch:appendix1}.
+It should be noted that some examples in the appendix reveal a need for improved lighting and potentially, higher resolution images,
+identifying one area of further work.
 The use of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs and less than an hour of training time.
 Overall, the high performance, especially on larger classes, suggest a great potential of this approach
-on a larger dataset showcasing more examples of rarer defects.
+on a larger, more varied and balanced dataset.
 To judge the models' performance as a sorting assistant, their error statics are presented on
 figure~\ref{fig:real-world-scores}.
 
