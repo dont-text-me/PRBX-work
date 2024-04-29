@@ -339,7 +339,7 @@ the main candidates due to their wide adoption in industry and strong results on
 While both optimizers showed good results when training the models, the SGD optimizer was chosen in the end for its ability
 to be customized with momentum (with a value of 0.9 used) and its more intuitive operation.
 With momentum, the optimizer updates the weights each epoch the following way:
-$\theta_{t+1}=\theta_{t} - \gamma\nabla{f(\theta_{t})}+\mu\Delta\theta$, where $\gamma$ is the learning rate,
+$\theta_{t+1}=\theta_{t} - \gamma\nabla{f(\theta_{t})}+\mu\Delta\theta$, where $\gamma$ is the learning rate (set to 0.001),
 $\mu$ is the momentum value and $\Delta\theta$ is the previous update of the weight vector $\theta$.
 
 A loss function needed to be picked next - being a classification problem with multiple classes, binary methods were not applicable,
@@ -351,7 +351,7 @@ The overall function can be defined by $-\log{\frac{\exp(x_{n, y_{n}})}{\sum_{c=
 with each minibatch's loss being the average of the loss for each input~\cite{pytorchLibrary}.
 
 Finally, the batch size and epoch number were selected experimentally - initial attempts showed a significant boost in accuracy
-(though, at the expense of longer training times) when a smaller batch size was used: switching from 32 down to 8 led
+(though, at the expense of longer training times) when a smaller batch size was used: switching from 32 down to 4 led
 to the biggest increase, with little to no gain seen from further reductions.
 The number of epochs was determined from the size of the batches and from observing the magnitude of the changes in the loss function
 with the optimal number being 40 for the shuffleNet and mobileNet architectures.
@@ -411,10 +411,9 @@ with the latter serving as an example of a transformer network.
 As mentioned in section~\ref{sec:transfer-learning}, each network was adjusted to predict 6 classes and trained using a similar
 iterative approach as described in section~\ref{sec:compact-cnn-results}.
 
-While training the models, it was discovered that they benefited from a lower learning rate and more aggressive scheduling,
+While training the models, it was discovered that they benefited from a higher initial learning rate of 0.01 and more aggressive scheduling,
 with the ResNet models performing best with the learning rate reduced by ten times every eight epochs.
-The best performing optimizer and loss function were SGD and Cross entropy loss respectively, though, with slightly different settings
-from the ones described in section~\ref{sec:compact-cnn-results}.
+The best performing optimizer and loss function were SGD and Cross entropy loss respectively.
 
 It should be noted that MobileNet and ResNet were trained entirely - that is, every weight was updated during training.
 The Swin transformer on the other hand, had all its weights frozen (by marking them as not requiring gradient calculations in PyTorch)
@@ -476,7 +475,8 @@ The same metrics for the pre-trained MobileNet and Swin transformer networks are
 \end{table}
 Except the Swin transformer, the application of transfer learning brought significant improvements in
 under-represented class performance as well as further increases in overall accuracy.
-The confusion matrices for all classifiers discussed here are available in appendix~\ref{ch:appendix2}.
+The confusion matrices for all classifiers discussed here are available in appendix~\ref{ch:appendix2}, while
+the hyperparameter search results are available in appendix~\ref{ch:appendix3}.
 The next section will discuss the real-world application potential of each of the classifiers.
 
 \section{Evaluation}
