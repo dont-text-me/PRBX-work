@@ -281,7 +281,7 @@ The experiments produced two noteworthy classifiers, whose hyperparameter choice
         \toprule
         & \textbf{\makecell{Distance \\metric}} & \textbf{K value} & \textbf{\makecell{Calculation \\algorithm}} & \textbf{\makecell{Histogram  \\bin count}} \\
         \midrule
-        \textbf{KNN-1} & Manhattan  & 11  & KDTree & 32 \\
+        \textbf{KNN-1} & Manhattan  & 9  & KDTree & 32 \\
         \textbf{KNN-2} & Canberra  & 6  & KDTree & 256 \\
         \bottomrule
     \end{tabular}
@@ -303,14 +303,14 @@ These metrics for KNN-1 and KNN-2 are presented in table~\ref{tab:knnScores}.
         \textbf{Class} & \multicolumn{3}{c}{KNN-1} & \multicolumn{3}{c}{KNN-2} \\
         \midrule
         {}            & Precision & Recall & F1   & Precision & Recall & F1   \\
-        Normal        & 0.80      & 0.96   & 0.88 & 0.80      & 0.96   & 0.87 \\
-        Quaker        & 0.74      & 0.84   & 0.78 & 0.80      & 0.80   & 0.80 \\
-        Bean fragment & 0.67      & 0.14   & 0.23 & 0.80      & 0.27   & 0.40 \\
-        Underroasted  & 0.57      & 0.20   & 0.29 & 0.80      & 0.57   & 0.67 \\
-        Burnt         & 1.00      & 0.10   & 0.19 & 0.57      & 0.40   & 0.47 \\
+        Normal        & 0.81      & 0.95   & 0.87 & 0.80      & 0.96   & 0.87 \\
+        Quaker        & 0.74      & 0.85   & 0.79 & 0.80      & 0.80   & 0.80 \\
+        Bean fragment & 0.69      & 0.19   & 0.29 & 0.80      & 0.27   & 0.40 \\
+        Underroasted  & 0.83      & 0.24   & 0.37 & 0.80      & 0.57   & 0.67 \\
+        Burnt         & 1.00      & 0.20   & 0.33 & 0.57      & 0.40   & 0.47 \\
         Insect/Mould  & 0.00      & 0.00   & 0.00 & 1.00      & 0.33   & 0.50 \\
         \midrule
-        \textbf{Overall accuracy} & \multicolumn{3}{c}{77.1\%} & \multicolumn{3}{c}{\textbf{79.7\%}} \\
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{78.0\%} & \multicolumn{3}{c}{\textbf{79.7\%}} \\
         \bottomrule
     \end{tabular}
     \caption{KNN classifier evaluation metrics}
