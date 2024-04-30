@@ -510,9 +510,9 @@ Furthermore, the performance on smaller classes is quite poor, with only the ''Q
 Despite this, the KNN approach still has its strengths, which mainly relate to its simplicity and transparency -
 the general principle behind it is likely to be understood even by a non-technical audience and the dimensionality reduction
 method is relatively straightforward and relies on simple observations of the beans.
-Using a highly optimised algorithm such as the one implemented in Scikit-learn can also dramatically reduce the resources
-needed for a single prediction, even though the scaling potential of this classifier is slightly lower due to the need to
-compare each incoming image to the entire dataset, which could impact prediction times as more data is gathered.
+While using a highly optimised algorithm such as the one implemented in Scikit-learn~\cite{sklearnLibrary} can dramatically reduce the resources
+needed for a single prediction, calculating the colour histogram takes a much larger amount of time.
+Furthermore, the prediction time is dependent on the size of the dataset, leading to slower prediction times as the dataset grows.
 
 Switching to a simple neural network architecture results in a much more viable model: with the MobileNet architecture
 being the best performer in that category, the precision and recall scores for the ''Normal`` class could potentially allow it
