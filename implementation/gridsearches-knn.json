@@ -1,1 +1,2090 @@
-[{"metric": "manhattan", "k": 1, "bins": 32, "acc": 0.7060931899641577}, {"metric": "manhattan", "k": 2, "bins": 32, "acc": 0.7132616487455197}, {"metric": "manhattan", "k": 3, "bins": 32, "acc": 0.7652329749103942}, {"metric": "manhattan", "k": 4, "bins": 32, "acc": 0.7670250896057348}, {"metric": "manhattan", "k": 5, "bins": 32, "acc": 0.7724014336917563}, {"metric": "manhattan", "k": 6, "bins": 32, "acc": 0.7724014336917563}, {"metric": "manhattan", "k": 7, "bins": 32, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 8, "bins": 32, "acc": 0.7777777777777778}, {"metric": "manhattan", "k": 9, "bins": 32, "acc": 0.7795698924731183}, {"metric": "manhattan", "k": 10, "bins": 32, "acc": 0.7777777777777778}, {"metric": "manhattan", "k": 11, "bins": 32, "acc": 0.7706093189964157}, {"metric": "manhattan", "k": 12, "bins": 32, "acc": 0.7652329749103942}, {"metric": "manhattan", "k": 13, "bins": 32, "acc": 0.7652329749103942}, {"metric": "manhattan", "k": 14, "bins": 32, "acc": 0.7670250896057348}, {"metric": "manhattan", "k": 15, "bins": 32, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 16, "bins": 32, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 17, "bins": 32, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 18, "bins": 32, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 19, "bins": 32, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 20, "bins": 32, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 21, "bins": 32, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 22, "bins": 32, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 23, "bins": 32, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 24, "bins": 32, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 25, "bins": 32, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 26, "bins": 32, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 27, "bins": 32, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 28, "bins": 32, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 29, "bins": 32, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 1, "bins": 32, "acc": 0.7508960573476703}, {"metric": "canberra", "k": 2, "bins": 32, "acc": 0.7455197132616488}, {"metric": "canberra", "k": 3, "bins": 32, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 4, "bins": 32, "acc": 0.7903225806451613}, {"metric": "canberra", "k": 5, "bins": 32, "acc": 0.7741935483870968}, {"metric": "canberra", "k": 6, "bins": 32, "acc": 0.7939068100358423}, {"metric": "canberra", "k": 7, "bins": 32, "acc": 0.7795698924731183}, {"metric": "canberra", "k": 8, "bins": 32, "acc": 0.7849462365591398}, {"metric": "canberra", "k": 9, "bins": 32, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 10, "bins": 32, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 11, "bins": 32, "acc": 0.7634408602150538}, {"metric": "canberra", "k": 12, "bins": 32, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 13, "bins": 32, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 14, "bins": 32, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 15, "bins": 32, "acc": 0.7724014336917563}, {"metric": "canberra", "k": 16, "bins": 32, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 17, "bins": 32, "acc": 0.7652329749103942}, {"metric": "canberra", "k": 18, "bins": 32, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 19, "bins": 32, "acc": 0.7598566308243727}, {"metric": "canberra", "k": 20, "bins": 32, "acc": 0.7580645161290323}, {"metric": "canberra", "k": 21, "bins": 32, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 22, "bins": 32, "acc": 0.7562724014336918}, {"metric": "canberra", "k": 23, "bins": 32, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 24, "bins": 32, "acc": 0.7491039426523297}, {"metric": "canberra", "k": 25, "bins": 32, "acc": 0.7473118279569892}, {"metric": "canberra", "k": 26, "bins": 32, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 27, "bins": 32, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 28, "bins": 32, "acc": 0.7508960573476703}, {"metric": "canberra", "k": 29, "bins": 32, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 1, "bins": 32, "acc": 0.6971326164874552}, {"metric": "euclidean", "k": 2, "bins": 32, "acc": 0.7043010752688172}, {"metric": "euclidean", "k": 3, "bins": 32, "acc": 0.7544802867383512}, {"metric": "euclidean", "k": 4, "bins": 32, "acc": 0.7741935483870968}, {"metric": "euclidean", "k": 5, "bins": 32, "acc": 0.7652329749103942}, {"metric": "euclidean", "k": 6, "bins": 32, "acc": 0.7759856630824373}, {"metric": "euclidean", "k": 7, "bins": 32, "acc": 0.7580645161290323}, {"metric": "euclidean", "k": 8, "bins": 32, "acc": 0.7598566308243727}, {"metric": "euclidean", "k": 9, "bins": 32, "acc": 0.7598566308243727}, {"metric": "euclidean", "k": 10, "bins": 32, "acc": 0.7598566308243727}, {"metric": "euclidean", "k": 11, "bins": 32, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 12, "bins": 32, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 13, "bins": 32, "acc": 0.7526881720430108}, {"metric": "euclidean", "k": 14, "bins": 32, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 15, "bins": 32, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 16, "bins": 32, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 17, "bins": 32, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 18, "bins": 32, "acc": 0.7491039426523297}, {"metric": "euclidean", "k": 19, "bins": 32, "acc": 0.7544802867383512}, {"metric": "euclidean", "k": 20, "bins": 32, "acc": 0.7491039426523297}, {"metric": "euclidean", "k": 21, "bins": 32, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 22, "bins": 32, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 23, "bins": 32, "acc": 0.7544802867383512}, {"metric": "euclidean", "k": 24, "bins": 32, "acc": 0.7544802867383512}, {"metric": "euclidean", "k": 25, "bins": 32, "acc": 0.7544802867383512}, {"metric": "euclidean", "k": 26, "bins": 32, "acc": 0.7544802867383512}, {"metric": "euclidean", "k": 27, "bins": 32, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 28, "bins": 32, "acc": 0.7526881720430108}, {"metric": "euclidean", "k": 29, "bins": 32, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 1, "bins": 64, "acc": 0.7150537634408602}, {"metric": "manhattan", "k": 2, "bins": 64, "acc": 0.7025089605734767}, {"metric": "manhattan", "k": 3, "bins": 64, "acc": 0.7724014336917563}, {"metric": "manhattan", "k": 4, "bins": 64, "acc": 0.7670250896057348}, {"metric": "manhattan", "k": 5, "bins": 64, "acc": 0.7688172043010753}, {"metric": "manhattan", "k": 6, "bins": 64, "acc": 0.7759856630824373}, {"metric": "manhattan", "k": 7, "bins": 64, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 8, "bins": 64, "acc": 0.7741935483870968}, {"metric": "manhattan", "k": 9, "bins": 64, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 10, "bins": 64, "acc": 0.7741935483870968}, {"metric": "manhattan", "k": 11, "bins": 64, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 12, "bins": 64, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 13, "bins": 64, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 14, "bins": 64, "acc": 0.7670250896057348}, {"metric": "manhattan", "k": 15, "bins": 64, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 16, "bins": 64, "acc": 0.7544802867383512}, {"metric": "manhattan", "k": 17, "bins": 64, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 18, "bins": 64, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 19, "bins": 64, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 20, "bins": 64, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 21, "bins": 64, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 22, "bins": 64, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 23, "bins": 64, "acc": 0.7508960573476703}, {"metric": "manhattan", "k": 24, "bins": 64, "acc": 0.7491039426523297}, {"metric": "manhattan", "k": 25, "bins": 64, "acc": 0.7491039426523297}, {"metric": "manhattan", "k": 26, "bins": 64, "acc": 0.7544802867383512}, {"metric": "manhattan", "k": 27, "bins": 64, "acc": 0.7508960573476703}, {"metric": "manhattan", "k": 28, "bins": 64, "acc": 0.7544802867383512}, {"metric": "manhattan", "k": 29, "bins": 64, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 1, "bins": 64, "acc": 0.7598566308243727}, {"metric": "canberra", "k": 2, "bins": 64, "acc": 0.7437275985663082}, {"metric": "canberra", "k": 3, "bins": 64, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 4, "bins": 64, "acc": 0.7867383512544803}, {"metric": "canberra", "k": 5, "bins": 64, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 6, "bins": 64, "acc": 0.7921146953405018}, {"metric": "canberra", "k": 7, "bins": 64, "acc": 0.7885304659498208}, {"metric": "canberra", "k": 8, "bins": 64, "acc": 0.7813620071684588}, {"metric": "canberra", "k": 9, "bins": 64, "acc": 0.7759856630824373}, {"metric": "canberra", "k": 10, "bins": 64, "acc": 0.7813620071684588}, {"metric": "canberra", "k": 11, "bins": 64, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 12, "bins": 64, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 13, "bins": 64, "acc": 0.7670250896057348}, {"metric": "canberra", "k": 14, "bins": 64, "acc": 0.7688172043010753}, {"metric": "canberra", "k": 15, "bins": 64, "acc": 0.7688172043010753}, {"metric": "canberra", "k": 16, "bins": 64, "acc": 0.7598566308243727}, {"metric": "canberra", "k": 17, "bins": 64, "acc": 0.7652329749103942}, {"metric": "canberra", "k": 18, "bins": 64, "acc": 0.7634408602150538}, {"metric": "canberra", "k": 19, "bins": 64, "acc": 0.7580645161290323}, {"metric": "canberra", "k": 20, "bins": 64, "acc": 0.7598566308243727}, {"metric": "canberra", "k": 21, "bins": 64, "acc": 0.7598566308243727}, {"metric": "canberra", "k": 22, "bins": 64, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 23, "bins": 64, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 24, "bins": 64, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 25, "bins": 64, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 26, "bins": 64, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 27, "bins": 64, "acc": 0.7491039426523297}, {"metric": "canberra", "k": 28, "bins": 64, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 29, "bins": 64, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 1, "bins": 64, "acc": 0.6917562724014337}, {"metric": "euclidean", "k": 2, "bins": 64, "acc": 0.7025089605734767}, {"metric": "euclidean", "k": 3, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 4, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 5, "bins": 64, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 6, "bins": 64, "acc": 0.7598566308243727}, {"metric": "euclidean", "k": 7, "bins": 64, "acc": 0.7598566308243727}, {"metric": "euclidean", "k": 8, "bins": 64, "acc": 0.7616487455197133}, {"metric": "euclidean", "k": 9, "bins": 64, "acc": 0.7598566308243727}, {"metric": "euclidean", "k": 10, "bins": 64, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 11, "bins": 64, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 12, "bins": 64, "acc": 0.7491039426523297}, {"metric": "euclidean", "k": 13, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 14, "bins": 64, "acc": 0.7437275985663082}, {"metric": "euclidean", "k": 15, "bins": 64, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 16, "bins": 64, "acc": 0.7437275985663082}, {"metric": "euclidean", "k": 17, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 18, "bins": 64, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 19, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 20, "bins": 64, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 21, "bins": 64, "acc": 0.7437275985663082}, {"metric": "euclidean", "k": 22, "bins": 64, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 23, "bins": 64, "acc": 0.7491039426523297}, {"metric": "euclidean", "k": 24, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 25, "bins": 64, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 26, "bins": 64, "acc": 0.7437275985663082}, {"metric": "euclidean", "k": 27, "bins": 64, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 28, "bins": 64, "acc": 0.7437275985663082}, {"metric": "euclidean", "k": 29, "bins": 64, "acc": 0.7455197132616488}, {"metric": "manhattan", "k": 1, "bins": 128, "acc": 0.7096774193548387}, {"metric": "manhattan", "k": 2, "bins": 128, "acc": 0.7043010752688172}, {"metric": "manhattan", "k": 3, "bins": 128, "acc": 0.7652329749103942}, {"metric": "manhattan", "k": 4, "bins": 128, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 5, "bins": 128, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 6, "bins": 128, "acc": 0.7688172043010753}, {"metric": "manhattan", "k": 7, "bins": 128, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 8, "bins": 128, "acc": 0.7670250896057348}, {"metric": "manhattan", "k": 9, "bins": 128, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 10, "bins": 128, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 11, "bins": 128, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 12, "bins": 128, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 13, "bins": 128, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 14, "bins": 128, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 15, "bins": 128, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 16, "bins": 128, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 17, "bins": 128, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 18, "bins": 128, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 19, "bins": 128, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 20, "bins": 128, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 21, "bins": 128, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 22, "bins": 128, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 23, "bins": 128, "acc": 0.7491039426523297}, {"metric": "manhattan", "k": 24, "bins": 128, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 25, "bins": 128, "acc": 0.7508960573476703}, {"metric": "manhattan", "k": 26, "bins": 128, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 27, "bins": 128, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 28, "bins": 128, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 29, "bins": 128, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 1, "bins": 128, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 2, "bins": 128, "acc": 0.7455197132616488}, {"metric": "canberra", "k": 3, "bins": 128, "acc": 0.7634408602150538}, {"metric": "canberra", "k": 4, "bins": 128, "acc": 0.7831541218637993}, {"metric": "canberra", "k": 5, "bins": 128, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 6, "bins": 128, "acc": 0.7831541218637993}, {"metric": "canberra", "k": 7, "bins": 128, "acc": 0.7831541218637993}, {"metric": "canberra", "k": 8, "bins": 128, "acc": 0.7759856630824373}, {"metric": "canberra", "k": 9, "bins": 128, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 10, "bins": 128, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 11, "bins": 128, "acc": 0.7795698924731183}, {"metric": "canberra", "k": 12, "bins": 128, "acc": 0.7759856630824373}, {"metric": "canberra", "k": 13, "bins": 128, "acc": 0.7724014336917563}, {"metric": "canberra", "k": 14, "bins": 128, "acc": 0.7688172043010753}, {"metric": "canberra", "k": 15, "bins": 128, "acc": 0.7706093189964157}, {"metric": "canberra", "k": 16, "bins": 128, "acc": 0.7795698924731183}, {"metric": "canberra", "k": 17, "bins": 128, "acc": 0.7634408602150538}, {"metric": "canberra", "k": 18, "bins": 128, "acc": 0.7616487455197133}, {"metric": "canberra", "k": 19, "bins": 128, "acc": 0.7634408602150538}, {"metric": "canberra", "k": 20, "bins": 128, "acc": 0.7634408602150538}, {"metric": "canberra", "k": 21, "bins": 128, "acc": 0.7562724014336918}, {"metric": "canberra", "k": 22, "bins": 128, "acc": 0.7562724014336918}, {"metric": "canberra", "k": 23, "bins": 128, "acc": 0.7562724014336918}, {"metric": "canberra", "k": 24, "bins": 128, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 25, "bins": 128, "acc": 0.7473118279569892}, {"metric": "canberra", "k": 26, "bins": 128, "acc": 0.7455197132616488}, {"metric": "canberra", "k": 27, "bins": 128, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 28, "bins": 128, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 29, "bins": 128, "acc": 0.7562724014336918}, {"metric": "euclidean", "k": 1, "bins": 128, "acc": 0.6917562724014337}, {"metric": "euclidean", "k": 2, "bins": 128, "acc": 0.6738351254480287}, {"metric": "euclidean", "k": 3, "bins": 128, "acc": 0.7222222222222222}, {"metric": "euclidean", "k": 4, "bins": 128, "acc": 0.7240143369175627}, {"metric": "euclidean", "k": 5, "bins": 128, "acc": 0.7329749103942652}, {"metric": "euclidean", "k": 6, "bins": 128, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 7, "bins": 128, "acc": 0.7508960573476703}, {"metric": "euclidean", "k": 8, "bins": 128, "acc": 0.7473118279569892}, {"metric": "euclidean", "k": 9, "bins": 128, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 10, "bins": 128, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 11, "bins": 128, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 12, "bins": 128, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 13, "bins": 128, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 14, "bins": 128, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 15, "bins": 128, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 16, "bins": 128, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 17, "bins": 128, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 18, "bins": 128, "acc": 0.7311827956989247}, {"metric": "euclidean", "k": 19, "bins": 128, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 20, "bins": 128, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 21, "bins": 128, "acc": 0.7437275985663082}, {"metric": "euclidean", "k": 22, "bins": 128, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 23, "bins": 128, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 24, "bins": 128, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 25, "bins": 128, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 26, "bins": 128, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 27, "bins": 128, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 28, "bins": 128, "acc": 0.7419354838709677}, {"metric": "euclidean", "k": 29, "bins": 128, "acc": 0.7419354838709677}, {"metric": "manhattan", "k": 1, "bins": 256, "acc": 0.7168458781362007}, {"metric": "manhattan", "k": 2, "bins": 256, "acc": 0.7078853046594982}, {"metric": "manhattan", "k": 3, "bins": 256, "acc": 0.7652329749103942}, {"metric": "manhattan", "k": 4, "bins": 256, "acc": 0.7670250896057348}, {"metric": "manhattan", "k": 5, "bins": 256, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 6, "bins": 256, "acc": 0.7688172043010753}, {"metric": "manhattan", "k": 7, "bins": 256, "acc": 0.7508960573476703}, {"metric": "manhattan", "k": 8, "bins": 256, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 9, "bins": 256, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 10, "bins": 256, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 11, "bins": 256, "acc": 0.7544802867383512}, {"metric": "manhattan", "k": 12, "bins": 256, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 13, "bins": 256, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 14, "bins": 256, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 15, "bins": 256, "acc": 0.7616487455197133}, {"metric": "manhattan", "k": 16, "bins": 256, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 17, "bins": 256, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 18, "bins": 256, "acc": 0.7652329749103942}, {"metric": "manhattan", "k": 19, "bins": 256, "acc": 0.7580645161290323}, {"metric": "manhattan", "k": 20, "bins": 256, "acc": 0.7598566308243727}, {"metric": "manhattan", "k": 21, "bins": 256, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 22, "bins": 256, "acc": 0.7634408602150538}, {"metric": "manhattan", "k": 23, "bins": 256, "acc": 0.7508960573476703}, {"metric": "manhattan", "k": 24, "bins": 256, "acc": 0.7562724014336918}, {"metric": "manhattan", "k": 25, "bins": 256, "acc": 0.7508960573476703}, {"metric": "manhattan", "k": 26, "bins": 256, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 27, "bins": 256, "acc": 0.7526881720430108}, {"metric": "manhattan", "k": 28, "bins": 256, "acc": 0.7544802867383512}, {"metric": "manhattan", "k": 29, "bins": 256, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 1, "bins": 256, "acc": 0.7562724014336918}, {"metric": "canberra", "k": 2, "bins": 256, "acc": 0.7293906810035843}, {"metric": "canberra", "k": 3, "bins": 256, "acc": 0.7670250896057348}, {"metric": "canberra", "k": 4, "bins": 256, "acc": 0.7849462365591398}, {"metric": "canberra", "k": 5, "bins": 256, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 6, "bins": 256, "acc": 0.7974910394265233}, {"metric": "canberra", "k": 7, "bins": 256, "acc": 0.7795698924731183}, {"metric": "canberra", "k": 8, "bins": 256, "acc": 0.7795698924731183}, {"metric": "canberra", "k": 9, "bins": 256, "acc": 0.7688172043010753}, {"metric": "canberra", "k": 10, "bins": 256, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 11, "bins": 256, "acc": 0.7759856630824373}, {"metric": "canberra", "k": 12, "bins": 256, "acc": 0.7777777777777778}, {"metric": "canberra", "k": 13, "bins": 256, "acc": 0.7724014336917563}, {"metric": "canberra", "k": 14, "bins": 256, "acc": 0.7759856630824373}, {"metric": "canberra", "k": 15, "bins": 256, "acc": 0.7688172043010753}, {"metric": "canberra", "k": 16, "bins": 256, "acc": 0.7724014336917563}, {"metric": "canberra", "k": 17, "bins": 256, "acc": 0.7670250896057348}, {"metric": "canberra", "k": 18, "bins": 256, "acc": 0.7652329749103942}, {"metric": "canberra", "k": 19, "bins": 256, "acc": 0.7652329749103942}, {"metric": "canberra", "k": 20, "bins": 256, "acc": 0.7562724014336918}, {"metric": "canberra", "k": 21, "bins": 256, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 22, "bins": 256, "acc": 0.7544802867383512}, {"metric": "canberra", "k": 23, "bins": 256, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 24, "bins": 256, "acc": 0.7508960573476703}, {"metric": "canberra", "k": 25, "bins": 256, "acc": 0.7419354838709677}, {"metric": "canberra", "k": 26, "bins": 256, "acc": 0.7491039426523297}, {"metric": "canberra", "k": 27, "bins": 256, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 28, "bins": 256, "acc": 0.7526881720430108}, {"metric": "canberra", "k": 29, "bins": 256, "acc": 0.7580645161290323}, {"metric": "euclidean", "k": 1, "bins": 256, "acc": 0.6881720430107527}, {"metric": "euclidean", "k": 2, "bins": 256, "acc": 0.6845878136200717}, {"metric": "euclidean", "k": 3, "bins": 256, "acc": 0.7150537634408602}, {"metric": "euclidean", "k": 4, "bins": 256, "acc": 0.7204301075268817}, {"metric": "euclidean", "k": 5, "bins": 256, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 6, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 7, "bins": 256, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 8, "bins": 256, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 9, "bins": 256, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 10, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 11, "bins": 256, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 12, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 13, "bins": 256, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 14, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 15, "bins": 256, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 16, "bins": 256, "acc": 0.7365591397849462}, {"metric": "euclidean", "k": 17, "bins": 256, "acc": 0.7455197132616488}, {"metric": "euclidean", "k": 18, "bins": 256, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 19, "bins": 256, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 20, "bins": 256, "acc": 0.7401433691756273}, {"metric": "euclidean", "k": 21, "bins": 256, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 22, "bins": 256, "acc": 0.7383512544802867}, {"metric": "euclidean", "k": 23, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 24, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 25, "bins": 256, "acc": 0.7347670250896058}, {"metric": "euclidean", "k": 26, "bins": 256, "acc": 0.7329749103942652}, {"metric": "euclidean", "k": 27, "bins": 256, "acc": 0.7329749103942652}, {"metric": "euclidean", "k": 28, "bins": 256, "acc": 0.7329749103942652}, {"metric": "euclidean", "k": 29, "bins": 256, "acc": 0.7347670250896058}]
+[
+  {
+    "metric": "manhattan",
+    "k": 1,
+    "bins": 32,
+    "acc": 0.7060931899641577
+  },
+  {
+    "metric": "manhattan",
+    "k": 2,
+    "bins": 32,
+    "acc": 0.7132616487455197
+  },
+  {
+    "metric": "manhattan",
+    "k": 3,
+    "bins": 32,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "manhattan",
+    "k": 4,
+    "bins": 32,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "manhattan",
+    "k": 5,
+    "bins": 32,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "manhattan",
+    "k": 6,
+    "bins": 32,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "manhattan",
+    "k": 7,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 8,
+    "bins": 32,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "manhattan",
+    "k": 9,
+    "bins": 32,
+    "acc": 0.7795698924731183
+  },
+  {
+    "metric": "manhattan",
+    "k": 10,
+    "bins": 32,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "manhattan",
+    "k": 11,
+    "bins": 32,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "manhattan",
+    "k": 12,
+    "bins": 32,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "manhattan",
+    "k": 13,
+    "bins": 32,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "manhattan",
+    "k": 14,
+    "bins": 32,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "manhattan",
+    "k": 15,
+    "bins": 32,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 16,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 17,
+    "bins": 32,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 18,
+    "bins": 32,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 19,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 20,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 21,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 22,
+    "bins": 32,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 23,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 24,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 25,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 26,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 27,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 28,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 29,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 1,
+    "bins": 32,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "canberra",
+    "k": 2,
+    "bins": 32,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "canberra",
+    "k": 3,
+    "bins": 32,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 4,
+    "bins": 32,
+    "acc": 0.7903225806451613
+  },
+  {
+    "metric": "canberra",
+    "k": 5,
+    "bins": 32,
+    "acc": 0.7741935483870968
+  },
+  {
+    "metric": "canberra",
+    "k": 6,
+    "bins": 32,
+    "acc": 0.7939068100358423
+  },
+  {
+    "metric": "canberra",
+    "k": 7,
+    "bins": 32,
+    "acc": 0.7795698924731183
+  },
+  {
+    "metric": "canberra",
+    "k": 8,
+    "bins": 32,
+    "acc": 0.7849462365591398
+  },
+  {
+    "metric": "canberra",
+    "k": 9,
+    "bins": 32,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 10,
+    "bins": 32,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 11,
+    "bins": 32,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "canberra",
+    "k": 12,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 13,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 14,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 15,
+    "bins": 32,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "canberra",
+    "k": 16,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 17,
+    "bins": 32,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "canberra",
+    "k": 18,
+    "bins": 32,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 19,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "canberra",
+    "k": 20,
+    "bins": 32,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "canberra",
+    "k": 21,
+    "bins": 32,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 22,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "canberra",
+    "k": 23,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 24,
+    "bins": 32,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "canberra",
+    "k": 25,
+    "bins": 32,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "canberra",
+    "k": 26,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 27,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 28,
+    "bins": 32,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "canberra",
+    "k": 29,
+    "bins": 32,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 1,
+    "bins": 32,
+    "acc": 0.6971326164874552
+  },
+  {
+    "metric": "euclidean",
+    "k": 2,
+    "bins": 32,
+    "acc": 0.7043010752688172
+  },
+  {
+    "metric": "euclidean",
+    "k": 3,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "euclidean",
+    "k": 4,
+    "bins": 32,
+    "acc": 0.7741935483870968
+  },
+  {
+    "metric": "euclidean",
+    "k": 5,
+    "bins": 32,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "euclidean",
+    "k": 6,
+    "bins": 32,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "euclidean",
+    "k": 7,
+    "bins": 32,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "euclidean",
+    "k": 8,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "euclidean",
+    "k": 9,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "euclidean",
+    "k": 10,
+    "bins": 32,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "euclidean",
+    "k": 11,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 12,
+    "bins": 32,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 13,
+    "bins": 32,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "euclidean",
+    "k": 14,
+    "bins": 32,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 15,
+    "bins": 32,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 16,
+    "bins": 32,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 17,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 18,
+    "bins": 32,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "euclidean",
+    "k": 19,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "euclidean",
+    "k": 20,
+    "bins": 32,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "euclidean",
+    "k": 21,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 22,
+    "bins": 32,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 23,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "euclidean",
+    "k": 24,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "euclidean",
+    "k": 25,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "euclidean",
+    "k": 26,
+    "bins": 32,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "euclidean",
+    "k": 27,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 28,
+    "bins": 32,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "euclidean",
+    "k": 29,
+    "bins": 32,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 1,
+    "bins": 64,
+    "acc": 0.7150537634408602
+  },
+  {
+    "metric": "manhattan",
+    "k": 2,
+    "bins": 64,
+    "acc": 0.7025089605734767
+  },
+  {
+    "metric": "manhattan",
+    "k": 3,
+    "bins": 64,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "manhattan",
+    "k": 4,
+    "bins": 64,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "manhattan",
+    "k": 5,
+    "bins": 64,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "manhattan",
+    "k": 6,
+    "bins": 64,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "manhattan",
+    "k": 7,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 8,
+    "bins": 64,
+    "acc": 0.7741935483870968
+  },
+  {
+    "metric": "manhattan",
+    "k": 9,
+    "bins": 64,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 10,
+    "bins": 64,
+    "acc": 0.7741935483870968
+  },
+  {
+    "metric": "manhattan",
+    "k": 11,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 12,
+    "bins": 64,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 13,
+    "bins": 64,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 14,
+    "bins": 64,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "manhattan",
+    "k": 15,
+    "bins": 64,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 16,
+    "bins": 64,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "manhattan",
+    "k": 17,
+    "bins": 64,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 18,
+    "bins": 64,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 19,
+    "bins": 64,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 20,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 21,
+    "bins": 64,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 22,
+    "bins": 64,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 23,
+    "bins": 64,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "manhattan",
+    "k": 24,
+    "bins": 64,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "manhattan",
+    "k": 25,
+    "bins": 64,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "manhattan",
+    "k": 26,
+    "bins": 64,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "manhattan",
+    "k": 27,
+    "bins": 64,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "manhattan",
+    "k": 28,
+    "bins": 64,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "manhattan",
+    "k": 29,
+    "bins": 64,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 1,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "canberra",
+    "k": 2,
+    "bins": 64,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "canberra",
+    "k": 3,
+    "bins": 64,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 4,
+    "bins": 64,
+    "acc": 0.7867383512544803
+  },
+  {
+    "metric": "canberra",
+    "k": 5,
+    "bins": 64,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 6,
+    "bins": 64,
+    "acc": 0.7921146953405018
+  },
+  {
+    "metric": "canberra",
+    "k": 7,
+    "bins": 64,
+    "acc": 0.7885304659498208
+  },
+  {
+    "metric": "canberra",
+    "k": 8,
+    "bins": 64,
+    "acc": 0.7813620071684588
+  },
+  {
+    "metric": "canberra",
+    "k": 9,
+    "bins": 64,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "canberra",
+    "k": 10,
+    "bins": 64,
+    "acc": 0.7813620071684588
+  },
+  {
+    "metric": "canberra",
+    "k": 11,
+    "bins": 64,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 12,
+    "bins": 64,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 13,
+    "bins": 64,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "canberra",
+    "k": 14,
+    "bins": 64,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "canberra",
+    "k": 15,
+    "bins": 64,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "canberra",
+    "k": 16,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "canberra",
+    "k": 17,
+    "bins": 64,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "canberra",
+    "k": 18,
+    "bins": 64,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "canberra",
+    "k": 19,
+    "bins": 64,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "canberra",
+    "k": 20,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "canberra",
+    "k": 21,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "canberra",
+    "k": 22,
+    "bins": 64,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 23,
+    "bins": 64,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 24,
+    "bins": 64,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 25,
+    "bins": 64,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 26,
+    "bins": 64,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 27,
+    "bins": 64,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "canberra",
+    "k": 28,
+    "bins": 64,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 29,
+    "bins": 64,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 1,
+    "bins": 64,
+    "acc": 0.6917562724014337
+  },
+  {
+    "metric": "euclidean",
+    "k": 2,
+    "bins": 64,
+    "acc": 0.7025089605734767
+  },
+  {
+    "metric": "euclidean",
+    "k": 3,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 4,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 5,
+    "bins": 64,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 6,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "euclidean",
+    "k": 7,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "euclidean",
+    "k": 8,
+    "bins": 64,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "euclidean",
+    "k": 9,
+    "bins": 64,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "euclidean",
+    "k": 10,
+    "bins": 64,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 11,
+    "bins": 64,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 12,
+    "bins": 64,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "euclidean",
+    "k": 13,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 14,
+    "bins": 64,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "euclidean",
+    "k": 15,
+    "bins": 64,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 16,
+    "bins": 64,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "euclidean",
+    "k": 17,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 18,
+    "bins": 64,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 19,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 20,
+    "bins": 64,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 21,
+    "bins": 64,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "euclidean",
+    "k": 22,
+    "bins": 64,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 23,
+    "bins": 64,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "euclidean",
+    "k": 24,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 25,
+    "bins": 64,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 26,
+    "bins": 64,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "euclidean",
+    "k": 27,
+    "bins": 64,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 28,
+    "bins": 64,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "euclidean",
+    "k": 29,
+    "bins": 64,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "manhattan",
+    "k": 1,
+    "bins": 128,
+    "acc": 0.7096774193548387
+  },
+  {
+    "metric": "manhattan",
+    "k": 2,
+    "bins": 128,
+    "acc": 0.7043010752688172
+  },
+  {
+    "metric": "manhattan",
+    "k": 3,
+    "bins": 128,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "manhattan",
+    "k": 4,
+    "bins": 128,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 5,
+    "bins": 128,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 6,
+    "bins": 128,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "manhattan",
+    "k": 7,
+    "bins": 128,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 8,
+    "bins": 128,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "manhattan",
+    "k": 9,
+    "bins": 128,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 10,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 11,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 12,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 13,
+    "bins": 128,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 14,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 15,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 16,
+    "bins": 128,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 17,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 18,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 19,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 20,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 21,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 22,
+    "bins": 128,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 23,
+    "bins": 128,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "manhattan",
+    "k": 24,
+    "bins": 128,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 25,
+    "bins": 128,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "manhattan",
+    "k": 26,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 27,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 28,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 29,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 1,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 2,
+    "bins": 128,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "canberra",
+    "k": 3,
+    "bins": 128,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "canberra",
+    "k": 4,
+    "bins": 128,
+    "acc": 0.7831541218637993
+  },
+  {
+    "metric": "canberra",
+    "k": 5,
+    "bins": 128,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 6,
+    "bins": 128,
+    "acc": 0.7831541218637993
+  },
+  {
+    "metric": "canberra",
+    "k": 7,
+    "bins": 128,
+    "acc": 0.7831541218637993
+  },
+  {
+    "metric": "canberra",
+    "k": 8,
+    "bins": 128,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "canberra",
+    "k": 9,
+    "bins": 128,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 10,
+    "bins": 128,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 11,
+    "bins": 128,
+    "acc": 0.7795698924731183
+  },
+  {
+    "metric": "canberra",
+    "k": 12,
+    "bins": 128,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "canberra",
+    "k": 13,
+    "bins": 128,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "canberra",
+    "k": 14,
+    "bins": 128,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "canberra",
+    "k": 15,
+    "bins": 128,
+    "acc": 0.7706093189964157
+  },
+  {
+    "metric": "canberra",
+    "k": 16,
+    "bins": 128,
+    "acc": 0.7795698924731183
+  },
+  {
+    "metric": "canberra",
+    "k": 17,
+    "bins": 128,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "canberra",
+    "k": 18,
+    "bins": 128,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "canberra",
+    "k": 19,
+    "bins": 128,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "canberra",
+    "k": 20,
+    "bins": 128,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "canberra",
+    "k": 21,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "canberra",
+    "k": 22,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "canberra",
+    "k": 23,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "canberra",
+    "k": 24,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 25,
+    "bins": 128,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "canberra",
+    "k": 26,
+    "bins": 128,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "canberra",
+    "k": 27,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 28,
+    "bins": 128,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 29,
+    "bins": 128,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "euclidean",
+    "k": 1,
+    "bins": 128,
+    "acc": 0.6917562724014337
+  },
+  {
+    "metric": "euclidean",
+    "k": 2,
+    "bins": 128,
+    "acc": 0.6738351254480287
+  },
+  {
+    "metric": "euclidean",
+    "k": 3,
+    "bins": 128,
+    "acc": 0.7222222222222222
+  },
+  {
+    "metric": "euclidean",
+    "k": 4,
+    "bins": 128,
+    "acc": 0.7240143369175627
+  },
+  {
+    "metric": "euclidean",
+    "k": 5,
+    "bins": 128,
+    "acc": 0.7329749103942652
+  },
+  {
+    "metric": "euclidean",
+    "k": 6,
+    "bins": 128,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 7,
+    "bins": 128,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "euclidean",
+    "k": 8,
+    "bins": 128,
+    "acc": 0.7473118279569892
+  },
+  {
+    "metric": "euclidean",
+    "k": 9,
+    "bins": 128,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 10,
+    "bins": 128,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 11,
+    "bins": 128,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 12,
+    "bins": 128,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 13,
+    "bins": 128,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 14,
+    "bins": 128,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 15,
+    "bins": 128,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 16,
+    "bins": 128,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 17,
+    "bins": 128,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 18,
+    "bins": 128,
+    "acc": 0.7311827956989247
+  },
+  {
+    "metric": "euclidean",
+    "k": 19,
+    "bins": 128,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 20,
+    "bins": 128,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 21,
+    "bins": 128,
+    "acc": 0.7437275985663082
+  },
+  {
+    "metric": "euclidean",
+    "k": 22,
+    "bins": 128,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 23,
+    "bins": 128,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 24,
+    "bins": 128,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 25,
+    "bins": 128,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 26,
+    "bins": 128,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 27,
+    "bins": 128,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 28,
+    "bins": 128,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "euclidean",
+    "k": 29,
+    "bins": 128,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "manhattan",
+    "k": 1,
+    "bins": 256,
+    "acc": 0.7168458781362007
+  },
+  {
+    "metric": "manhattan",
+    "k": 2,
+    "bins": 256,
+    "acc": 0.7078853046594982
+  },
+  {
+    "metric": "manhattan",
+    "k": 3,
+    "bins": 256,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "manhattan",
+    "k": 4,
+    "bins": 256,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "manhattan",
+    "k": 5,
+    "bins": 256,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 6,
+    "bins": 256,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "manhattan",
+    "k": 7,
+    "bins": 256,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "manhattan",
+    "k": 8,
+    "bins": 256,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 9,
+    "bins": 256,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 10,
+    "bins": 256,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 11,
+    "bins": 256,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "manhattan",
+    "k": 12,
+    "bins": 256,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 13,
+    "bins": 256,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 14,
+    "bins": 256,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 15,
+    "bins": 256,
+    "acc": 0.7616487455197133
+  },
+  {
+    "metric": "manhattan",
+    "k": 16,
+    "bins": 256,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 17,
+    "bins": 256,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 18,
+    "bins": 256,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "manhattan",
+    "k": 19,
+    "bins": 256,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "manhattan",
+    "k": 20,
+    "bins": 256,
+    "acc": 0.7598566308243727
+  },
+  {
+    "metric": "manhattan",
+    "k": 21,
+    "bins": 256,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 22,
+    "bins": 256,
+    "acc": 0.7634408602150538
+  },
+  {
+    "metric": "manhattan",
+    "k": 23,
+    "bins": 256,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "manhattan",
+    "k": 24,
+    "bins": 256,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "manhattan",
+    "k": 25,
+    "bins": 256,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "manhattan",
+    "k": 26,
+    "bins": 256,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 27,
+    "bins": 256,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "manhattan",
+    "k": 28,
+    "bins": 256,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "manhattan",
+    "k": 29,
+    "bins": 256,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 1,
+    "bins": 256,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "canberra",
+    "k": 2,
+    "bins": 256,
+    "acc": 0.7293906810035843
+  },
+  {
+    "metric": "canberra",
+    "k": 3,
+    "bins": 256,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "canberra",
+    "k": 4,
+    "bins": 256,
+    "acc": 0.7849462365591398
+  },
+  {
+    "metric": "canberra",
+    "k": 5,
+    "bins": 256,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 6,
+    "bins": 256,
+    "acc": 0.7974910394265233
+  },
+  {
+    "metric": "canberra",
+    "k": 7,
+    "bins": 256,
+    "acc": 0.7795698924731183
+  },
+  {
+    "metric": "canberra",
+    "k": 8,
+    "bins": 256,
+    "acc": 0.7795698924731183
+  },
+  {
+    "metric": "canberra",
+    "k": 9,
+    "bins": 256,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "canberra",
+    "k": 10,
+    "bins": 256,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 11,
+    "bins": 256,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "canberra",
+    "k": 12,
+    "bins": 256,
+    "acc": 0.7777777777777778
+  },
+  {
+    "metric": "canberra",
+    "k": 13,
+    "bins": 256,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "canberra",
+    "k": 14,
+    "bins": 256,
+    "acc": 0.7759856630824373
+  },
+  {
+    "metric": "canberra",
+    "k": 15,
+    "bins": 256,
+    "acc": 0.7688172043010753
+  },
+  {
+    "metric": "canberra",
+    "k": 16,
+    "bins": 256,
+    "acc": 0.7724014336917563
+  },
+  {
+    "metric": "canberra",
+    "k": 17,
+    "bins": 256,
+    "acc": 0.7670250896057348
+  },
+  {
+    "metric": "canberra",
+    "k": 18,
+    "bins": 256,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "canberra",
+    "k": 19,
+    "bins": 256,
+    "acc": 0.7652329749103942
+  },
+  {
+    "metric": "canberra",
+    "k": 20,
+    "bins": 256,
+    "acc": 0.7562724014336918
+  },
+  {
+    "metric": "canberra",
+    "k": 21,
+    "bins": 256,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 22,
+    "bins": 256,
+    "acc": 0.7544802867383512
+  },
+  {
+    "metric": "canberra",
+    "k": 23,
+    "bins": 256,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 24,
+    "bins": 256,
+    "acc": 0.7508960573476703
+  },
+  {
+    "metric": "canberra",
+    "k": 25,
+    "bins": 256,
+    "acc": 0.7419354838709677
+  },
+  {
+    "metric": "canberra",
+    "k": 26,
+    "bins": 256,
+    "acc": 0.7491039426523297
+  },
+  {
+    "metric": "canberra",
+    "k": 27,
+    "bins": 256,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 28,
+    "bins": 256,
+    "acc": 0.7526881720430108
+  },
+  {
+    "metric": "canberra",
+    "k": 29,
+    "bins": 256,
+    "acc": 0.7580645161290323
+  },
+  {
+    "metric": "euclidean",
+    "k": 1,
+    "bins": 256,
+    "acc": 0.6881720430107527
+  },
+  {
+    "metric": "euclidean",
+    "k": 2,
+    "bins": 256,
+    "acc": 0.6845878136200717
+  },
+  {
+    "metric": "euclidean",
+    "k": 3,
+    "bins": 256,
+    "acc": 0.7150537634408602
+  },
+  {
+    "metric": "euclidean",
+    "k": 4,
+    "bins": 256,
+    "acc": 0.7204301075268817
+  },
+  {
+    "metric": "euclidean",
+    "k": 5,
+    "bins": 256,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 6,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 7,
+    "bins": 256,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 8,
+    "bins": 256,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 9,
+    "bins": 256,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 10,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 11,
+    "bins": 256,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 12,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 13,
+    "bins": 256,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 14,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 15,
+    "bins": 256,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 16,
+    "bins": 256,
+    "acc": 0.7365591397849462
+  },
+  {
+    "metric": "euclidean",
+    "k": 17,
+    "bins": 256,
+    "acc": 0.7455197132616488
+  },
+  {
+    "metric": "euclidean",
+    "k": 18,
+    "bins": 256,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 19,
+    "bins": 256,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 20,
+    "bins": 256,
+    "acc": 0.7401433691756273
+  },
+  {
+    "metric": "euclidean",
+    "k": 21,
+    "bins": 256,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 22,
+    "bins": 256,
+    "acc": 0.7383512544802867
+  },
+  {
+    "metric": "euclidean",
+    "k": 23,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 24,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 25,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  },
+  {
+    "metric": "euclidean",
+    "k": 26,
+    "bins": 256,
+    "acc": 0.7329749103942652
+  },
+  {
+    "metric": "euclidean",
+    "k": 27,
+    "bins": 256,
+    "acc": 0.7329749103942652
+  },
+  {
+    "metric": "euclidean",
+    "k": 28,
+    "bins": 256,
+    "acc": 0.7329749103942652
+  },
+  {
+    "metric": "euclidean",
+    "k": 29,
+    "bins": 256,
+    "acc": 0.7347670250896058
+  }
+]
