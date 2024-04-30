@@ -1,10 +1,11 @@
+This chapter provides a deeper look into the implementation of the classifiers discussed in the above chapters.
+The results of the data gathering process are also discussed here, with an evaluation of the classifiers' performance on the
+portion of the dataset reserved for testing.
+Finally, this chapter evaluates the classifiers' performance against real-world metrics and discusses their strengths and weaknesses.
+
+
 \section{Sample gathering and dataset development}
 \label{sec:sample-gathering-and-dataset-development}
-To address the aims of the project, a custom dataset,
-reflecting the variety of existing defects and coffee varieties was deemed necessary to
-ensure that any developed model can cope with the diversity of coffee available
-on the market.
-
 The gathered dataset consisted of roughly two kilograms of roasted coffee, gathered
 from two small-scale, specialty coffee roasters: Harmony Roasters based in York and Vibe
 With coffee based in Nottingham.
@@ -15,9 +16,6 @@ echoing the research aims of the project.
 Between november and february 2023, both roasters were asked
 to keep track of any defective beans they come across and separate the defects by
 the variety the coffee belonged to.
-This ensured that the roasters were not
-asked to spend too much of their time and could still perform their usual duties
-with as little distraction as possible.
 Neither roaster asked for compensation for
 their work, however, samples of non-defective beans were purchased for their usual
 retail price, ensuring that the research process would not take any advantage of
@@ -49,8 +47,16 @@ While not a perfect solution, this
 ensured a satisfactory number of images per class.
 
 \begin{figure}[h]
+    \centering
     \begin{subfigure}
-    {0.2\textwidth}
+    {0.25\textwidth}
+        \includegraphics[height=0.8\linewidth, keepaspectratio]{
+            ./figures/methodology/normal-bean
+        }
+        \subcaption{Normal} \label{fig:normalBeanSingle}
+    \end{subfigure}
+    \begin{subfigure}
+    {0.25\textwidth}
         \includegraphics[height=0.8\linewidth, keepaspectratio]{
             ./figures/methodology/quaker-bean
         }
@@ -58,24 +64,17 @@ ensured a satisfactory number of images per class.
     \end{subfigure}
     \begin{subfigure}
     {0.2\textwidth}
-        \includegraphics[height=0.8\linewidth, keepaspectratio]{
-            ./figures/methodology/normal-bean
-        }
-        \subcaption{Normal} \label{fig:normalBeanSingle}
-    \end{subfigure}
-    \begin{subfigure}
-    {0.2\textwidth}
-        \includegraphics[height=0.8\linewidth, keepaspectratio]{
-            ./figures/methodology/insect-damaged-bean
-        }
-        \subcaption{Insect \\ damage} \label{fig:insectBeanSingle}
-    \end{subfigure}
-    \begin{subfigure}
-    {0.2\textwidth}
-        \includegraphics[height=0.8\linewidth, keepaspectratio]{
+        \includegraphics[width=0.8\linewidth, keepaspectratio, angle=270]{
             ./figures/methodology/bean-fragment
         }
         \subcaption{Bean \\ fragment} \label{fig:fragBeanSingle}
+    \end{subfigure}
+    \begin{subfigure}
+    {0.2\textwidth}
+        \includegraphics[width=0.8\linewidth, keepaspectratio, angle=90]{
+            ./figures/methodology/under-bean
+        }
+        \subcaption{Underroasted} \label{fig:underBeanSingle}
     \end{subfigure}
     \begin{subfigure}
     {0.25\textwidth}
@@ -85,18 +84,18 @@ ensured a satisfactory number of images per class.
         \subcaption{Burnt} \label{fig:burntBeanSingle}
     \end{subfigure}
     \begin{subfigure}
+    {0.2\textwidth}
+        \includegraphics[height=0.8\linewidth, keepaspectratio]{
+            ./figures/methodology/insect-damaged-bean
+        }
+        \subcaption{Insect \\ damage} \label{fig:insectBeanSingle}
+    \end{subfigure}
+    \begin{subfigure}
     {0.25\textwidth}
         \includegraphics[height=0.8\linewidth, keepaspectratio]{
             ./figures/methodology/mold-damaged-bean
         }
         \subcaption{Mould damage} \label{fig:moldBeanSingle}
-    \end{subfigure}
-    \begin{subfigure}
-    {0.25\textwidth}
-        \includegraphics[height=0.8\linewidth, keepaspectratio]{
-            ./figures/methodology/under-bean
-        }
-        \subcaption{Underroasted} \label{fig:underBeanSingle}
     \end{subfigure}
     \caption{Examples of bean defects}
     \label{fig:beanDefects}
@@ -104,15 +103,15 @@ ensured a satisfactory number of images per class.
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{|p{0.25\linewidth}|p{0.6\linewidth}|p{0.15\linewidth}|}
-        \toprule \textbf{Defect name} & \textbf{Visual features}                                                                                                                                             & \textbf{Count} \\
+    \begin{tabular}{p{0.2\textwidth}p{0.7\textwidth}p{0.1\textwidth}}
+        \toprule \textbf{Defect name} & \textbf{Visual features}                                                                                   & \textbf{Count} \\
         \midrule Normal bean          & Even colour, brown to dark-brown hue, no surface damage or blemishes and a round shape with no deformities                                                           & 1311           \\
-        Quaker                        & Light brown to brown hue (due to less caramelisation of sugar), scorch marks, brown spots on surface.
+        Quaker & Light brown to brown hue (due to less caramelisation of sugar), scorch marks, brown spots on surface.
         Occasionally, a shrivelled, uneven look of the outside surface & 978            \\
-        Bean fragment                 & Significantly deformed or chipped exterior, smaller bean pieces                                                                                                      & 296            \\
+        Bean fragment                 & Significantly deformed or chipped exterior, smaller bean pieces                                            & 296            \\
         Underroasted                  & Very light brown exterior, dark green or yellow in extremely underroasted beans                                                                                      & 104            \\
         Burnt                         & Dark brown to black exterior, significant scorching or an oily, shiny surface                                                                                        & 50             \\
-        Insect/mould damage           & Small, round holes or larger ''craters`` on the surface                                                                                                              & 47             \\
+        Insect/mould damage           & Small, round holes or larger ''craters`` on the surface                                                    & 47             \\
         \bottomrule
     \end{tabular}
     \caption{Bean defect counts}
@@ -120,8 +119,7 @@ ensured a satisfactory number of images per class.
 \end{table}
 Overall, the beans exhibited five various defects, whose
 counts and short descriptions are presented in table~\ref{tab:beanDefectCounts}.
-Figure~\ref{fig:beanDefects} provides a brief look at the various defects, with more
-examples available in appendix~\ref{ch:appendix1}.
+Figure~\ref{fig:beanDefects} provides a brief look at the various defects.
 
 The beans in the dataset belonged to a total of nine varieties and have been processed using six different methods.
 The number of beans belonging to each processing method and variety method is shown
@@ -204,6 +202,7 @@ Both versions of the datasets were retained and used in classifier training.
 Overall, the data processing pipeline yielded a dataset containing the individual images in a nested directory, with
 a CSV annotations file in the top-level directory to be used by a machine learning framework.
 
+
 \section{Loading and pre-processing the dataset}
 \label{sec:loading-and-pre-processing-the-dataset}
 Associating images with labels as well as final pre-processing and loading of the data was done by a PyTorch \verb|DataLoader|.
@@ -232,14 +231,14 @@ The split was applied with a constant random state value for repeatable results.
         \toprule
         \textbf{Defect name} & \textbf{Training count} & \textbf{Testing count} \\
         \midrule
-        Normal & 1048 & 263 \\
-        Quaker & 782 & 196 \\
-        Bean fragment & 237 & 59 \\
-        Underroasted & 83 & 21 \\
-        Burnt & 40 & 10 \\
-        Insect/Mould & 38 & 9 \\
+        Normal               & 1048                    & 263                    \\
+        Quaker               & 782                     & 196                    \\
+        Bean fragment        & 237                     & 59                     \\
+        Underroasted         & 83                      & 21                     \\
+        Burnt                & 40                      & 10                     \\
+        Insect/Mould         & 38                      & 9                      \\
         \midrule
-        \textbf{Total} & 2228 & 558 \\
+        \textbf{Total}       & 2228                    & 558                    \\
         \bottomrule
     \end{tabular}
     \caption{Finalised training and testing set class counts}
@@ -258,15 +257,17 @@ $P(Class_{sample} = C) = \frac{1}{\arrowvert\{x \in X \colon Class_x = C\}\arrow
 
 Overall, by combining the techniques of over and under sampling as well as data augmentation, the networks were able to learn on a relatively
 evenly balanced and varied dataset.
+
+
 \section{KNN classifier results}
 \label{sec:knn-results}
 The experiments with a KNN classifier followed the methods outlined in section~\ref{sec:knn-classifier}.
 The sets of hyperparameters used to tune the classifier were as follows:
 \begin{itemize}
-    \item Distance calculation metric $M = \{Euclidean, Manhattan, Canberra\}$
-    \item Number of nearest neighbours $K = [1, 30]$
-    \item Nearest neighbour calculation algorithm $A = \{KDTree, Brute-force\}$
-    \item Number of bins in colour histogram $N = \{32, 64, 128, 256\}$
+    \item Distance calculation metric $M=\{Euclidean, Manhattan, Canberra\}$
+    \item Number of nearest neighbours $K=[1, 30]$
+    \item Nearest neighbour calculation algorithm $A=\{KDTree, Brute-force\}$
+    \item Number of bins in colour histogram $N=\{32, 64, 128, 256\}$
 \end{itemize}
 
 All but the last hyperparameter were chosen via a grid search, with the number of bins being
@@ -275,12 +276,13 @@ set separately as it was applied to the dataset itself prior to fitting the clas
 The experiments produced two noteworthy classifiers, whose hyperparameter choices and overall accuracy are presented in table~\ref{tab:knnResults}.
 \pagebreak
 \begin{table}[h]
-    \begin{tabular}{@{}llllll}
+    \centering
+    \begin{tabular}{@{}lllll}
         \toprule
-        & \textbf{\makecell{Distance\\metric}} & \textbf{K value} & \textbf{\makecell{Calculation\\algorithm}} & \textbf{\makecell{Histogram\\bin count}} & \textbf{\makecell{Overall\\accuracy(\%)}} \\
+        & \textbf{\makecell{Distance \\metric}} & \textbf{K value} & \textbf{\makecell{Calculation \\algorithm}} & \textbf{\makecell{Histogram  \\bin count}} \\
         \midrule
-        \textbf{KNN-1} & Manhattan & 11 & KDTree & 32 & 77.1 \\
-        \textbf{KNN-2} & Canberra & 6 & KDTree & 256 & 79.7 \\
+        \textbf{KNN-1} & Manhattan  & 9  & KDTree & 32 \\
+        \textbf{KNN-2} & Canberra  & 6  & KDTree & 256 \\
         \bottomrule
     \end{tabular}
     \caption{Finalised KNN classifiers}
@@ -300,13 +302,15 @@ These metrics for KNN-1 and KNN-2 are presented in table~\ref{tab:knnScores}.
         \toprule
         \textbf{Class} & \multicolumn{3}{c}{KNN-1} & \multicolumn{3}{c}{KNN-2} \\
         \midrule
-        {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-            \textbf{Normal} & 0.80 & 0.96 & 0.88 & 0.80 & 0.96 & 0.87  \\
-            \textbf{Quaker} & 0.74 & 0.84 & 0.78 & 0.80 & 0.80 & 0.80 \\
-            \textbf{Bean fragment} & 0.67 & 0.14 & 0.23 & 0.80 & 0.27 & 0.40 \\
-            \textbf{Underroasted} & 0.57 & 0.20 & 0.29 & 0.80 & 0.57 & 0.67 \\
-            \textbf{Burnt} & 1.00 & 0.10 & 0.19 & 0.57 & 0.40 & 0.47 \\
-            \textbf{Insect/Mould} & 0.00 & 0.00 & 0.00 & 1.00 & 0.33 & 0.50  \\
+        {}            & Precision & Recall & F1   & Precision & Recall & F1   \\
+        Normal        & 0.81      & 0.95   & 0.87 & 0.80      & 0.96   & 0.87 \\
+        Quaker        & 0.74      & 0.85   & 0.79 & 0.80      & 0.80   & 0.80 \\
+        Bean fragment & 0.69      & 0.19   & 0.29 & 0.80      & 0.27   & 0.40 \\
+        Underroasted  & 0.83      & 0.24   & 0.37 & 0.80      & 0.57   & 0.67 \\
+        Burnt         & 1.00      & 0.20   & 0.33 & 0.57      & 0.40   & 0.47 \\
+        Insect/Mould  & 0.00      & 0.00   & 0.00 & 1.00      & 0.33   & 0.50 \\
+        \midrule
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{78.0\%} & \multicolumn{3}{c}{\textbf{79.7\%}} \\
         \bottomrule
     \end{tabular}
     \caption{KNN classifier evaluation metrics}
@@ -334,16 +338,20 @@ The first item considered was the optimizer selection, with the Adam~\cite{adamG
 the main candidates due to their wide adoption in industry and strong results on existing datasets.
 While both optimizers showed good results when training the models, the SGD optimizer was chosen in the end for its ability
 to be customized with momentum (with a value of 0.9 used) and its more intuitive operation.
+With momentum, the optimizer updates the weights each epoch the following way:
+$\theta_{t+1}=\theta_{t} - \gamma\nabla{f(\theta_{t})}+\mu\Delta\theta$, where $\gamma$ is the learning rate (set to 0.001),
+$\mu$ is the momentum value and $\Delta\theta$ is the previous update of the weight vector $\theta$.
 
 A loss function needed to be picked next - being a classification problem with multiple classes, binary methods were not applicable,
-therefore the choice fell on the binary cross-entropy function, which at a high level, measures the extent to which the
+therefore the choice fell on the cross-entropy function, which at a high level, measures the extent to which the
 probability distribution of the model's prediction matches that of the actual data.
 It should be noted that the Pytorch implementation of this loss function differs slightly from the commonly seen definition,
-requiring that the input to the loss function consists of the actual class labels rather than the probability of each class
-for each item in a batch for best performance.
+requiring that the input to the loss function consists of the ''unnormalised logits for each class`` and the target is the class labels.
+The overall function can be defined by $-\log{\frac{\exp(x_{n, y_{n}})}{\sum_{c=1}^C\exp(x_{n, c})}}$,
+with each minibatch's loss being the average of the loss for each input~\cite{pytorchLibrary}.
 
 Finally, the batch size and epoch number were selected experimentally - initial attempts showed a significant boost in accuracy
-(though, at the expense of longer training times) when a smaller batch size was used: switching from 32 down to 8 led
+(though, at the expense of longer training times) when a smaller batch size was used: switching from 32 down to 4 led
 to the biggest increase, with little to no gain seen from further reductions.
 The number of epochs was determined from the size of the batches and from observing the magnitude of the changes in the loss function
 with the optimal number being 40 for the shuffleNet and mobileNet architectures.
@@ -356,7 +364,6 @@ The chosen solution was an instance of the \verb|StepLR| class, halving the lear
 ShuffleNet and MobileNet.
 Overall, the two selected architectures achieved a significant improvement in both overall accuracy and per-class
 metrics over the KNN classifier, with the results presented in table~\ref{tab:cnn-small-scores}.
-The total accuracy percentages were 84\% and 81\% for MobileNet and ShuffleNet respectively.
 
 \begin{table}
     \centering
@@ -364,13 +371,15 @@ The total accuracy percentages were 84\% and 81\% for MobileNet and ShuffleNet r
         \toprule
         \textbf{Class} & \multicolumn{3}{c}{MobileNet V2} & \multicolumn{3}{c}{ShuffleNet} \\
         \midrule
-        {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-        \textbf{Normal} & 0.93 & 0.95 & 0.94 & 0.92 & 0.94 & 0.93  \\
-        \textbf{Quaker} & 0.77 & 0.90 & 0.83 & 0.82 & 0.75 & 0.78 \\
-        \textbf{Bean fragment} & 0.93 & 0.50 & 0.64 & 0.77 & 0.63 & 0.69 \\
-        \textbf{Underroasted} & 0.57 & 0.62 & 0.60 & 0.28 & 0.76 & 0.41 \\
-        \textbf{Burnt} & 1.00 & 0.40 & 0.57 & 0.75 & 0.30 & 0.43 \\
-        \textbf{Insect/Mould} & 0.50 & 0.11 & 0.20 & 0.00 & 0.00 & 0.00  \\
+        {}            & Precision & Recall & F1   & Precision & Recall & F1   \\
+        Normal        & 0.93      & 0.95   & 0.94 & 0.92      & 0.94   & 0.93 \\
+        Quaker        & 0.77      & 0.90   & 0.83 & 0.82      & 0.75   & 0.78 \\
+        Bean fragment & 0.93      & 0.50   & 0.64 & 0.77      & 0.63   & 0.69 \\
+        Underroasted  & 0.57      & 0.62   & 0.60 & 0.28      & 0.76   & 0.41 \\
+        Burnt         & 1.00      & 0.40   & 0.57 & 0.75      & 0.30   & 0.43 \\
+        Insect/Mould  & 0.50      & 0.11   & 0.20 & 0.00      & 0.00   & 0.00 \\
+        \midrule
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{\textbf{84\%}} & \multicolumn{3}{c}{81\%} \\
         \bottomrule
     \end{tabular}
     \caption{Compact CNN evaluation metrics}
@@ -384,6 +393,8 @@ beans being frequently misclassified.
 It is clear that the network is lacking information to build a knowledge of the features of these beans from the small
 data samples the dataset provides.
 The next section will look at addressing these shortcomings by applying transfer learning to a much larger model.
+
+
 \section{Transfer learning results}
 \label{sec:transfer-learning-results}
 When selecting the models here, much less concern was given to the size of the model - the main criteria instead were
@@ -400,10 +411,9 @@ with the latter serving as an example of a transformer network.
 As mentioned in section~\ref{sec:transfer-learning}, each network was adjusted to predict 6 classes and trained using a similar
 iterative approach as described in section~\ref{sec:compact-cnn-results}.
 
-While training the models, it was discovered that they benefited from a lower learning rate and more aggressive scheduling,
+While training the models, it was discovered that they benefited from a higher initial learning rate of 0.01 and more aggressive scheduling,
 with the ResNet models performing best with the learning rate reduced by ten times every eight epochs.
-The best performing optimizer and loss function were SGD and Cross entropy loss respectively, though, with slightly different settings
-from the ones described in section~\ref{sec:compact-cnn-results}.
+The best performing optimizer and loss function were SGD and Cross entropy loss respectively.
 
 It should be noted that MobileNet and ResNet were trained entirely - that is, every weight was updated during training.
 The Swin transformer on the other hand, had all its weights frozen (by marking them as not requiring gradient calculations in PyTorch)
@@ -417,18 +427,20 @@ retaining the weights trained on ImageNet allowed it to better classify the smal
         \toprule
         \textbf{Class} & \multicolumn{3}{c}{ResNet 18} & \multicolumn{3}{c}{ResNet 34} & \multicolumn{3}{c}{ResNet 50} \\
         \midrule
-        {} & {Prec.} & {Rec.} & F1 & {Prec.} & {Rec.} & F1 & {Prec.} & {Rec.} & F1 \\
-        \textbf{Normal} & 0.93 & 0.98 & 0.96 & 0.96 & 0.99 & 0.98 & 0.99 & 0.99 & 0.99\\
+        {}     & {Prec.} & {Rec.} & F1   & {Prec.} & {Rec.} & F1   & {Prec.} & {Rec.} & F1   \\
+        Normal & 0.93    & 0.98   & 0.96 & 0.96    & 0.99   & 0.98 & 0.99    & 0.99   & 0.99 \\
         \addlinespace[0.5em]
-        \textbf{Quaker} & 0.93 & 0.89 & 0.91 & 0.94 & 0.92 & 0.93 & 0.95 & 0.92 & 0.94\\
+        Quaker & 0.93    & 0.89   & 0.91 & 0.94    & 0.92   & 0.93 & 0.95    & 0.92   & 0.94 \\
         \addlinespace[0.5em]
-        \textbf{\makecell[l]{Bean\\fragment}} & 0.90 & 0.90 & 0.90 & 0.88 & 0.83 & 0.85 & 0.94 & 0.86 & 0.90\\
+        \makecell[l]{Bean \\fragment} & 0.90 & 0.90 & 0.90 & 0.88 & 0.83 & 0.85 & 0.94 & 0.86 & 0.90 \\
         \addlinespace[0.5em]
-        \textbf{\makecell[l]{Under\\roasted}} & 0.80 & 0.76 & 0.78 & 0.77 & 0.81 & 0.79 & 0.60 & 1.00 & 0.75 \\
+        \makecell[l]{Under  \\roasted} & 0.80 & 0.76 & 0.78 & 0.77 & 0.81 & 0.79 & 0.60 & 1.00 & 0.75 \\
         \addlinespace[0.5em]
-        \textbf{Burnt} & 0.86 & 0.60 & 0.57 & 1.00 & 0.60 & 0.75 & 0.91 & 1.00 & 0.95\\
+        Burnt & 0.86 & 0.60 & 0.57 & 1.00 & 0.60 & 0.75 & 0.91 & 1.00 & 0.95 \\
         \addlinespace[0.5em]
-        \textbf{\makecell[l]{Insect/\\mould}} & 0.83 & 0.56 & 0.67 & 0.67 & 0.89 & 0.76 & 1.00 & 0.67 & 0.80 \\
+        \makecell[l]{Insect/ \\mould} & 0.83 & 0.56 & 0.67 & 0.67 & 0.89 & 0.76 & 1.00 & 0.67 & 0.80 \\
+        \midrule
+        \textbf{\makecell[l]{Overall \\accuracy}} & \multicolumn{3}{c}{92\%} & \multicolumn{3}{c}{94\%} & \multicolumn{3}{c}{\textbf{95.2\%}} \\
         \bottomrule
     \end{tabular}
     \caption{ResNet architecture evaluation metrics}
@@ -439,11 +451,7 @@ Overall, the ResNet and MobileNet architectures showed the best results, with th
 training time.
 The best results were achieved on the white-background dataset (as described in section~\ref{sec:sample-gathering-and-dataset-development}),
 with the per-class accuracy metrics presented in table~\ref{tab:resnet-scores}.
-The overall accuracy for the models was 92\%, 94\% and 95\% for the 18, 34 and 50 layer architectures respectively, with the
-pre-trained MobileNet also achieving a 95\% result.
-
 The same metrics for the pre-trained MobileNet and Swin transformer networks are displayed in table~\ref{tab:transfer-results-2}.
-The overall accuracy scores achieved were 95\% and 85\% for EfficientNet and Swin transformer respectively.
 
 \begin{table}[h]
     \centering
@@ -451,22 +459,26 @@ The overall accuracy scores achieved were 95\% and 85\% for EfficientNet and Swi
         \toprule
         \textbf{Class} & \multicolumn{3}{c}{MobileNet (pre-trained)} & \multicolumn{3}{c}{Swin transformer} \\
         \midrule
-        {} & Precision & Recall & F1 & Precision & Recall & F1 \\
-        \textbf{Normal} & 0.97 & 0.98 & 0.98 & 0.88 & 0.95 & 0.91  \\
-        \textbf{Quaker} & 0.95 & 0.97 & 0.96 & 0.79 & 0.87 & 0.83 \\
-        \textbf{Bean fragment} & 0.91 & 0.85 & 0.88 & 0.86 & 0.71 & 0.78 \\
-        \textbf{Underroasted} & 1.00 & 0.90 & 0.95 & 1.00 & 0.19 & 0.32 \\
-        \textbf{Burnt} & 0.89 & 0.80 & 0.84 & 0.00 & 0.00 & 0.00 \\
-        \textbf{Insect/Mould} & 1.00 & 0.67 & 0.80 & 0.75 & 0.33 & 0.46  \\
+        {}            & Precision & Recall & F1   & Precision & Recall & F1   \\
+        Normal        & 0.97      & 0.98   & 0.98 & 0.88      & 0.95   & 0.91 \\
+        Quaker        & 0.95      & 0.97   & 0.96 & 0.79      & 0.87   & 0.83 \\
+        Bean fragment & 0.91      & 0.85   & 0.88 & 0.86      & 0.71   & 0.78 \\
+        Underroasted  & 1.00      & 0.90   & 0.95 & 1.00      & 0.19   & 0.32 \\
+        Burnt         & 0.89      & 0.80   & 0.84 & 0.00      & 0.00   & 0.00 \\
+        Insect/Mould  & 1.00      & 0.67   & 0.80 & 0.75      & 0.33   & 0.46 \\
+        \midrule
+        \textbf{Overall accuracy} & \multicolumn{3}{c}{\textbf{95.3\%}} & \multicolumn{3}{c}{85\%} \\
         \bottomrule
     \end{tabular}
     \caption{ResNet alternatives evaluation metrics}
     \label{tab:transfer-results-2}
 \end{table}
-With the exception of the Swin transformer, the application of transfer learning brought significant improvements in
+Except the Swin transformer, the application of transfer learning brought significant improvements in
 under-represented class performance as well as further increases in overall accuracy.
-It is important, however, to consider the real-world application potential of each of the classifiers.
-The next section will take a critical look at the classifiers' performance in the context of a real-world system.
+The confusion matrices for all classifiers discussed here are available in appendix~\ref{ch:appendix2}, while
+the hyperparameter search results are available in appendix~\ref{ch:appendix3}.
+The next section will discuss the real-world application potential of each of the classifiers.
+
 \section{Evaluation}
 \label{sec:evaluation}
 While the high accuracy of the classifiers developed during the project makes a relatively strong case for it being a success,
@@ -498,9 +510,9 @@ Furthermore, the performance on smaller classes is quite poor, with only the ''Q
 Despite this, the KNN approach still has its strengths, which mainly relate to its simplicity and transparency -
 the general principle behind it is likely to be understood even by a non-technical audience and the dimensionality reduction
 method is relatively straightforward and relies on simple observations of the beans.
-Using a highly optimised algorithm such as the one implemented in Scikit-learn can also dramatically reduce the resources
-needed for a single prediction, even though the scaling potential of this classifier is slightly lower due to the need to
-compare each incoming image to the entire dataset, which could impact prediction times as more data is gathered.
+While using a highly optimised algorithm such as the one implemented in Scikit-learn~\cite{sklearnLibrary} can dramatically reduce the resources
+needed for a single prediction, calculating the colour histogram takes a much larger amount of time.
+Furthermore, the prediction time is dependent on the size of the dataset, leading to slower prediction times as the dataset grows.
 
 Switching to a simple neural network architecture results in a much more viable model: with the MobileNet architecture
 being the best performer in that category, the precision and recall scores for the ''Normal`` class could potentially allow it
@@ -508,43 +520,43 @@ to be used in industry, similarly to its performance with the ''Quaker`` class.
 On the testing set, the model displayed a good result, with its relatively low rate of normal beans classified as defective
 making it highly useful as, for example, a first-stage sorter before a second, manual pass, greatly reducing the labour
 needed to sort a batch of beans.
-Despite those good results, the performance on underrepresented classes is still relatively low, limiting the model's
-potential in producing statistics of the occurrences of various defects.
 
 Finally, transfer learning produced the most versatile and high-performing models, with the ResNet and MobileNet achieving
 quite similar results despite their significant size difference.
 It can be said that the knowledge gained from a large general-purpose dataset transfers well to this relatively niche
 application area, with the MobileNet's gain in identifying underrepresented classes being clear proof of this hypothesis.
-While the predictions are not perfect, it is difficult to imagine the labour and time commitment needed for a human to match
-them on a daily basis.
-The usage of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs and less than an hour of training time.
-Overall, the quick training time and high performance, especially on larger classes, suggest a great potential of this approach
-on a larger dataset showcasing more examples of rarer defects.
-
+This improvement in performance likely comes from the convolution layers' ability to develop filters that assess both the texture
+and colour of the images, allowing the CNN models to better inform their classification.
+The impact of that additional information on performance can be seen in examples shown in appendix~\ref{ch:appendix1}.
+It should be noted that some examples in the appendix reveal a need for improved lighting and potentially, higher resolution images,
+identifying one area of further work.
+The use of transfer learning also reduced the amount of time needed for training, with both models requiring fewer epochs and less than an hour of training time.
+Overall, the high performance, especially on larger classes, suggest a great potential of this approach
+on a larger, more varied and balanced dataset.
 To judge the models' performance as a sorting assistant, their error statics are presented on
 figure~\ref{fig:real-world-scores}.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{results/best-performers-results}
     \caption{Real-world application results for best performers}
     \label{fig:real-world-scores}
 \end{figure}
+From the above figure, it is evident that neural networks vastly outperform the KNN classifier,
 \begin{wraptable}{r}{0.35\textwidth}
     \centering
     \begin{tabular}{lc}
         \toprule
-        \textbf{Model} &  \textbf{\makecell{Prediction\\time (ms)}}\\
+        \textbf{Model} & \textbf{\makecell{Prediction \\time (ms)}}          \\
         \midrule
-        KNN-2 & 0.20 \\
-        MobileNet & 10.44 \\
-        ResNet 50 & 20.34 \\
+        KNN-2      & 8.32                        \\
+        MobileNet      & 10.44                        \\
+        ResNet 50      & 20.34                        \\
         \bottomrule
     \end{tabular}
     \caption{Average prediction time per bean (ms)}
     \label{tab:execTimes}
 \end{wraptable}
-From the above figure, it is evident that neural networks vastly outperform the KNN classifier,
 with pre-training greatly reducing the waste of normal beans and the chance of a defective bean,
 especially one with a high-impact defect, making it into the final product.
 Overall, the pre-trained MobileNet architecture stands out as the best compromise between prediction time, accuracy and
@@ -557,7 +569,6 @@ in section~\ref{sec:research-aims}: the dataset was developed entirely from scra
 processing methods that is reflective of the products offered by modern coffee roasters today.
 The models' training was entirely achievable on consumer-grade hardware and took a reasonable amount of time to complete,
 enabling roasters to quickly train their own models or instantly begin classifying by downloading the model weights developed here.
-The next section will provide some closing comments as well as identify areas of future work.
 
 
 

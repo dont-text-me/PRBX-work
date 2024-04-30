@@ -1,20 +1,83 @@
-\documentclass[12pt]{article}
-%\usepackage[left=2cm, right=2cm]{geometry}
-\usepackage[scaled]{helvet}
-\renewcommand\familydefault{\sfdefault}
-\usepackage[T1]{fontenc}
-\usepackage{lipsum}
-\usepackage{fancyhdr}
-\lhead{Reflection document}
-\rhead{Ivan barinskiy}
+%! suppress = MissingLabel
+\documentclass{./template/ReflectionsDoc}
 \begin{document}
-\section{Project specification}
-\label{sec:section-1}
-    \thispagestyle{fancy}
+    \section{Project specification}
+    The choices of learning outcomes for my project were based on real conversations I had with people in the coffee industry.
+    Developing a low-cost, customizable solution was therefore a direct response to the problems they identified.
+    Initially, I was slightly reluctant to pick a project that would require me to build my own dataset as that felt like a significant
+    undertaking without any promise of success.
 
-\section{Self-reflection}
-\label{sec:section-2}
-    \subsection{Problem solving}
-    \subsection{Communication}
-    \subsection{Responsibility}
+    Regarding the initial project specification I proposed, it is clear that i may have put too much confidence into KNN-based classifiers,
+    with them performing the worst out of all classifiers I developed during the project.
+    However, this has been an insightful experience that allowed me to see how a neural network can easily outperform hand-engineered features
+    in a real-world context.
+    In that sense, the comparative aspect of my project specification was a good choice, allowing me to try my hand at every part
+    of a ``big-data'' project, from gathering the coffee beans to picking and training a neural network architecture.
+    Trying my hand at reducing the dimensionality of an image dataset has also showed me the power of even relatively simple methods such as colour histograms.
+    While I am sure that doing similar projects in industry would involve more complex programming and concepts, this project is very likely
+    to make a good baseline for the needed knowledge, making me familiar with commonly used concepts such as dataloaders, organising a dataset,
+    training on a GPU and presenting my findings for an audience.
+
+    On a more general level, setting what in my mind were very ambitious goals, has helped me reduce the feelings of anxiety when starting on a large project
+    and using a task board to track the writing of each chapter and implementing parts of my solution have solidified my project management skills after being introduced to them
+    during my year in industry.
+
+    Overall, I feel I was able to judge my abilities relatively well, identifying the fact that a hardware solution would likely be beyond
+    the scope of my project.
+    Achieving the other goals i set for myself however, has given me a sense of empowerment to try my hand at that task in my own time.
+
+    Finally, it is important to remark on the sense of achievement and pride I felt when communicating the results of my project back to my
+    coffee industry acquaintances - the excitement they showed for my results has removed any anxiety I had around the project's success.
+    Seeing the positive change possible from my work has made me excited to develop my skills further and made for a great reminder of the power of computer science.
+
+    If I were to attempt the project again, my main changes would be around stricter (or, more well-defined) benchmarks my solution would need to achieve -
+    in an ideal case, I would like to see my classifier compete against a coffee professional on the same set of samples.
+    In that case, I would seek some financing from the university to make sure that any professionals whose help I seek are fairly compensated -
+    this time, i got all the defective samples for free but made sure to purchase the ''normal`` beans for their usual retail price to ensure no one is taken advantage of.
+
+    Overall, I would call my choice of project specification a success, placing it at an intersection of my hobbies and areas of software engineering I felt I could get more experience in.
+    \pagebreak
+    \section{Self-reflection}
+    %problem-solving
+    One of this project's biggest challenges has been in the volume of work that was required to build the dataset.
+    In particular, I feel like I underestimated the amount of time it would take to digitize the images, going as far as
+    suggesting I photograph each bean individually to my supervisor in one of the early meetings.
+    By developing an image processing pipeline, i was able to process up to 25 beans at a time, greatly reducing the required work.
+    By doing so, I was also able to learn about blob detection and image masking, which are commonly used techniques in image processing,
+    giving me useful skills for any future projects involving image classification.
+
+    Later in the project, I identified a flaw in my dimensionality reduction algorithm, where I lost some image information
+    by not separating the colour channels.
+    This occurred due to me misreading the library's documentation when prototyping.
+    After visualising the processed images, I was able to increase my accuracy by nearly 5\% by applying the algorithm
+    correctly after re-visiting the documentation page and adjusting my code.
+    This experience was important for several reasons: first, it taught me the importance of making sure I fully understand
+    my issue before attempting to fix it.
+    Second, visualising the data has given me valuable experience with libraries such as Matplotlib, a tool widely used in
+    the industry and beyond, with the project greatly improving my familiarity with the tool and the quality of material I produce with it.
+    Finally, I improved my skills in navigating technical documentation and my understanding of the underlying algorithm, with the improved
+    accuracy score being solid proof of that.
+
+    % communication
+    This project's success, perhaps more than any other projects I have done, relied on my communication skills.
+    Having to approach several people, with some of whom I never talked before, definitely felt like a challenge, allowing me to
+    develop my skills in ''pitching`` my ideas and aims to a non-technical audience, which will certainly be useful in almost any area
+    of software engineering I could find myself in the future.
+
+    Another useful skill was in learning to condense my writing for the report itself: many times i would find myself
+    writing excessively verbose text, and learning to critically evaluate my writing and identify the most important parts
+    allowed me to be more efficient with my work and to communicate deeper insights of my findings while sticking to the page
+    constraints.
+    As an effect of this, I was able to shorten my introduction by more than a full page, removing the unrelated information and
+    providing a clearer link between the study aims and the real-world problem behind the project.
+
+    % responsibility
+    Overall, I would say that my project had a relatively late start due to a lack of organisational skills and responsibility on my part.
+    If I were to undertake such a project again, I would make sure to start gathering samples as early on in the process as possible.
+    Despite this setback, I feel like my responsibility has grown over the course of the project: I learned to set realistic but
+    demanding deadlines for myself and, in most cases, delivered the work earlier than planned, with my self-study skills growing stronger
+    the further into the semester I went.
+    Overall, my development in self-study, project management and workload evaluation have definitely improved over the course of the year,
+    giving me useful soft skills that are definitely going to be useful in further work.
+
 \end{document}

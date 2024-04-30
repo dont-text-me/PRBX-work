@@ -6,3 +6,6 @@ data/archives
 data/processed-whitebg
 # model weights
 *.pt
+# the stuff that goes on the teaching portal (mobilenet and resnet weights, setup code, portion of dataset, PDF's)
+submission
+submission.zip

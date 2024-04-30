@@ -2,6 +2,8 @@ The literature review identified 3 general paths that one could take when develo
 set of strengths, weaknesses, and aiming to address different priorities.
 The following sections will discuss the approaches taken to develop the three models to be evaluated further, in an
 increasing order of complexity.
+
+
 \section{Nearest-neighbor classifier}
 \label{sec:knn-classifier}
 The primary reasoning behind implementing a KNN-based classifier is its speed of deployment, simplicity of implementation
@@ -57,6 +59,8 @@ The classifiers and their evaluation were implemented using the Scikit-learn lib
 distributions provided by the Scikit-image library~\cite{skImageLibrary}.
 Loading the data was done by creating a \verb|DataLoader| class provided by the PyTorch library \cite{pytorchLibrary}, which allowed
 for the data loading to be easily shared between this classifier and ones developed later.
+
+
 \section{Compact CNN classifier}
 \label{sec:deep-learning}
 The aims in developing this classifier were centered around addressing the weaknesses of the one described above,
@@ -72,12 +76,15 @@ and, therefore, smaller designs were considered.
 The MobileNet V2 architecture~\cite{mobileNet} stood out for its relatively small number of parameters and a promised ability to run even on
 a mobile device.
 
-
 \begin{wrapfigure}{r}{0.4\textwidth}
     \centering
     \includegraphics[width=0.4\textwidth]{methodology/depthwise-conv}
     \caption[Depthwise convolution]{Depthwise convolution~\cite{mobileNet}}
     \label{fig:depthwiseConv}
+    \vspace{0.5em}
+    \includegraphics[width=0.4\textwidth]{methodology/residual-block}
+    \caption[Residual block]{Residual block~\cite{resNet}}
+    \label{fig:residualBlock}
     \vspace{-1em}
 \end{wrapfigure}
 
@@ -86,12 +93,32 @@ where a ''traditional`` convolution block is split into two stages: first, each 
 Then, the resulting intermediate representation is consolidated using a $nChannels \times 1 \times 1$ filter.
 Doing so still allows the network to learn the relationships between channels and achieve high benchmark results, with the models requiring
 a fraction of the number of parameters of conventional CNN's~\cite{mobileNet}.
+
+Another standout feature of the MobileNet architecture is its use of ''residual blocks``, first introduced in the ResNet~\cite{resNet} classifier family (with an example shown on figure~\ref{fig:residualBlock}), an architecture where the output of
+a chain of convolution, activation and/or batch normalisation layers is added to the input and passed along further rather than just the output being passed on.
+This architecture choice has led to improvements on ImageNet performance, and remains the state-of-the-art in image classification.
+By having access to both the unmodified input and the output of the convolution layers, it is possible to make use of both representations,
+leading to better accuracy~\cite{resNet}.
+The overall structure of the MobileNet can be seen on figure~\ref{fig:mobilenetSketch}.
+It should be noted that the ''bottleneck`` term refers to the number of channels within the layers of the residual blocks,
+with the number of channels expanding and contracting within each block~\cite{mobileNet}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/methodology/mobilenet_diagram}
+    \caption[An illustration of the MobileNet v2 architecture]
+    {An illustration of the MobileNet v2~\cite{mobileNet} architecture}
+    \label{fig:mobilenetSketch}
+\end{figure}
+
 Achieving a high performance result from such a small architecture would result in a classifier that is able to be deployed
 on any system, removing the cost barrier between coffee roasters and automatic quality control methods.
 Furthermore, a smaller architecture would be faster to train on a custom dataset, providing greater flexibility.
 
 Other smaller architectures such as ShuffleNet V2`~\cite{shuffleNet} were considered and trialled in preliminary experiments,
 however, MobileNet consistently outperformed the others and was therefore selected as the best performer of this section.
+
+
 \section{Application of transfer learning to large models}
 \label{sec:transfer-learning}
 The models trialled in this set of experiments were the largest in terms of the number of parameters and
@@ -113,24 +140,23 @@ Pre-trained models were loaded from the \verb|torchvision.models| package provid
 
 One of the more promising architectures was ResNet~\cite{resNet}, with a deep architecture boasting a high top-1 accuracy on the imageNet dataset.
 Several versions of the ResNet architecture exist, with the 18, 34 and 50 layer versions trialled in the experiments.
-\newline
-\begin{wrapfigure}{r}{0.4\textwidth}
+While these classifiers' size made them an unlikely choice for training from scratch, they were great candidates for transfer learning.
+A diagram of the ResNet family can be seen on figure~\ref{fig:resnetSketch}.
+
+\begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.4\textwidth]{methodology/residual-block}
-    \caption[Residual block]{Residual block~\cite{resNet}}
-    \label{fig:residualBlock}
-\end{wrapfigure}
-The main innovation behind this family of classifiers is their use of ''residual blocks`` (with an example shown on figure~\ref{fig:residualBlock}), an architecture where the output of
-a chain of convolution layers is added to the input and passed along further rather than just the output being passed on.
-This architecture choice has led to improvements on ImageNet performance, and remains the state-of-the-art in image classification.
-By having access to both the unmodified input and the output of the convolution layers, it is possible to make use of both representations,
-leading to better accuracy~\cite{resNet}.
+    \includegraphics[width=\textwidth]{figures/methodology/resnet_diagram}
+    \caption[An illustration of ResNet architectures]
+    {An illustration of the ResNet~\cite{resNet} architectures used.
+    Alternating numbers represent the 18, 34 and 50 layer versions respectively}
+    \label{fig:resnetSketch}
+\end{figure}
 
 Other tested architectures included the EfficientNet V2~\cite{efficientNet} and the Swin transformer~\cite{swinTransformer},
 which were selected for their reported accuracy on the imageNet dataset.
 
 An important step in this set of experiments was the readjusting of the model before making predictions on the bean dataset:
-since all models were tailored to ImageNet, the number of output neurons in their final fully-connected layers was mismatched.
+since all models were tailored to ImageNet, the number of output neurons in their final layers was mismatched.
 The fixes involved inspecting the models' architectures, identifying the attribute name of the final layer, and replacing it with an
 instance of the \verb|torch.nn.Linear()| class, where the number of input neurons matched that of the old fully connected layer,
 and the number of outputs was equal to the number of classes in the dataset.

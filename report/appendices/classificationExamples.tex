@@ -1,5 +1,12 @@
 \newcommand{\badcell}[1]{\cellcolor{red!10}#1}
 \newcommand{\goodcell}[1]{\cellcolor{green!10}#1}
+This section contains particular examples of errors made by the best models developed in the project.
+Each example is accompanied by a table showing each model's prediction and a brief explanation of the most likely reason
+for the error.
+
+Apart from demonstrating the greater depth of information that neural networks are generally able to extract,
+the examples here highlight a need for improved lighting and more diverse examples of bean defects in the dataset,
+identifying an area of future work.
 \begin{figure}[!ht]
     \begin{minipage}[b]{.45\textwidth}
         \centering
@@ -26,7 +33,7 @@
         \subcaption{Classifier predictions}
         \label{tab:ex1}
     \end{minipage}
-    \caption{}
+    \caption{Effect of illumination on fragmented bean predictions}
 \end{figure}
 
 While the human eye can easily spot the crack on the left side of the bean, the neural networks may have struggled to do so
@@ -66,7 +73,7 @@ of future improvement.
         \subcaption{Classifier predictions}
         \label{tab:ex2}
     \end{minipage}
-    \caption{}
+    \caption{Effect of colour distribution on fragmented bean predictions}
 \end{figure}
 
 This bean highlights the weakness of the histogram method used for the KNN classifier: while this bean is clearly misshapen
@@ -101,7 +108,7 @@ a correct prediction.
         \subcaption{Classifier predictions}
         \label{tab:ex3}
     \end{minipage}
-    \caption{}
+    \caption{Effect of coffee cherry husk on KNN predictions}
 \end{figure}
 
 The misclassification of the KNN model here can be explained by the strip of ''chaff`` (dried husk of the coffee cherry)
@@ -137,7 +144,7 @@ tend to have a lighter colour due to their lack of sugar not enabling them to ca
         \subcaption{Classifier predictions}
         \label{tab:ex4}
     \end{minipage}
-    \caption{}
+    \caption{Effect of colour distribution on fragmented bean predictions}
 \end{figure}
 
 The image here displays similar traits to that in figure~\ref{fig:ex3}, with a relatively even colour distribution confusing
@@ -171,7 +178,7 @@ on the top and left of the bean.
         \subcaption{Classifier predictions}
         \label{tab:ex5}
     \end{minipage}
-    \caption{}
+    \caption{Illustration of the effect of using textural features}
 \end{figure}
 
 This bean, with its lighter colour and occasional dark patches, showcases the typical signs of a ''quaker`` bean.
@@ -179,7 +186,6 @@ Despite this, the image contains a relatively large shadow, which could have ske
 shades, affecting the judgement of the KNN classifier.
 On the other hand, all neural network classifiers were able to extract more information from the image, possibly making use
 of its textures and shapes, as well as the colours, making the correct prediction.
-\pagebreak
 \begin{figure}[!ht]
     \begin{minipage}[b]{.45\textwidth}
         \centering
@@ -206,7 +212,7 @@ of its textures and shapes, as well as the colours, making the correct predictio
         \subcaption{Classifier predictions}
         \label{tab:ex6}
     \end{minipage}
-    \caption{}
+    \caption{Effect of model size on insect/mould damaged bean classification}
 \end{figure}
 
 The insect damage in this bean is localised to a dark spot near its center.
@@ -243,10 +249,10 @@ internal descriptions of input images.
         \subcaption{Classifier predictions}
         \label{tab:ex7}
     \end{minipage}
-    \caption{}
+    \caption{Misclassified bean exhibiting a dark surface colour and significant deformation}
 \end{figure}
 The bean in this example is severely misshapen and fragmented, with a large crack seen on its top surface.
-Furthermore, the bean appears to have a normal sugar content, which can be deducted from its dark and relatively even
+Furthermore, the bean appears to have a normal sugar content, which can be deduced from its dark and relatively even
 surface.
 The image of the bean lacks any sharp edges and contains shadows, a combination of factors
 that could have influenced the judgements of both MobileNet based classifiers.
@@ -281,7 +287,7 @@ classifier, though this is unlikely to generalise well to other such beans.
         \subcaption{Classifier predictions}
         \label{tab:ex8}
     \end{minipage}
-    \caption{}
+    \caption{Effect of surface colour and texture on model predictions}
 \end{figure}
 
 While the misprediction of the KNN classifier can be explained by the overall colour distribution of this bean, it is also
@@ -295,3 +301,8 @@ of the dataset.
 \label{sec:raw-misclassification-results}
 The raw results are available in the project submission archived folder, under the following path: \\
 \verb|implementation/misclassified_results.json|
+
+\section{Full dataset URL}
+\label{sec:full-dataset-url}
+The full dataset can be accessed on \href{https://github.com/dont-text-me/RoastedCoffeeDefectDataset}{GitHub}.
+\footnote{\url{https://github.com/dont-text-me/RoastedCoffeeDefectDataset}}
