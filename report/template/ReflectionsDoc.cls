@@ -14,3 +14,4 @@
 \setlength{\headheight}{15pt} % hides warning
 \pagestyle{fancy}
 \setcounter{secnumdepth}{0}
+\fancyfoot[c]{\thepage}
