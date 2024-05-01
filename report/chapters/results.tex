@@ -217,7 +217,7 @@ This decision was based on the reasoning in section~\ref{sec:knn-classifier} and
 For neural network-based classifiers, the processing consisted from a sequence of transforms from the Pytorch \verb|torchvision.transforms|
 package and consisted of the following items:
 \begin{itemize}
-    \item Converting the images to the \verb|float32| data type to enable training on the M3 GPU cores
+    \item Converting the images to the \verb|float32| data type to enable training on the Apple Silicon M3 GPU cores
     \item For the training set, applying a random horizontal flip and a rotation to augment the dataset
     \item For the testing set, only applying a rotation to augment the test data due to its small size
 \end{itemize}
